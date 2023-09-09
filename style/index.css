@@ -1,8 +1,83 @@
-body {
-  font-family: "Roboto", Arial, sans-serif;
+:root {
+  --dark: #24305e; /* #1c1e27 */
+  --light: #feffff; /* feffff */
+  /* #cfcecf */
+  --red: #f76c6c; /* #f76c6c */
+  --blue: #51bfff; /* #a8d0e6 #7b95e0 #51bfff */
+  --green: #8fbc8f;
+  --blur: rgb(0, 0, 0, 0.2);
+  --orange: antiquewhite;
+  --background: var(--dark);
+  --foreground: var(--light);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Comic", sans-serif, Arial, Verdana, "Helvetica",
+    "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: var(--foreground);
+}
+
+.link {
+  color: var(--blue);
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--red);
+}
+
+#loading-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--blur);
+}
+#loading-icon {
+  width: 100px;
+  height: 100px;
+  border: solid var(--foreground) 10px;
+  border-top-color: transparent;
+  border-radius: 100px;
+  -webkit-animation: loader 1s linear infinite;
+  animation: loader 1s linear infinite;
+}
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*==== Background ====*/
-canvas {
+video {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -24,8 +99,8 @@ canvas {
 .pages {
   position: absolute;
   height: 100vh;
-  background: #1c1e27;
-  color: #cfcecf;
+  background: var(--background);
+  color: var(--foreground);
 }
 .containers {
   position: relative;
@@ -42,7 +117,7 @@ canvas {
   text-align: center;
 }
 #contact {
-  background: #cfcecf;
+  background: var(--foreground);
   color: #1c1e27;
 }
 /* ================== Desktop styles =================== */
@@ -59,7 +134,7 @@ canvas {
   vertical-align: middle;
   text-decoration: none;
   font-weight: bold;
-  background-color: #cfcecf;
+  background-color: var(--foreground);
   color: #1c1e27;
   border-radius: 100%;
   z-index: 1;
@@ -72,7 +147,7 @@ canvas {
   left: 185px;
   font-size: 25px;
   font-weight: bold;
-  color: #51bfff;
+  color: var(--blue);
   text-decoration: none;
   font-family: "Muli", sans-serif;
   letter-spacing: 4px;
@@ -149,15 +224,16 @@ canvas {
   padding: 5px 8px;
   font-size: 18px;
   text-decoration: none;
-  background: #51bfff;
-  color: #1c1e27;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 0 0 2px #59bd7f;
   border-radius: 30px;
   transition: 0.1s ease;
 }
 .nav-links:hover {
-  background: #59bd7f;
-  color: white;
-  box-shadow: 0 0 0 2px #59bd7f;
+  background: var(--foreground);
+  box-shadow: none;
+  color: var(--background);
 }
 @keyframes nav-links-anim {
   0% {
@@ -246,13 +322,6 @@ canvas {
     top: 30vh;
   }
 }
-.gen-links {
-  text-decoration: none;
-  color: #51bfff;
-}
-.gen-links:hover {
-  color: #b5173c;
-}
 
 /*===== About styles====*/
 #about-me {
@@ -260,8 +329,8 @@ canvas {
   margin: 11vh 0 0 0;
   padding: 50px 15%;
   text-align: center;
-  background: #cfcecf;
-  color: #1c1e27;
+  background: var(--foreground);
+  color: var(--background);
 }
 #about-me > h2 {
   font-size: 40px;
@@ -283,7 +352,7 @@ canvas {
   flex-flow: wrap;
   margin: 0;
   padding: 80px 20px;
-  border-bottom: 1px solid #cfcecf;
+  border-bottom: 1px solid var(--foreground);
 }
 .priorities {
   flex: 3;
@@ -308,10 +377,10 @@ canvas {
   padding: 15px;
   font-size: 20px;
   line-height: 25px;
-  background: #cfcecf;
+  background: var(--foreground);
   color: #1c1e27;
   border-radius: 10px;
-  box-shadow: 0 0 5px 1px #cfcecf;
+  box-shadow: 0 0 5px 1px var(--foreground);
 }
 #skills {
   padding: 90px 30px;
@@ -336,7 +405,7 @@ canvas {
   color: #1c1e27;
   margin: 0 0 80px 0;
   border-radius: 10px;
-  box-shadow: 0 0 5px 1px #cfcecf;
+  box-shadow: 0 0 5px 1px var(--foreground);
 }
 .skill-imgs {
   flex: 2;
@@ -361,27 +430,7 @@ canvas {
   margin: 20vh 0 50px 0;
   font-size: 40px;
 }
-#projects-categories {
-  display: flex;
-  position: relative;
-  width: 810px;
-  padding: 0;
-  margin: 30px auto;
-  background: #cfcecf;
-}
 
-#projects-categories .btns {
-  flex: 2;
-  border: none;
-  padding: 6px;
-  margin: 0;
-  font-size: 18px;
-  height: 32px;
-  background: none;
-  z-index: 1;
-  outline: none;
-  cursor: pointer;
-}
 #active-category {
   position: absolute;
   width: 135px;
@@ -404,7 +453,7 @@ canvas {
   margin: 10px;
   padding: 0;
   overflow: hidden;
-  background: #cfcecf;
+  background: var(--foreground);
   color: #1c1e27;
   border-radius: 10px;
 }
@@ -605,7 +654,7 @@ input[type="text"]:valid + label {
   padding: 20px;
   border: none;
   background: #1c1e27;
-  color: #cfcecf;
+  color: var(--foreground);
   font-size: 20px;
   transition: 0.2s ease;
 }
@@ -622,7 +671,7 @@ input[type="text"]:valid + label {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #cfcecf;
+  background: var(--foreground);
 }
 #response-h2 {
   width: 60%;
@@ -717,7 +766,7 @@ input[type="text"]:valid + label {
   }
   #work-priorities {
     padding: 60px 20px 80px 20px;
-    border-bottom: 1px solid #cfcecf;
+    border-bottom: 1px solid var(--foreground);
   }
   .priorities {
     flex: 50%;
@@ -751,15 +800,6 @@ input[type="text"]:valid + label {
     height: 50px;
   }
 
-  /*===== Portfolio styles====*/
-  #projects-categories {
-    width: 600px;
-  }
-
-  #projects-categories .btns {
-    font-size: 16px;
-    height: 30px;
-  }
   #active-category {
     width: 100px;
     height: 30px;
@@ -1093,14 +1133,7 @@ input[type="text"]:valid + label {
   #projects-h4 {
     font-size: 28px;
   }
-  #projects-categories {
-    width: 360px;
-  }
-  #projects-categories .btns {
-    width: 60px;
-    height: 24px;
-    font-size: 11px;
-  }
+
   #active-category {
     width: 60px;
     height: 24px;
@@ -1218,8 +1251,8 @@ input[type="text"]:valid + label {
 
 /*
 Background and K color: rgb(28, 30, 39) #1C1E27         (Dark)
-K Logo background and text color: (207,206,207) #CFCECF (light)
-awara Logo color: rgb(81, 191, 255) #51BFFF             (blue)
+K Logo background and text color: (207,206,207) var(--foreground) (light)
+awara Logo color: rgb(81, 191, 255) var(--blue);        (blue)
 drop list: rgb(89, 189, 127) #59BD7F                    (green)
 x-icom and links hover: rgb(181, 23, 60) #b5173c        (red)
 */

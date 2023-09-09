@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Kawara | Web Developer | Front-end Back-end development</title>
+    <title>Kawara Software Developer | Web Application Development | Front-end Back-end development</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -9,8 +9,8 @@
       type="text/css"
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap&family=Roboto&family=Comic+Neue"
     />
-    <link rel="stylesheet" type="text/css" href="style/variables.css" />
     <link rel="stylesheet" type="text/css" href="style/index.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
     <link rel="shortcut icon" type="image/ico" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicon/apple-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
@@ -78,9 +78,9 @@
                 development.</span
               >
               <span>Feel free to take a look at my work on </span>
-              <a href="#portfolio" class="gen-links">Portfolio</a>
+              <a href="#portfolio" class="link">Portfolio</a>
               <span>page. Enquires at </span>
-              <a href="mailto:info@kawaraa.com?Subject=Hello%20again" class="gen-links">info@kawaraa.com </a>
+              <a href="mailto:info@kawaraa.com?Subject=Hello%20again" class="link">info@kawaraa.com </a>
             </h2>
             <div id="social-media-wrapper">
               <a href="https://www.linkedin.com/in/kawaraa" target="_blank" class="l">
@@ -112,7 +112,7 @@
               </p>
               <p>
                 I'm available for remote work, if you would like to build something together or you have any
-                question, feel free to <a href="#contact" class="gen-links">get in touch</a>
+                question, feel free to <a href="#contact" class="link">get in touch</a>
               </p>
             </article>
             <h2 class="work-priorities-h2">Work Priorities</h2>
@@ -294,16 +294,12 @@
         <section class="pages" id="portfolio">
           <div class="containers">
             <h4 id="projects-h4">Projects</h4>
-            <div id="projects-categories">
-              <div id="active-category"></div>
-              <button class="btns" name="all">All</button>
-              <button class="btns" name="nodejs">Node.js</button>
-              <button class="btns" name="javascript">JavaScript</button>
-              <button class="btns" name="react">React</button>
-              <button class="btns" name="css">CSS</button>
-              <button class="btns" name="typescript">TypeScript</button>
+            <div id="projects-wrapper">
+              <div class="frames">
+                <iframe src="" frameborder="0" class="frames-imgs"></iframe>
+                <a href="" target="_blank" class="view-btns">View</a>
+              </div>
             </div>
-            <div id="projects-results"></div>
           </div>
         </section>
         <section class="pages" id="contact">
@@ -360,7 +356,6 @@
         </section>
       </div>
     </main>
-    <script src="script/utility.js"></script>
     <script src="script/index.js"></script>
   </body>
 </html>
