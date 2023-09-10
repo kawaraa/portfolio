@@ -107,7 +107,7 @@ video {
   overflow: auto;
 }
 #about,
-#portfolio,
+#projects,
 #contact {
   display: none;
 }
@@ -312,13 +312,24 @@ video {
     top: 25vh;
   }
 }
+#hello-emoji {
+  animation: waving 1s ease-in-out 2s;
+}
+@keyframes waving {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
 #introduction {
   position: relative;
   margin-top: 35vh;
   max-width: 1000px;
   padding: 0 20px;
   text-align: center;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: normal;
   line-height: 45px;
 }
@@ -1017,7 +1028,7 @@ input[type="text"]:valid + label {
     font-size: 28px;
   }
   #introduction {
-    margin-top: 35vh;
+    margin-top: 30vh;
     font-size: 18px;
     line-height: 30px;
   }
@@ -1026,13 +1037,13 @@ input[type="text"]:valid + label {
       top: -10vh;
     }
     40% {
-      top: 25vh;
+      top: 15vh;
     }
     80% {
-      top: 20vh;
+      top: 10vh;
     }
     100% {
-      top: 25vh;
+      top: 20vh;
     }
   }
 
