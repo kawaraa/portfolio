@@ -78,8 +78,6 @@ body {
 
 /*==== Background ====*/
 video {
-  z-index: 1;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -292,36 +290,37 @@ video {
 /*===== Intro styles====*/
 #intro-hello {
   position: absolute;
-  top: -20vh;
+  z-index: 1;
+  top: -25vh;
   left: 45%;
   padding: 0;
   font-size: 40px;
   text-align: center;
-  z-index: 1;
   animation: hello 0.3s ease 1.6s forwards;
 }
-#introduction {
-  position: relative;
-  margin-top: 39vh;
-  text-align: center;
-  padding: 0 20%;
-  line-height: 45px;
-  font-weight: normal;
-}
-
 @keyframes hello {
   0% {
     top: -10vh;
   }
   40% {
-    top: 30vh;
-  }
-  80% {
     top: 20vh;
   }
-  100% {
-    top: 30vh;
+  80% {
+    top: 10vh;
   }
+  100% {
+    top: 25vh;
+  }
+}
+#introduction {
+  position: relative;
+  margin-top: 35vh;
+  max-width: 1000px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 45px;
 }
 
 /*===== About styles====*/
@@ -745,7 +744,6 @@ input[type="text"]:valid + label {
 
   /*===== Intro styles====*/
   #introduction {
-    margin-top: 42vh;
     padding: 0 10%;
     line-height: 42px;
     font-size: 28px;
@@ -1020,7 +1018,6 @@ input[type="text"]:valid + label {
   }
   #introduction {
     margin-top: 35vh;
-    padding: 0 5%;
     font-size: 18px;
     line-height: 30px;
   }

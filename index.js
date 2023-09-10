@@ -4,7 +4,7 @@ const pagesContainer = document.getElementById("pages-container");
 const cube = document.getElementById("cube");
 const intro = document.getElementById("intro");
 const about = document.getElementById("about");
-const portfolio = document.getElementById("portfolio");
+const projects = document.getElementById("projects");
 const contact = document.getElementById("contact");
 const width = pagesContainer.offsetWidth;
 const height = pagesContainer.offsetHeight;
@@ -19,10 +19,10 @@ document.querySelectorAll(".pages").forEach((el) => {
 });
 intro.style.transform = "rotateY(0deg)" + transPlus;
 about.style.transform = " rotateY(90deg)" + transPlus;
-portfolio.style.transform = " rotateY(180deg)" + transPlus;
+projects.style.transform = " rotateY(180deg)" + transPlus;
 contact.style.transform = " rotateY(-90deg)" + transPlus;
 about.style.display = "block";
-portfolio.style.display = "block";
+projects.style.display = "block";
 contact.style.display = "block";
 
 function hidePages(page1, page2, page3) {
@@ -32,39 +32,27 @@ function hidePages(page1, page2, page3) {
 }
 
 function showPage() {
+  intro.style.display = "block";
+  about.style.display = "block";
+  projects.style.display = "block";
+  contact.style.display = "block";
+
   if (location.hash === "#intro" || location.hash === "") {
-    intro.style.display = "block";
-    about.style.display = "block";
-    portfolio.style.display = "block";
-    contact.style.display = "block";
     cube.style.transform = transMin + "rotateY(0deg)";
-    setTimeout(() => hidePages(about, portfolio, contact), 550);
+    setTimeout(() => hidePages(about, projects, contact), 550);
   }
   switch (location.hash) {
     case "#about":
-      intro.style.display = "block";
-      about.style.display = "block";
-      portfolio.style.display = "block";
-      contact.style.display = "block";
       cube.style.transform = transMin + "rotateY(-90deg)";
-      setTimeout(() => hidePages(intro, portfolio, contact), 550);
+      setTimeout(() => hidePages(intro, projects, contact), 550);
       break;
-    case "#portfolio":
-      intro.style.display = "block";
-      about.style.display = "block";
-      portfolio.style.display = "block";
-      contact.style.display = "block";
+    case "#projects":
       cube.style.transform = transMin + "rotateY(-180deg)";
       setTimeout(() => hidePages(intro, about, contact), 550);
-      renderProjects("all");
       break;
     case "#contact":
-      intro.style.display = "block";
-      about.style.display = "block";
-      portfolio.style.display = "block";
-      contact.style.display = "block";
       cube.style.transform = transMin + "rotateY(90deg)";
-      setTimeout(() => hidePages(intro, about, portfolio), 550);
+      setTimeout(() => hidePages(intro, about, projects), 550);
       break;
   }
   animateLinks();
@@ -83,32 +71,20 @@ function createAppend(name, parent, options = {}) {
   }
   return elem;
 }
-function typeText(ele, str, time) {
-  Array.from(str).forEach((char) => setTimeout(() => (ele.innerHTML += char), (time += 50)));
+function typeText(el, str, time) {
+  Array.from(str).forEach((char) => setTimeout(() => (el.innerHTML += char), (time += 50)));
   return time;
 }
 function typeIntroduction() {
-  const introduction = document.getElementById("introduction");
-  introduction.innerHTML = "";
-  introduction.style.zIndex = "1";
-  const txt =
-    "My name is Armando Kawara. I'm a full stack web developer, I do Front-end as well as Back-end development. ";
-  let span = createAppend("span", introduction);
-  let time = typeText(span, txt, 2000);
-  let span1 = createAppend("span", introduction);
-  let time1 = typeText(span1, "Feel free to take a look at my work on ", time);
-  let a2 = createAppend("a", introduction, {
-    href: "#portfolio",
-    class: "link",
-  });
-  let time2 = typeText(a2, "Portfolio ", time1);
-  let span3 = createAppend("span", introduction);
-  let time3 = typeText(span3, "page. Enquires at ", time2);
-  let a4 = createAppend("a", introduction, {
-    href: "mailto:info@kawaraa.com?Subject=Hello%20again",
-    class: "link",
-  });
-  typeText(a4, "info@kawaraa.com ", time3);
+  const introductionParts = document.getElementById("introduction").children;
+  let time = 1500;
+  for (const el of introductionParts) {
+    const text = el.innerHTML.trim();
+    console.log(text);
+    el.innerHTML = "";
+    el.style.opacity = "1";
+    time = typeText(el, text, time);
+  }
 }
 typeIntroduction();
 
