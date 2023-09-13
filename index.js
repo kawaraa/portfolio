@@ -97,7 +97,7 @@ function showHidList() {
   let dropList = document.getElementById("drop-list");
   if (menuIcon.className === "m-icon") {
     menuIcon.className = "x-icon";
-    dropList.style.top = "45px";
+    dropList.style.top = "60px";
     listLinks.forEach((el) => (el.style.animation = "margin-max 1s ease 0.5 forwards"));
   } else {
     menuIcon.className = "m-icon";
@@ -112,15 +112,15 @@ function animateLinks() {
   navLinks[1].style.animation = "nav-links-anim 1s ease 0.1s";
   navLinks[2].style.animation = "nav-links-anim 1s ease ";
   navLinks[3].style.animation = "nav-links-anim 1s ease";
-  let Klogo = document.getElementById("k-logo");
+  let logo = document.getElementById("logo");
   let logoLetters = document.getElementById("logo-letters");
-  Klogo.style.animation = "logo 1s ease";
+  logo.style.animation = "logo 1s ease";
   logoLetters.style.animation = "logo 1s ease";
   menuIcon.style.animation = "logo 1s ease";
   setTimeout(
     () =>
       navLinks.forEach((el) => {
-        Klogo.style.animation = "none";
+        logo.style.animation = "none";
         logoLetters.style.animation = "none";
         menuIcon.style.animation = "none";
         el.style.animation = null;
@@ -131,9 +131,9 @@ function animateLinks() {
 
 function showValue(e) {
   if (e.target.name === "budget") {
-    document.getElementById("budget-holder").innerHTML = "€" + e.target.value;
+    document.getElementById("budget-result-holder").innerHTML = "€" + e.target.value;
   } else {
-    document.getElementById("deadline-holder").innerHTML = e.target.value + " Days";
+    document.getElementById("deadline-result-holder").innerHTML = e.target.value + " Days";
   }
 }
 document.getElementById("budget").addEventListener("input", showValue);
@@ -151,23 +151,20 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
     deadline: e.target.deadline.value,
     message: e.target.message.value,
   });
+
+  const responseHolder = document.getElementById("response");
+
   // postJSON("/api/contact", data)
   //   .then((res) => {
-  //     e.target.style.display = "none";
-  //     submitResponse.style.display = "block";
-  //     document.getElementById("response-h2").innerHTML =
-  //       "Thanks for contacting me!<br />I will contact you back very soon.";
+  //     responseHolder.innerHTML = "Thanks for contacting me!<br />I will contact you back very soon.";
   //   })
   //   .catch((err) => {
-  //     e.target.style.display = "none";
-  //     submitResponse.style.display = "block";
-  //     document.getElementById("response-h2").innerHTML = "Something wrong happened, Please try again!";
+  //     responseHolder.innerHTML = "Something wrong happened, Please try again!";
   //   });
 
-  setTimeout(() => (location.hash = "#intro"), 4000);
   setTimeout(() => {
-    e.target.style.display = "block";
-    submitResponse.style.display = "none";
     e.target.reset();
+    location.hash = "#intro";
+    responseHolder.innerHTML = "";
   }, 6000);
 });
