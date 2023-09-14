@@ -76,7 +76,7 @@ body {
   }
 }
 
-/* .video-overlay {
+.video-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -85,7 +85,7 @@ body {
   height: 100%;
   background-color: rgb(0 0 0 / 45%);
   z-index: 1;
-} */
+}
 
 /* Pages cube styles */
 #pages-container {
@@ -303,7 +303,7 @@ body {
 #intro-hello {
   position: absolute;
   z-index: 1;
-  top: -25vh;
+  top: -13vh;
   left: 50%;
   transform: translateX(-50%);
   padding: 0;
@@ -313,16 +313,16 @@ body {
 }
 @keyframes hello {
   0% {
-    top: -10vh;
+    top: -13vh;
   }
   40% {
-    top: 15vh;
+    top: 13vh;
   }
   80% {
-    top: 10vh;
+    top: 8vh;
   }
   100% {
-    top: 16vh;
+    top: 13vh;
   }
 }
 #hello-emoji {
@@ -346,21 +346,20 @@ body {
 #introduction {
   position: relative;
   margin: auto;
-  margin-top: 28vh;
+  margin-top: 23vh;
   max-width: 1000px;
   padding: 0 20px;
   text-align: center;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 18px;
   z-index: 1;
-  text-shadow: 0px 0px 3px #000000;
+  text-shadow: 0px 0px 5px #000000;
 }
 
 /* Social Media styles */
 #social-media-wrapper {
   position: absolute;
   left: 5%;
-  bottom: 20px;
+  bottom: 0;
   padding: 0;
   z-index: 1;
 }
@@ -459,30 +458,30 @@ body {
   font-size: 20px;
   line-height: 25px;
 }
-#skills {
+#technologies {
   padding: 40px 20px;
 }
-#skills > .page-h {
+#technologies .page-h {
   margin: 0 0 40px 0;
 }
-#skills > h2 {
+#technologies > h3 {
   padding: 0;
   margin: 50px 0 15px 10px;
   font-size: 20px;
   font-weight: normal;
 }
-#skills > .card {
+#technologies > .card {
   display: flex;
   flex-flow: wrap;
 }
-.skill {
+.technology {
   flex: 5;
   text-align: center;
   margin: 10px;
   padding: 0;
   font-size: 14px;
 }
-.skill > img {
+.technology > img {
   display: block;
   width: 40px;
   height: 40px;
@@ -912,6 +911,7 @@ input[type="text"]:valid + label {
   }
   #introduction {
     margin-top: 40vh;
+    line-height: 30px;
   }
   /* Social Media styles */
   #social-media-wrapper {
@@ -959,7 +959,7 @@ input[type="text"]:valid + label {
     line-height: 37px;
   }
   .priority {
-    flex: 25%;
+    flex: 33%;
   }
 
   /* Projects styles */
