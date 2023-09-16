@@ -146,21 +146,23 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
     name: e.target.name.value,
     email: e.target.email.value,
     organization: e.target.organization.value,
-    need: e.target.need.value,
+    need: e.target.subject.value,
     budget: e.target.budget.value,
     deadline: e.target.deadline.value,
     message: e.target.message.value,
   });
 
   const responseHolder = document.getElementById("response");
-
-  // postJSON("/api/contact", data)
-  //   .then((res) => {
-  //     responseHolder.innerHTML = "Thanks for contacting me!<br />I will contact you back very soon.";
-  //   })
-  //   .catch((err) => {
-  //     responseHolder.innerHTML = "Something wrong happened, Please try again!";
-  //   });
+  fetch(
+    `https://script.google.com/macros/s/AKfycbwBx0kEGihFZ5vQ7ytswTtiL_gOnzKh34pqSD46dCblvW4vv7PPKnh2ihmkYQhxMSLL1w/exec?name=${name}&email=${email}&organization=${organization}&subject=${subject}&budget=${budget}&deadline=${deadline}&message=${message}`
+  )
+    .then((res) => {
+      if (!res.ok) responseHolder.innerHTML = "Something wrong happened, Please try again!";
+      else responseHolder.innerHTML = "Thanks for contacting me!<br />I will contact you back very soon.";
+    })
+    .catch((err) => {
+      responseHolder.innerHTML = "Something wrong happened, Please try again!";
+    });
 
   setTimeout(() => {
     e.target.reset();
