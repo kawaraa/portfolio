@@ -80,7 +80,6 @@ function typeIntroduction() {
   let time = 1500;
   for (const el of introductionParts) {
     const text = el.innerHTML.trim();
-    console.log(text);
     el.innerHTML = "";
     el.style.opacity = "1";
     time = typeText(el, text, time);
@@ -154,7 +153,8 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
 
   const responseHolder = document.getElementById("response");
   fetch(
-    `https://script.google.com/macros/s/AKfycbwBx0kEGihFZ5vQ7ytswTtiL_gOnzKh34pqSD46dCblvW4vv7PPKnh2ihmkYQhxMSLL1w/exec?name=${name}&email=${email}&organization=${organization}&subject=${subject}&budget=${budget}&deadline=${deadline}&message=${message}`
+    `https://script.google.com/macros/s/AKfycbwBx0kEGihFZ5vQ7ytswTtiL_gOnzKh34pqSD46dCblvW4vv7PPKnh2ihmkYQhxMSLL1w/exec?name=${name}&email=${email}&organization=${organization}&subject=${subject}&budget=${budget}&deadline=${deadline}&message=${message}`,
+    { method: "POST" }
   )
     .then((res) => {
       if (!res.ok) responseHolder.innerHTML = "Something wrong happened, Please try again!";
