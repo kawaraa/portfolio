@@ -141,11 +141,11 @@ document.getElementById("deadline").addEventListener("input", showValue);
 const submitResponse = document.getElementById("submit-response");
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const data = JSON.stringify({
+  const body = JSON.stringify({
     name: e.target.name.value,
     email: e.target.email.value,
     organization: e.target.organization.value,
-    need: e.target.subject.value,
+    subject: e.target.subject.value,
     budget: e.target.budget.value,
     deadline: e.target.deadline.value,
     message: e.target.message.value,
@@ -153,8 +153,8 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
 
   const responseHolder = document.getElementById("response");
   fetch(
-    `https://script.google.com/macros/s/AKfycbwBx0kEGihFZ5vQ7ytswTtiL_gOnzKh34pqSD46dCblvW4vv7PPKnh2ihmkYQhxMSLL1w/exec?name=${name}&email=${email}&organization=${organization}&subject=${subject}&budget=${budget}&deadline=${deadline}&message=${message}`,
-    { method: "POST" }
+    `https://script.google.com/macros/s/AKfycbyQm_YXkN7_oDy0PlEtm65G5KKmiK7Hw3ZMv4BUf1iyZPUZ9LVQVNcMAW4zL1AI3-vH4A/exec`,
+    { method: "POST", body }
   )
     .then((res) => {
       if (!res.ok) responseHolder.innerHTML = "Something wrong happened, Please try again!";
