@@ -62,11 +62,6 @@ const current = pages.findIndex((p) => window.location.href.includes(p));
 window.onload = () => {
   document.getElementById("loading-container").style.display = "none";
   if (current < 1) return;
-  if (localStorage.getItem("next") == "true") {
-    console.log("Should animate to next page");
-    moveNext(document.getElementsByClassName("page")[1]);
-  } else {
-    console.log("Should animate to previous page");
-    movePrevious(document.getElementsByClassName("page")[1]);
-  }
+  if (localStorage.getItem("next") == "true") moveNext(document.getElementsByClassName("page")[1]);
+  else movePrevious(document.getElementsByClassName("page")[1]);
 };

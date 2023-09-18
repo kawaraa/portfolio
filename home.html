@@ -493,6 +493,7 @@
 
     <script src="test-index.js"></script>
     <script>
+      document.getElementById("loading-container").style.display = "none";
       function typeText(el, str, time) {
         Array.from(str).forEach((char) => setTimeout(() => (el.innerHTML += char), (time += 50)));
         return time;
