@@ -249,6 +249,10 @@
         box-shadow: 0 0 0px 4px var(--green) inset;
       }
 
+      #error-holder {
+        margin-bottom: 30px;
+        color: var(--red);
+      }
       /* Submit response styles */
       #response:empty {
         display: none;
@@ -445,8 +449,10 @@
           <textarea name="message" id="message" required></textarea>
           <label for="message">Your Message</label>
         </div>
+        <div id="error-holder"></div>
         <button type="submit" class="form-submit">Send</button>
       </form>
+
       <p id="response"></p>
     </main>
 
@@ -456,6 +462,9 @@
 
     <script src="test-index.js"></script>
     <script>
+      const errMsg = "Something wrong happened, Please try again!";
+      const catchErr = () => (document.getElementById("error-holder").innerHTML = errMsg);
+
       function showValue(e) {
         if (e.target.name === "budget") {
           document.getElementById("budget-result-holder").innerHTML = "€" + e.target.value;
@@ -466,7 +475,7 @@
       document.getElementById("budget").addEventListener("input", showValue);
       document.getElementById("deadline").addEventListener("input", showValue);
 
-      const submitResponse = document.getElementById("submit-response");
+      const submitResponse = document.getElementById("response");
       document.getElementById("contact-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const body = JSON.stringify({
@@ -479,25 +488,19 @@
           message: e.target.message.value,
         });
 
-        const responseHolder = document.getElementById("response");
         fetch(
           `https://script.google.com/macros/s/AKfycbyQm_YXkN7_oDy0PlEtm65G5KKmiK7Hw3ZMv4BUf1iyZPUZ9LVQVNcMAW4zL1AI3-vH4A/exec`,
           { method: "POST", body }
         )
           .then((res) => {
-            if (!res.ok) responseHolder.innerHTML = "Something wrong happened, Please try again!";
-            else
-              responseHolder.innerHTML = "Thanks for contacting me!<br />I will contact you back very soon.";
+            if (!res.ok) return catchErr();
+            submitResponse.innerHTML = "Thanks for contacting me!<br />I will contact you back very soon.";
+            e.target.remove();
+            setTimeout(() => {
+              location.href = "home.html";
+            }, 6000);
           })
-          .catch((err) => {
-            responseHolder.innerHTML = "Something wrong happened, Please try again!";
-          });
-
-        setTimeout(() => {
-          e.target.reset();
-          location.hash = "home.html";
-          responseHolder.innerHTML = "";
-        }, 6000);
+          .catch(catchErr);
       });
     </script>
   </body>
