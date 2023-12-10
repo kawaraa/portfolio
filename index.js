@@ -1,91 +1,5 @@
 "use strict";
-
-const pagesContainer = document.getElementById("pages-container");
-const cube = document.getElementById("cube");
-const intro = document.getElementById("intro");
-const about = document.getElementById("about");
-const projects = document.getElementById("projects");
-const contact = document.getElementById("contact");
-const width = pagesContainer.offsetWidth;
-const height = pagesContainer.offsetHeight;
-const transPlus = `translateZ(${width / 2}px)`;
-const transMin = `translateZ(-${width / 2}px)`;
-
-pagesContainer.style.perspective = width + "px";
-cube.style.width = width + "px";
-cube.style.transform = transMin;
-document.querySelectorAll(".pages").forEach((el) => {
-  el.style.width = width + "px";
-});
-intro.style.transform = "rotateY(0deg)" + transPlus;
-about.style.transform = " rotateY(90deg)" + transPlus;
-projects.style.transform = " rotateY(180deg)" + transPlus;
-contact.style.transform = " rotateY(-90deg)" + transPlus;
-about.style.display = "block";
-projects.style.display = "block";
-contact.style.display = "block";
-
-function hidePages(page1, page2, page3) {
-  page1.style.display = "none";
-  page2.style.display = "none";
-  page3.style.display = "none";
-}
-
-function showPage() {
-  intro.style.display = "block";
-  about.style.display = "block";
-  projects.style.display = "block";
-  contact.style.display = "block";
-
-  if (location.hash === "#intro" || location.hash === "") {
-    cube.style.transform = transMin + "rotateY(0deg)";
-    setTimeout(() => hidePages(about, projects, contact), 550);
-  }
-  switch (location.hash) {
-    case "#about":
-      cube.style.transform = transMin + "rotateY(-90deg)";
-      setTimeout(() => hidePages(intro, projects, contact), 550);
-      break;
-    case "#projects":
-      cube.style.transform = transMin + "rotateY(-180deg)";
-      setTimeout(() => hidePages(intro, about, contact), 550);
-      break;
-    case "#contact":
-      cube.style.transform = transMin + "rotateY(90deg)";
-      setTimeout(() => hidePages(intro, about, projects), 550);
-      break;
-  }
-  animateLinks();
-}
-window.onhashchange = () => setTimeout(showPage, 600);
-
-function createAppend(name, parent, options = {}) {
-  const elem = document.createElement(name);
-  parent.appendChild(elem);
-  for (let key in options) {
-    if (key === "txt") {
-      elem.innerText = options.txt;
-    } else {
-      elem.setAttribute(key, options[key]);
-    }
-  }
-  return elem;
-}
-function typeText(el, str, time) {
-  Array.from(str).forEach((char) => setTimeout(() => (el.innerHTML += char), (time += 50)));
-  return time;
-}
-function typeIntroduction() {
-  const introductionParts = document.getElementById("introduction").children;
-  let time = 1500;
-  for (const el of introductionParts) {
-    const text = el.innerHTML.trim();
-    el.innerHTML = "";
-    el.style.opacity = "1";
-    time = typeText(el, text, time);
-  }
-}
-typeIntroduction();
+const pages = ["home", "projects", "about", "contact"];
 
 const listLinks = document.querySelectorAll(".list-links");
 listLinks.forEach((el) => el.addEventListener("click", showHidList));
@@ -105,7 +19,12 @@ function showHidList() {
   }
 }
 
-function animateLinks() {
+window.addEventListener("click", async (e) => {
+  if (e.target.tagName !== "A") return;
+  const current = pages.findIndex((p) => window.location.href.includes(p));
+  const next = pages.findIndex((p) => e.target.href.includes(p));
+  localStorage.setItem("next", current <= next);
+
   let navLinks = document.querySelectorAll(".nav-links");
   navLinks[0].style.animation = "nav-links-anim 1s ease 0.2s";
   navLinks[1].style.animation = "nav-links-anim 1s ease 0.1s";
@@ -116,57 +35,33 @@ function animateLinks() {
   logo.style.animation = "logo 1s ease";
   logoLetters.style.animation = "logo 1s ease";
   menuIcon.style.animation = "logo 1s ease";
-  setTimeout(
-    () =>
-      navLinks.forEach((el) => {
-        logo.style.animation = "none";
-        logoLetters.style.animation = "none";
-        menuIcon.style.animation = "none";
-        el.style.animation = null;
-      }),
-    1400
-  );
-}
-
-function showValue(e) {
-  if (e.target.name === "budget") {
-    document.getElementById("budget-result-holder").innerHTML = "€" + e.target.value;
-  } else {
-    document.getElementById("deadline-result-holder").innerHTML = e.target.value + " Days";
-  }
-}
-document.getElementById("budget").addEventListener("input", showValue);
-document.getElementById("deadline").addEventListener("input", showValue);
-
-const submitResponse = document.getElementById("submit-response");
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const body = JSON.stringify({
-    name: e.target.name.value,
-    email: e.target.email.value,
-    organization: e.target.organization.value,
-    subject: e.target.subject.value,
-    budget: e.target.budget.value,
-    deadline: e.target.deadline.value,
-    message: e.target.message.value,
-  });
-
-  const responseHolder = document.getElementById("response");
-  fetch(
-    `https://script.google.com/macros/s/AKfycbyQm_YXkN7_oDy0PlEtm65G5KKmiK7Hw3ZMv4BUf1iyZPUZ9LVQVNcMAW4zL1AI3-vH4A/exec`,
-    { method: "POST", body }
-  )
-    .then((res) => {
-      if (!res.ok) responseHolder.innerHTML = "Something wrong happened, Please try again!";
-      else responseHolder.innerHTML = "Thanks for contacting me!<br />I will contact you back very soon.";
-    })
-    .catch((err) => {
-      responseHolder.innerHTML = "Something wrong happened, Please try again!";
-    });
-
-  setTimeout(() => {
-    e.target.reset();
-    location.hash = "#intro";
-    responseHolder.innerHTML = "";
-  }, 6000);
 });
+
+const flipCube = (front, side) => {
+  setTimeout(() => {
+    front.classList.add("front");
+    side.classList.add("leave");
+  }, 100);
+};
+function moveNext(el) {
+  el.nextElementSibling.remove();
+  el.previousElementSibling.classList.add("left");
+  el.classList.add("front-on-right");
+  flipCube(el, el.previousElementSibling);
+}
+function movePrevious(el) {
+  el.previousElementSibling.remove();
+  el.nextElementSibling.classList.add("right");
+  el.classList.add("front-on-left");
+  flipCube(el, el.nextElementSibling);
+}
+
+const next = localStorage.getItem("next") === "true";
+const current = pages.findIndex((p) => window.location.href.includes(p));
+
+window.onload = () => {
+  document.getElementById("loading-container").style.display = "none";
+  if (current < 1) return;
+  if (localStorage.getItem("next") == "true") moveNext(document.getElementsByClassName("page")[1]);
+  else movePrevious(document.getElementsByClassName("page")[1]);
+};
