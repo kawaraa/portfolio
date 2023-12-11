@@ -1,9 +1,15 @@
 import { notFound } from "next/navigation";
+import localFont from "next/font/local";
 import getMetadata from "../metadata";
 
-export default function Layout({ children, params }) {
-  if (params.lang != "en" && params.lang != "ar") notFound();
-  return children;
+const kufiFont = localFont({
+  src: "../../public/font/NotoKufiArabic-VariableFont_wght.ttf",
+  display: "swap",
+});
+
+export default function Layout({ children, params: { lang } }) {
+  if (lang != "en" && lang != "ar") notFound();
+  return <div className={lang == "ar" ? kufiFont.className : ""}>{children}</div>;
 }
 
 export function generateMetadata({ params }) {
