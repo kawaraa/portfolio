@@ -153,7 +153,7 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
 
   const responseHolder = document.getElementById("response");
   fetch(
-    `https://script.google.com/macros/s/AKfycbyQm_YXkN7_oDy0PlEtm65G5KKmiK7Hw3ZMv4BUf1iyZPUZ9LVQVNcMAW4zL1AI3-vH4A/exec`,
+    `https://script.google.com/macros/s/AKfycbwKNqvz7Xx-rSFwCSsvW-N9egWL__dSDiOPFdjabc4ee-_itCwXOrhaXc4iN9bDHGl0/exec`,
     { method: "POST", body }
   )
     .then((res) => {
