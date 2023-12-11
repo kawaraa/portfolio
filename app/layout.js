@@ -1,15 +1,9 @@
 import getMetadata from "./metadata";
+import Layout from "../app/[lang]/layout";
 import "./globals.css";
 
-export default function RootLayout({ children }) {
-  // Todo: find a way to get the "lang" params and add "lang={lang}" to html tag
-  return (
-    <html dir="auto" translate="no">
-      <body className="h-screen selection:bg-teal-300 dark:selection:bg-pink-500 dark:selection:text-white">
-        {children}
-      </body>
-    </html>
-  );
+export default function RootLayout({ children, params, ...p }) {
+  return <Layout params={{ lang: "en" }} />;
 }
 
 export function generateMetadata() {
