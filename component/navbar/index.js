@@ -1,6 +1,6 @@
 export default function Navbar({ lang }) {
   return (
-    <nav className="sticky top-0 left-0 right-0 z-1 p-3 bg-bg flex items-center sm:justify-between">
+    <nav dir="ltr" className="sticky top-0 left-0 right-0 z-1 p-3 bg-bg flex items-center sm:justify-between">
       <a className="flex items-start " href="/en">
         <span className="w-7">
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">

@@ -1,9 +1,10 @@
 import getMetadata from "./metadata";
-import Layout from "../app/[lang]/layout";
 import "./globals.css";
 
-export default function RootLayout({ children, params, ...p }) {
-  return <Layout params={{ lang: "en" }} />;
+// revalidate all the underneath routes and layouts
+// export const revalidate = 1800; // 30 mins in seconds
+export default function RootLayout({ children }) {
+  return children;
 }
 
 export function generateMetadata() {
@@ -16,5 +17,5 @@ export const viewport = {
     { media: "(prefers-color-scheme: light)", color: "#fafafa" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
-  colorScheme: "#000000",
+  colorScheme: "#fafafa",
 };
