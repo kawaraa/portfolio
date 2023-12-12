@@ -51,7 +51,7 @@ export default function getMetadata({ lang, title, description, keywords, author
   };
 }
 
-const content = {
+export const content = {
   title: {
     en: "Kawara Software Development - Web Application Development",
     ar: "كاوارا لتطوير البرمجيات - تطوير تطبيقات الويب - Kawara",
@@ -62,7 +62,7 @@ const content = {
   },
   keywords: {
     en: "Kawara portfolio, Kawara software development, full-stack developer, Frontend developer, Backend developer, Webmaster, Systems development, Mobile application development, Android application development, Iphone IOS application development, Telephone application development, Smart device application development, Web development, Apps development, Maintaining websites and applications, Updating websites and applications, Editing websites and applications, Enhancing websites performance, Enhancing applications performance, Fixing websites and applications, Improving SEO, Improving Search Engine Optimization, SEO friendly Website, User friendly Web App, Create accessible websites, User friendly UI UX, Create responsive websites, Create databases, Building RESTFUL API servers, Building web service",
-    ar: "محفظة كاوارا, كاوارا لتطوير البرمجيات, مطور ويب شامل متكامل, مطور الواجهة الأمامية, مطور الواجهة الخلفية, مطور خوادم, مشرف الموقع, تطوير الأنظمة, تطوير تطبيقات الهاتف المحمول, تطوير تطبيقات الاندرويد, تطوير تطبيقات الايفون IOS, تطوير تطبيقات الهاتف, تطوير تطبيقات الأجهزة الذكية, تطوير الشبكة, صيانة المواقع والتطبيقات, تحديث المواقع والتطبيقات, تحرير المواقع والتطبيقات, تعزيز أداء المواقع, تحسين أداء التطبيقات, اصلاح المواقع والتطبيقات, تحسين محركات البحث, موقع متوافق مع تحسين محركات البحث, تطبيق ويب سهل الاستخدام, إنشاء مواقع ويب يمكن الوصول إليها, واجهة مستخدم سهلة الاستخدام, إنشاء مواقع ويب سريعة الاستجابة, إنشاء مواقع ويب متجاوب, إنشاء قواعد البيانات, بناء خوادم RESTFUL API, بناء خدمة الويب",
+    ar: "محفظة كاوارا, كاوارا لتطوير البرمجيات, مطور ويب شامل متكامل, مطور الواجهة الأمامية, مطور الواجهة الخلفية, مطور خوادم, مشرف الموقع, تطوير الأنظمة, تطوير تطبيقات الهاتف المحمول, تطوير تطبيقات الاندرويد, تطوير تطبيقات الايفون IOS, تطوير تطبيقات الهاتف, تطوير تطبيقات الأجهزة الذكية, تطوير الشبكة, صيانة المواقع والتطبيقات, تحديث المواقع والتطبيقات, تحرير المواقع والتطبيقات, تعزيز أداء المواقع, تحسين أداء التطبيقات, اصلاح المواقع والتطبيقات, تحسين محركات البحث, موقع متوافق مع تحسين محركات البحث, تطبيق ويب سهل الاستخدام, إنشاء مواقع ويب يمكن الوصول إليها, واجهة مستخدم سهلة الاستخدام, إنشاء مواقع ويب سريعة الاستجابة, إنشاء مواقع ويب متجاوب, إنشاء قواعد البيانات, بناء خوادم, بناء خدمة الويب, بناء سيرفرات, واجهة برمجة",
   },
   author: { name: "Kawara", url: baseUrl },
 };

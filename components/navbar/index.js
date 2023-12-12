@@ -38,7 +38,10 @@ export default async function Navbar({ lang }) {
         ))}
       </div>
 
-      <a href={content.contact.path.replace("lang", lang)} className={btnCls + "  mx-3 py-2 rounded-full "}>
+      <a
+        href={content.contact.path.replace("lang", lang)}
+        className={btnCls + "  mx-3 py-2 px-4 rounded-full "}
+      >
         {content.contact[lang]}
       </a>
       <MobileMenu lang={lang} />
