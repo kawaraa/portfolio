@@ -7,9 +7,7 @@ export default function RootLayout({ children }) {
   return children;
 }
 
-export function generateMetadata() {
-  return getMetadata({ lang: "en" });
-}
+export const metadata = getMetadata({ lang: "en" });
 
 export const viewport = {
   themeColor: "#fafafa",

@@ -1,4 +1,4 @@
-import { bCls, cardBgCls } from "../../../component/tailwindcss-class";
+import { bCls, cardBgCls } from "../../../components/tailwindcss-class";
 
 export default function About({ params: { lang } }) {
   return (

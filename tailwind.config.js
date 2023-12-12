@@ -4,13 +4,14 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      screens: { xs: "450px" },
+      fontFamily: {
+        arabic: ["Noto Kufi Arabic", "sans-serif"],
+        monospace: "monospace",
+      },
       colors: {
         // testbg: "linear-gradient(to bottom right, #9bface, #b26cfc)",
         // hpbg: "radial-gradient(#b8f5d9, #ffffff)",
@@ -46,10 +47,6 @@ module.exports = {
         // blue: "#4696ff",
         // orange: "#ffa500",
         // blur: "#00000066",
-      },
-      fontFamily: {
-        arabic: ["Noto Kufi Arabic", "sans-serif"],
-        monospace: "monospace",
       },
       zIndex: {
         auto: "auto",

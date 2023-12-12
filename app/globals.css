@@ -22,3 +22,69 @@ body {
   background: var(--background-end);
   color: var(--foreground);
 }
+
+/* Prevent usr from selecting text */
+.no-select {
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  -webkit-user-select: none; /* Safari */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  -o-user-select: none; /* Opera */
+}
+/* Hide scrollbar */
+.no-srl-bar::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari and Opera */
+}
+.no-srl-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+a {
+  cursor: inherit;
+}
+a.hvr:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+a.hvr:hover:after {
+  transform: scaleX(1);
+}
+a.hvr:active:after {
+  transform: scaleX(1);
+}
+
+.fade-out {
+  animation: animate-fade-out 0.3s ease;
+}
+.fade-in {
+  animation: animate-fade-in 0.3s ease forwards;
+}
+@keyframes animate-fade-out {
+  0% {
+    transform: scale(0.1, 0.002);
+  }
+  50% {
+    transform: scale(1, 0.002);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes animate-fade-in {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.002);
+  }
+  100% {
+    transform: scale(0.1, 0.002);
+  }
+}
