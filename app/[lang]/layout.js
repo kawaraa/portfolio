@@ -14,7 +14,7 @@ export default function Layout({ children, params: { lang } }) {
 
   return (
     <html dir="auto" translate="no" lang={lang} className={lang == "ar" ? kufiFont.className : ""}>
-      <body className="h-screen no-select h-screen selection:bg-teal-300 dark:selection:bg-pink-500 dark:selection:text-white cursor-[url(/cursor.svg),_auto] shadow-[0_0_50px_50px_rgba(0,0,0,0.7)] fade-out">
+      <body className="h-screen no-select h-screen flex flex-col selection:bg-teal-300 dark:selection:bg-pink-500 dark:selection:text-white cursor-[url(/cursor.svg),_auto] shadow-[0_0_50px_50px_rgba(0,0,0,0.7)] page-open">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -40,8 +40,6 @@ export default function Layout({ children, params: { lang } }) {
         />
 
         {/* <header></header> */}
-        {/* <div className="min-h-screen flex flex-col bg-bg text-t selection:bg-teal-300 shadow-[0_0_50px_50px_rgba(0,0,0,0.7)]">
-        </div> */}
         <Navbar lang={lang} />
         {children}
         <CursorAndPageAnimation />

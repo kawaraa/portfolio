@@ -8,7 +8,8 @@ export default function getMetadata({ lang, title, description, keywords, author
     description: description || content.description[lang],
     keywords: keywords || content.keywords[lang],
     category: "Software Development",
-    authors: [author || content.author],
+    applicationName: "Kawara",
+    authors: [author || "Kawara"],
     icons: {
       shortcut: { type: "image/ico", sizes: "48x48", url: "/favicon/favicon.ico" },
       icon: { type: "image/png", sizes: "16x16", url: "/favicon/favicon-16x16.png" },

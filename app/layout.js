@@ -19,5 +19,5 @@ export const viewport = {
     { media: "(prefers-color-scheme: light)", color: "#fafafa" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
-  colorScheme: "#fafafa",
+  colorScheme: "light dark",
 };

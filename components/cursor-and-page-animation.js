@@ -8,21 +8,22 @@ export default function CursorAndPageAnimation() {
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
 
   const handleMouseMove = (e) => {
+    // console.log(e.toElement.tagName);
     setCoordinates({ x: e.clientX, y: e.clientY });
   };
 
   const fetchContent = (e) => {
     if (e.target.tagName === "A") {
       e.preventDefault();
-      document.body.classList.add("fade-in");
-      setTimeout(() => router.push(e.target.href), 300);
+      document.body.classList.add("page-shut");
+      setTimeout(() => router.push(e.target.href), 400);
     }
   };
 
   useEffect(() => {
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("click", fetchContent);
-    document.body.classList.remove("fade-in");
+    document.body.classList.remove("page-shut");
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("click", fetchContent);

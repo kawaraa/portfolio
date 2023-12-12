@@ -12,7 +12,7 @@ export default async function Navbar({ lang }) {
       className="sticky top-0 left-0 right-0 z-1 p-3 bg-[inherit] flex items-center md:justify-between"
     >
       <Link href={`/${lang}`} className="flex items-start ">
-        <span className="w-7">
+        <span className="w-7 text-sc">
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <g className="layer" fill="none" stroke="currentColor" strokeWidth="30">
               <rect height="310" width="466" x="23" y="45.5" strokeLinejoin="round" />
@@ -25,7 +25,7 @@ export default async function Navbar({ lang }) {
             </g>
           </svg>
         </span>
-        <span className={`mx-3 tracking-[2px] text-2xl ${IconFont.className}`}>Kawara</span>
+        <span className={`mx-3 leading-[1] tracking-[2px] text-2xl ${IconFont.className}`}>Kawara</span>
       </Link>
 
       <div className="flex-auto"></div>
