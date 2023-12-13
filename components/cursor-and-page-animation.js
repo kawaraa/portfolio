@@ -6,9 +6,12 @@ export default function CursorAndPageAnimation() {
   const router = useRouter();
   const params = useParams();
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
+  const [cls, setCls] = useState("");
 
   const handleMouseMove = (e) => {
-    // console.log(e.toElement.tagName);
+    console.log();
+    if (e.toElement.tagName != "BUTTON" && e.toElement.name != "BUTTON") setCls("");
+    else setCls("bg-transparent w-20 h-20 border-2 border-pc");
     setCoordinates({ x: e.clientX, y: e.clientY });
   };
 
@@ -32,7 +35,7 @@ export default function CursorAndPageAnimation() {
 
   return (
     <div
-      className="fixed z-[999999] w-[25px] h-[25px] top-0 left-0 rounded-full bg-white mix-blend-difference pointer-events-none will-change-transform"
+      className={`fixed z-[999999] w-[25px] h-[25px] top-0 left-0 rounded-full bg-white mix-blend-difference pointer-events-none will-change-transform ${cls}`}
       style={{
         transition: "0.4s ease-out",
         transform: `translate(${x - 10}px, ${y - 10}px)`,

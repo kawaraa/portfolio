@@ -40,6 +40,7 @@ export default async function Navbar({ lang }) {
 
       <a
         href={content.contact.path.replace("lang", lang)}
+        name="BUTTON"
         className={btnCls + "  mx-3 py-2 px-4 rounded-full "}
       >
         {content.contact[lang]}

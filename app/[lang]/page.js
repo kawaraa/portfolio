@@ -11,8 +11,8 @@ export default function HomePageByLang({ params: { lang } }) {
       <section>
         <h1 id="intro-heading">
           <div className="flex justify-center items-end text-3xl mt-[10vh]">
-            Hi!
-            <img src="hi-emoji.png" alt="Hi Emoji" className="w-12 mx-1" />
+            <span id="hi">Hi!</span>
+            <img src="hi-emoji.png" alt="Hi Emoji" id="hi-emoji" className="w-12 mx-1" />
           </div>
 
           <span className="sr-only">
@@ -70,3 +70,19 @@ export default function HomePageByLang({ params: { lang } }) {
 export function generateMetadata({ params: { lang } }) {
   return { alternates: { canonical: lang == "en" ? "/" : "/ar" } };
 }
+
+const content = {
+  p: {
+    en: [
+      "Welcome to Kawara, where innovation meets execution. We are a leading software development company dedicated to crafting digital solutions that drive success for businesses of all sizes. With a team of talented developers, designers, and strategists, we specialize in creating cutting-edge software tailored to your unique needs.",
+      "We offer a wide range of software development services to help you stay ahead in the digital age.",
+      "We build bespoke software solutions that align perfectly with your business goals.",
+      "Feel free to take a look at some of our work on",
+      "Projects",
+      "page",
+      "Ready to transform your ideas into reality? then Contact us at",
+      "info@kawaraa.com",
+    ],
+    ar: [],
+  },
+};
