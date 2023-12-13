@@ -112,6 +112,29 @@ a.hvr:active:after {
   }
 }
 
+/* Site Name */
+#site-name {
+  transform: translate(50vh, 50vh);
+  opacity: 0;
+  position: absolute;
+  animation: animate-site-name 0.5s ease-in 0.5s forwards;
+}
+@keyframes logo-letters {
+  0% {
+    letter-spacing: 100vh;
+    opacity: 1;
+  }
+  50% {
+    transform: translate(50vh, 50vh);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
 /* Home page */
 #hi {
   transform: translate(0, -20vh);

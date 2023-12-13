@@ -25,7 +25,9 @@ export default async function Navbar({ lang }) {
             </g>
           </svg>
         </span>
-        <span className={`mx-3 leading-[1] tracking-[2px] text-2xl ${IconFont.className}`}>Kawara</span>
+        <span id="site-name" className={`mx-3 leading-[1] tracking-[2px] text-2xl ${IconFont.className}`}>
+          Kawara
+        </span>
       </Link>
 
       <div className="flex-auto"></div>

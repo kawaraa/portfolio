@@ -9,10 +9,15 @@ export default function CursorAndPageAnimation() {
   const [cls, setCls] = useState("");
 
   const handleMouseMove = (e) => {
-    console.log();
+    let x = 10;
+    let y = 10;
     if (e.toElement.tagName != "BUTTON" && e.toElement.name != "BUTTON") setCls("");
-    else setCls("bg-transparent w-20 h-20 border-2 border-pc");
-    setCoordinates({ x: e.clientX, y: e.clientY });
+    else {
+      x = 40;
+      y = 40;
+      setCls("!bg-transparent !w-20 !h-20 border-2 border-pc");
+    }
+    setCoordinates({ x: e.clientX - x, y: e.clientY - y });
   };
 
   const fetchContent = (e) => {
@@ -38,7 +43,7 @@ export default function CursorAndPageAnimation() {
       className={`fixed z-[999999] w-[25px] h-[25px] top-0 left-0 rounded-full bg-white mix-blend-difference pointer-events-none will-change-transform ${cls}`}
       style={{
         transition: "0.4s ease-out",
-        transform: `translate(${x - 10}px, ${y - 10}px)`,
+        transform: `translate(${x}px, ${y}px)`,
       }}
     ></div>
   );

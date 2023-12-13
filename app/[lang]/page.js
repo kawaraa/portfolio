@@ -1,5 +1,7 @@
 // import Image from "next/image";
 
+import TypingAnimation from "../../components/typing-animation";
+
 // import dynamic from "next/dynamic";
 // const DynamicHeader = dynamic(() => import("../components/header"), { ssr: false });
 // you can use the ssr option to disable server-rendering. This is useful if an external dependency or component relies on browser APIs like window.
@@ -12,7 +14,7 @@ export default function HomePageByLang({ params: { lang } }) {
         <h1 id="intro-heading">
           <div className="flex justify-center items-end text-3xl mt-[10vh]">
             <span id="hi">Hi!</span>
-            <img src="hi-emoji.png" alt="Hi Emoji" id="hi-emoji" className="w-12 mx-1" />
+            <img src="hi-emoji.png" alt="Hi Emoji" name="BUTTON" id="hi-emoji" className="w-12 mx-1" />
           </div>
 
           <span className="sr-only">
@@ -28,25 +30,27 @@ export default function HomePageByLang({ params: { lang } }) {
           other things.
         </p>
 
-        <div className="text-center mt-5 ">
-          <p className="">
+        <div id="introduction" className="text-lg text-center mt-5 ">
+          <p className="opacity-0">
             Welcome to Kawara, where innovation meets execution. We are a leading software development company
             dedicated to crafting digital solutions that drive success for businesses of all sizes. With a
             team of talented developers, designers, and strategists, we specialize in creating cutting-edge
             software tailored to your unique needs.
           </p>
-          <p>
+          <p className="opacity-0">
             We offer a wide range of software development services to help you stay ahead in the digital age.
           </p>
-          <p>We build bespoke software solutions that align perfectly with your business goals.</p>
-          <span className="">Feel free to take a look at some of our work on</span>
-          <a className=" link" href="#projects">
+          <p className="opacity-0">
+            We build bespoke software solutions that align perfectly with your business goals.
+          </p>
+          <span className="opacity-0">Feel free to take a look at some of our work on</span>
+          <a className="opacity-0 link" href="#projects">
             Projects
           </a>
-          <span className="">page.</span>
+          <span className="opacity-0">page.</span>
           <br />
-          <span className="">Ready to transform your ideas into reality? then Contact us at </span>
-          <a className=" link" href="mailto:info@kawaraa.com?Subject=Hello%20again">
+          <span className="opacity-0">Ready to transform your ideas into reality? then Contact us at </span>
+          <a className="opacity-0 link" href="mailto:info@kawaraa.com?Subject=Hello%20again">
             info@kawaraa.com
           </a>
         </div>
@@ -63,6 +67,8 @@ export default function HomePageByLang({ params: { lang } }) {
           <img src="media/github-logo.png" loading="lazy" alt="GitHub" className="social-media" />
         </a>
       </div>
+
+      <TypingAnimation containerId="introduction" />
     </main>
   );
 }
