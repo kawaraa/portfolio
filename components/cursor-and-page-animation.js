@@ -9,9 +9,10 @@ export default function CursorAndPageAnimation() {
   const [cls, setCls] = useState("");
 
   const handleMouseMove = (e) => {
+    const name = e.target.dataset.name || e.toElement.name || e.toElement.tagName;
     let x = 10;
     let y = 10;
-    if (e.toElement.tagName != "BUTTON" && e.toElement.name != "BUTTON") setCls("");
+    if (name != "BUTTON") setCls("");
     else {
       x = 40;
       y = 40;

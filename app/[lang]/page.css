@@ -67,33 +67,6 @@
     -webkit-transform: translate(0, 0);
   }
 }
-/* Site Logo */
-/* #site-logo {
-  opacity: 0;
-  transform-origin: center;
-  animation: animate-site-logo 3s ease-in 1.5s forwards;
-}
-@keyframes animate-site-logo {
-  0% {
-    opacity: 1;
-  }
-  1% {
-    opacity: 1;
-    transform: rotate(-360deg) translate(-5vw, calc(50vh - 15px));
-  }
-  60% {
-    opacity: 1;
-    transform: rotate(0deg) translate(calc(50vw - 35px), calc(50vh - 15px));
-  }
-  80% {
-    opacity: 1;
-    transform: translate(calc(50vw - 35px), calc(50vh - 15px));
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-} */
 
 /* Home page */
 #hi {

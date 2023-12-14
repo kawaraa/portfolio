@@ -1,5 +1,6 @@
 // import Image from "next/image";
 import TypingAnimation from "../../components/typing-animation";
+import { getCssDelay } from "../../services/utilities";
 import "./page.css";
 
 // import dynamic from "next/dynamic";
@@ -9,8 +10,8 @@ import "./page.css";
 
 export default function HomePageByLang({ params: { lang } }) {
   return (
-    <main className="">
-      <section>
+    <main className="flex flex-col h-full">
+      <section className="flex-auto">
         <h1 id="intro-heading">
           <div className="flex justify-center items-end mt-[10vh]">
             <span id="hi" className="text-5xl">
@@ -58,20 +59,29 @@ export default function HomePageByLang({ params: { lang } }) {
         </div>
       </section>
 
-      <div id="social-media-wrapper">
-        <a href="https://www.linkedin.com/in/kawaraa" target="_blank" className="l">
-          <img src="media/linkedin.png" loading="lazy" alt="Linkedin logo" className="social-media" />
-        </a>
-        <a href="https://www.facebook.com/kawaraa1" target="_blank" className="f">
-          <img src="media/facebook.png" alt="Facebook logo" className="social-media" />
-        </a>
-        <a href="https://github.com/kawaraa" target="_blank" className="g">
-          <img src="media/github-logo.png" loading="lazy" alt="GitHub" className="social-media" />
-        </a>
-      </div>
+      <SocialMedia lang={lang} />
 
       <TypingAnimation containerId="introduction" startMillisecond={1000} />
     </main>
+  );
+}
+
+export function SocialMedia({ lang }) {
+  return (
+    <div id="social-media-wrapper" className="p-6 flex gap-3">
+      {content.socialMedia.map((item, i) => (
+        <a
+          href={item.link}
+          target="_blank"
+          title={item.title[lang]}
+          className="overflow-hidden w-12 rounded-lg duration-300 lazy-b "
+          style={getCssDelay(1)}
+          key={i}
+        >
+          <img src={item.imageUrl} alt="social media profile logo" className="w-full" />
+        </a>
+      ))}
+    </div>
   );
 }
 
@@ -93,4 +103,21 @@ const content = {
     ],
     ar: [],
   },
+  socialMedia: [
+    {
+      title: { en: "Kawara LinkedIn profile", ar: "الملف الشخصي على لينكدإن" },
+      link: "https://www.linkedin.com/in/kawaraa",
+      imageUrl: "linkedin.png",
+    },
+    {
+      title: { en: "Kawara Facebook page", ar: "صفحة كاوارا على الفيسبوك" },
+      link: "https://www.facebook.com/kawaraa1",
+      imageUrl: "facebook.png",
+    },
+    {
+      title: { en: "Kawara GitHub profile", ar: "الملف الشخصي لكوارا على كيت هاب" },
+      link: "https://github.com/kawaraa",
+      imageUrl: "github.png",
+    },
+  ],
 };
