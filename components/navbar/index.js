@@ -12,7 +12,7 @@ export default async function Navbar({ lang }) {
       className="sticky top-0 left-0 right-0 z-1 p-3 bg-[inherit] flex items-center md:justify-between"
     >
       <Link href={`/${lang}`} className="flex items-start ">
-        <span className="w-7 text-sc">
+        <span id="site-logo" className="w-7 text-sc">
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <g className="layer" fill="none" stroke="currentColor" strokeWidth="30">
               <rect height="310" width="466" x="23" y="45.5" strokeLinejoin="round" />
@@ -43,7 +43,7 @@ export default async function Navbar({ lang }) {
       <a
         href={content.contact.path.replace("lang", lang)}
         name="BUTTON"
-        className={btnCls + "  mx-3 py-2 px-4 rounded-full "}
+        className={`${btnCls} mx-3 py-2 px-4 rounded-full`}
       >
         {content.contact[lang]}
       </a>

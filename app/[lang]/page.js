@@ -1,6 +1,6 @@
 // import Image from "next/image";
-
 import TypingAnimation from "../../components/typing-animation";
+import "./page.css";
 
 // import dynamic from "next/dynamic";
 // const DynamicHeader = dynamic(() => import("../components/header"), { ssr: false });
@@ -12,9 +12,11 @@ export default function HomePageByLang({ params: { lang } }) {
     <main className="">
       <section>
         <h1 id="intro-heading">
-          <div className="flex justify-center items-end text-3xl mt-[10vh]">
-            <span id="hi">Hi!</span>
-            <img src="hi-emoji.png" alt="Hi Emoji" name="BUTTON" id="hi-emoji" className="w-12 mx-1" />
+          <div className="flex justify-center items-end mt-[10vh]">
+            <span id="hi" className="text-5xl">
+              Hi
+            </span>
+            <img src="hi-emoji.png" alt="Hi Emoji" name="BUTTON" id="hi-emoji" className="w-12 mx-3" />
           </div>
 
           <span className="sr-only">
@@ -68,7 +70,7 @@ export default function HomePageByLang({ params: { lang } }) {
         </a>
       </div>
 
-      <TypingAnimation containerId="introduction" />
+      <TypingAnimation containerId="introduction" startMillisecond={1000} />
     </main>
   );
 }
