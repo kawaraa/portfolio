@@ -1,10 +1,9 @@
-const siteName = process.env.SITE_NAME;
 const baseUrl = new URL(process.env.NEXT_PUBLIC_HOST);
 const twitterSite = process.env.TWITTER_SITE;
 
 export default function getMetadata({ lang, title, description, keywords, author, data }) {
   return {
-    title: { default: title || content.title[lang], template: `%s | ${siteName}` },
+    title: { default: title || content.title[lang], template: `%s | ${content.name[lang]}` },
     description: description || content.description[lang],
     keywords: keywords || content.keywords[lang],
     category: "Software Development",
@@ -28,7 +27,7 @@ export default function getMetadata({ lang, title, description, keywords, author
       title: title || content.title[lang],
       description: description || content.description[lang],
       url: baseUrl,
-      siteName,
+      siteName: "Kawara",
       images: [{ url: `${baseUrl}/android-chrome-512x512.png`, width: 600, height: 600 }],
       type: "website",
       // publishedTime: page.createdAt,
@@ -53,6 +52,7 @@ export default function getMetadata({ lang, title, description, keywords, author
 }
 
 export const content = {
+  name: { en: "Kawara Software Consultant", ar: "كاوارا أخصائي برمجيات" },
   title: {
     en: "Kawara Software Development - Web Application Development",
     ar: "كاوارا لتطوير البرمجيات - تطوير تطبيقات الويب - Kawara",

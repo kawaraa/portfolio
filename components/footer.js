@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { navLinks } from "./shared-content";
 import Brand from "./navbar/brand";
 import { skeleton } from "./tailwindcss-class";
-const copyrightName = process.env.SITE_NAME || "";
 const lineSkeleton = skeleton + " w-full h-6";
 
 export default async function Footer({ lang }) {
@@ -33,8 +32,8 @@ export default async function Footer({ lang }) {
         <Suspense
           fallback={
             <div className="flex justify-around">
-              {new Array(2).fill(0).map(() => (
-                <div className="flex h-[188px] w-[200px] flex-col gap-5">
+              {new Array(2).fill(0).map((_, i) => (
+                <div className="flex h-[188px] w-[200px] flex-col gap-5" key={i}>
                   <div className={lineSkeleton} />
                   <div className={lineSkeleton} />
                   <div className={lineSkeleton} />
@@ -58,8 +57,7 @@ export default async function Footer({ lang }) {
       <div className="py-6 text-sm">
         <div className="mx-auto w-full max-w-7xl flex flex-col items-center justify-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p>
-            &copy; {copyrightDate} {copyrightName}
-            {copyrightName.length && !copyrightName.endsWith(".") ? "." : ""} {content.rights[lang]}
+            &copy; {copyrightDate} Kawara.{content.rights[lang]}
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] md:inline-block" />
           <p>{content.certified[lang]}</p>
@@ -76,17 +74,17 @@ const content = {
     {
       title: { en: "Kawara LinkedIn profile", ar: "الملف الشخصي على لينكدإن" },
       link: "https://www.linkedin.com/in/kawaraa",
-      imageUrl: "linkedin.png",
+      imageUrl: "/linkedin.png",
     },
     {
       title: { en: "Kawara Facebook page", ar: "صفحة كاوارا على الفيسبوك" },
       link: "https://www.facebook.com/kawaraa1",
-      imageUrl: "facebook.png",
+      imageUrl: "/facebook.png",
     },
     {
       title: { en: "Kawara GitHub profile", ar: "الملف الشخصي لكوارا على كيت هاب" },
       link: "https://github.com/kawaraa",
-      imageUrl: "github.png",
+      imageUrl: "/github.png",
     },
   ],
 };
