@@ -2,6 +2,7 @@ import Link from "next/link";
 import localFont from "next/font/local";
 import MobileMenu from "./mobile-menu";
 import { btnCls } from "../tailwindcss-class";
+const siteName = process.env.SITE_NAME;
 
 const IconFont = localFont({ src: "../../public/font/Quicksand-Bold.ttf", display: "swap" });
 
@@ -11,8 +12,8 @@ export default async function Navbar({ lang }) {
       dir="ltr"
       className="sticky top-0 left-0 right-0 z-1 p-3 bg-[inherit] flex items-center md:justify-between"
     >
-      <Link href={`/${lang}`} className="flex items-start ">
-        <span id="site-logo" data-name="BUTTON" className="w-8 text-sc">
+      <Link href={`/${lang}`} className="flex items-start">
+        <span id="site-logo" data-name="BUTTON" className="w-8 text-sc hover:scale-150 duration-300">
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none">
             <defs>
               <linearGradient id="logo-gradient" x1="0%" y1="-50%" x2="100%" y2="190%">
@@ -34,8 +35,11 @@ export default async function Navbar({ lang }) {
             </g>
           </svg>
         </span>
-        <span id="site-name" className={`mx-3 leading-[1] tracking-[2px] text-2xl ${IconFont.className}`}>
-          Kawara
+        <span
+          id="site-name"
+          className={`mx-3 leading-[1] tracking-[2px] text-2xl capitalize ${IconFont.className}`}
+        >
+          {siteName}
         </span>
       </Link>
 

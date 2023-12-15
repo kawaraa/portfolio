@@ -23,16 +23,6 @@ body {
   color: var(--foreground);
 }
 
-/* Prevent usr from selecting text */
-.no-select {
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  -webkit-user-select: none; /* Safari */
-  -webkit-touch-callout: none; /* iOS Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  -o-user-select: none; /* Opera */
-}
 /* Hide scrollbar */
 .no-srl-bar::-webkit-scrollbar {
   display: none;
@@ -44,6 +34,11 @@ body {
 }
 a {
   cursor: inherit;
+}
+
+a.hvr {
+  display: inline-block;
+  position: relative;
 }
 a.hvr:after {
   display: block;

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function Transition({ Tag, children, base, enter, exit, time = "300", open, ...p }) {
   const [active, setActive] = useState(open);
-  const [cls, setCls] = useState(enter);
+  const [cls, setCls] = useState("");
 
   useEffect(() => {
     if (open) {

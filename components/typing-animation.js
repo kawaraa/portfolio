@@ -14,7 +14,7 @@ export default function TypingAnimation({ containerId, text, startMillisecond = 
     function typeIntroduction() {
       const container = document.getElementById(containerId).children;
       for (const el of container) {
-        const text = el.innerHTML.trim();
+        const text = el.innerHTML + "";
         el.innerHTML = "";
         el.classList.replace("opacity-0", "opacity-1");
         time.current = typeText(text, time.current, (char) => (el.innerHTML += char));

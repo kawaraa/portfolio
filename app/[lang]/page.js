@@ -1,7 +1,9 @@
 // import Image from "next/image";
 import TypingAnimation from "../../components/typing-animation";
 import { getCssDelay } from "../../services/utilities";
+import { linkCls } from "../../components/tailwindcss-class";
 import "./page.css";
+import ToastMessages from "../../components/toast-messages";
 
 // import dynamic from "next/dynamic";
 // const DynamicHeader = dynamic(() => import("../components/header"), { ssr: false });
@@ -33,7 +35,7 @@ export default function HomePageByLang({ params: { lang } }) {
           other things.
         </p>
 
-        <div id="introduction" className="text-lg text-center mt-5 ">
+        <div id="introduction" className="text-lg text-center mt-5">
           <p className="opacity-0">
             Welcome to Kawara, where innovation meets execution. We are a leading software development company
             dedicated to crafting digital solutions that drive success for businesses of all sizes. With a
@@ -46,14 +48,18 @@ export default function HomePageByLang({ params: { lang } }) {
           <p className="opacity-0">
             We build bespoke software solutions that align perfectly with your business goals.
           </p>
-          <span className="opacity-0">Feel free to take a look at some of our work on</span>
-          <a className="opacity-0 link" href="#projects">
+          <span className="opacity-0">Feel free to take a look at some of our work on </span>
+          <a className={`opacity-0 ${linkCls} hvr`} href="/work">
             Projects
           </a>
-          <span className="opacity-0">page.</span>
+          <span className="opacity-0"> page.</span>
           <br />
           <span className="opacity-0">Ready to transform your ideas into reality? then Contact us at </span>
-          <a className="opacity-0 link" href="mailto:info@kawaraa.com?Subject=Hello%20again">
+          <a
+            className={`opacity-0 ${linkCls} hvr`}
+            target="_blank"
+            href="mailto:info@kawaraa.com?Subject=Hello%20again"
+          >
             info@kawaraa.com
           </a>
         </div>
@@ -62,6 +68,7 @@ export default function HomePageByLang({ params: { lang } }) {
       <SocialMedia lang={lang} />
 
       <TypingAnimation containerId="introduction" startMillisecond={1000} />
+      <ToastMessages messages={content.messages[lang]} />
     </main>
   );
 }
@@ -120,4 +127,18 @@ const content = {
       imageUrl: "github.png",
     },
   ],
+  messages: {
+    en: [
+      "Hi there!",
+      "Thanks for visiting!",
+      "We will walk you through hour site",
+      "Let's start first with what we can do",
+      "We are a Software Consultant",
+      "Wee works externally for companies and helps them with software development processes",
+      "This may include their software planning, design and construction stages",
+      "Sometimes these consultants work alone on these projects, and sometimes they collaborate with internal software developers",
+      "Want to know more about what we can do for you, please visit Services Page.",
+    ],
+    ar: [],
+  },
 };

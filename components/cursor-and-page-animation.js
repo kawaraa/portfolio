@@ -22,7 +22,7 @@ export default function CursorAndPageAnimation() {
   };
 
   const fetchContent = (e) => {
-    if (e.target.tagName === "A") {
+    if (e.target.tagName === "A" && e.target.target !== "_blank") {
       e.preventDefault();
       document.body.classList.add("page-shut");
       setTimeout(() => router.push(e.target.href), 400);
