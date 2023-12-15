@@ -63,7 +63,7 @@ const content = {
   p: {
     en: [
       "Welcome to Kawara, where innovation meets execution.",
-      "We are a leading software development company dedicated to crafting digital solutions that drive success for businesses of all sizes. With a team of talented developers, designers, and strategists, we specialize in creating cutting-edge software tailored to your unique needs.",
+      "We are a software consulting company dedicated to crafting digital solutions that drive success for businesses of all sizes. With a team of talented developers and designers specialize in creating cutting-edge software tailored to your unique needs.",
       "We offer a wide range of software development services to help you stay ahead in the digital age.",
       "We build bespoke software solutions that align perfectly with your business goals.",
       "Feel free to take a look at some of our work on ",
@@ -73,7 +73,7 @@ const content = {
     ],
     ar: [
       "مرحبًا بكم في كاوارا (Kawara)، حيث يلتقي الابتكار بالتنفيذ.",
-      "نحن شركة رائدة في تطوير البرمجيات الشاملة لصياغة الحلول الرقمية التي تدفع النجاح للشركات من جميع الأحجام. مع فريق من المطورين والمصممين والاستراتيجيين الموهوبين، نحن متخصصون في إنشاء برامج متطورة مصممة خصيصًا لتلبية احتياجاتك الفريدة.",
+      "نحن شركة رائدة أخصائية في تطوير البرمجيات الشاملة وصياغة الحلول الرقمية التي تدفع النجاح للشركات من جميع الأحجام. مع فريق من المطورين والمصممين الموهوبين متخصص في، نحن متخصصون في إنشاء برامج متطورة لتلبية احتياجاتك الفريدة.",
       "نحن نقدم مجموعة واسعة من خدمات تطوير البرمجيات لمساعدتك على البقاء في المقدمة في العصر الرقمي.",
       "نحن نبني حلولاً برمجية مخصصة تتوافق تمامًا مع أهداف عملك.",
       " لا تتردد في إلقاء نظرة على بعض من أعمالنا على صفحة ",
