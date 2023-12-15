@@ -3,8 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import Transition from "./transition";
 import { cardBgCls } from "./tailwindcss-class";
 
-export default function ToastMessages({ messages = [], duration = 4 }) {
+export default function ToastMessages({ messages = [], start = 1 }) {
   const mountedRef = useRef(false);
+  const startRef = useRef(start);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const [content, setContent] = useState("");
@@ -19,7 +20,9 @@ export default function ToastMessages({ messages = [], duration = 4 }) {
         setContent(el);
         setShow(true);
         setTimeout(() => setIndex(index + 1), (el.length / 6) * 1000);
-      }, 600);
+      }, startRef.current * 1000 + 600);
+
+      startRef.current = 0;
     }
   }, [index]);
 

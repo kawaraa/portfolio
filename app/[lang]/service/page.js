@@ -7,7 +7,9 @@ export default function Services({ params: { lang } }) {
   return (
     <>
       <h1 className={h1Cls}>{content.title[lang]}</h1>
+
       <p className="mb-14">{content.p[lang]}</p>
+
       <ol className="">
         {content.services.map((service, i) => (
           <li
@@ -27,7 +29,10 @@ export default function Services({ params: { lang } }) {
               </div>
               <p className="flex-auto text-sm my-8 px-3 md:my-0 md:px-0">{service.p[lang]}</p>
 
-              <a href={service.link} className={`${btnCls} md:place-self-start mx-3 mb-3 md:m-0`}>
+              <a
+                href={service.link.replace("lang", lang)}
+                className={`${btnCls} md:place-self-start mx-3 mb-3 md:m-0`}
+              >
                 {learn[lang]}
               </a>
             </div>
@@ -68,7 +73,7 @@ const content = {
         ar: "أصبحت التجارة الإلكترونية ممارسة روتينية، فهي تعتمد على تقنيات مثل التجارة المتنقلة، وتحويل الأموال الإلكتروني، وإدارة سلسلة التوريد، والتسويق عبر الإنترنت، ومعالجة المعاملات عبر الإنترنت، وتبادل البيانات الإلكترونية، وأنظمة إدارة المخزون، وأنظمة جمع البيانات الآلية.",
       },
       imageUrl: "/ecommerce.webp",
-      link: "/services/ecommerce",
+      link: "lang/services/ecommerce",
     },
   ],
 };

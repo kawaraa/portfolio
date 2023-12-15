@@ -48,10 +48,9 @@ a.hvr:after {
   transition: transform 250ms ease-in-out;
   transform-origin: 0% 50%;
 }
-a.hvr:hover:after {
-  transform: scaleX(1);
-}
-a.hvr:active:after {
+a.hvr:hover:after,
+a.hvr:active:after,
+a.active:after {
   transform: scaleX(1);
 }
 

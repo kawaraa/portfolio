@@ -1,11 +1,8 @@
 import Link from "next/link";
-import localFont from "next/font/local";
 import MobileMenu from "./mobile-menu";
 import { btnCls } from "../tailwindcss-class";
 import { navLinks } from "../shared-content";
-const siteName = process.env.SITE_NAME;
-
-const IconFont = localFont({ src: "../../public/font/Quicksand-Bold.ttf", display: "swap" });
+import Brand from "./brand";
 
 export default async function Navbar({ lang }) {
   return (
@@ -36,12 +33,7 @@ export default async function Navbar({ lang }) {
             </g>
           </svg>
         </span>
-        <span
-          id="site-name"
-          className={`mx-3 leading-[1] tracking-[2px] text-2xl capitalize ${IconFont.className}`}
-        >
-          {siteName}
-        </span>
+        <Brand id="site-name" cls="mx-3" />
       </Link>
 
       <div className="flex-auto"></div>

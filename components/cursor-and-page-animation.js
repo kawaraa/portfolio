@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, usePathname } from "next/navigation";
 
 export default function CursorAndPageAnimation() {
   const router = useRouter();
   const params = useParams();
+  const path = usePathname();
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
   const [cls, setCls] = useState("");
 
@@ -33,6 +34,8 @@ export default function CursorAndPageAnimation() {
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("click", fetchContent);
     document.body.classList.remove("page-shut");
+    document.querySelectorAll("a").forEach((el) => el.href.includes(path) && el.classList.add("active"));
+
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("click", fetchContent);
