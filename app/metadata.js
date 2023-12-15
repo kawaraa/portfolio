@@ -58,7 +58,7 @@ export const content = {
     ar: "كاوارا لتطوير البرمجيات - تطوير تطبيقات الويب - Kawara",
   },
   description: {
-    en: "Kawara is a Software Consultant company who does Web, Application, System and Custom Development also Fixing, Updating, Maintenance and Performance improvement for Websites and a lot of other things",
+    en: "Kawara is a Software Development Consulting Company who does Web, Application, System and Custom Development also Fixing, Updating, Maintenance and Performance improvement for Websites and a lot of other things",
     ar: "Kawara كاوارا هي شركة لتطوير البرمجيات وأخصائي برمجيات تقوم بتطوير الويب والتطبيقات والأنظمة والتطوير المخصص بالإضافة إلى إصلاح وتحديث وصيانة وتحسين الأداء لمواقع الويب والكثير من الأشياء الأخرى ",
   },
   keywords: {

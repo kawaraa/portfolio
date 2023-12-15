@@ -1,9 +1,8 @@
-// import Image from "next/image";
 import TypingAnimation from "../../components/typing-animation";
 import { getCssDelay } from "../../services/utilities";
 import { linkCls } from "../../components/tailwindcss-class";
-import "./page.css";
 import ToastMessages from "../../components/toast-messages";
+import "./page.css";
 
 // import dynamic from "next/dynamic";
 // const DynamicHeader = dynamic(() => import("../components/header"), { ssr: false });
@@ -12,7 +11,7 @@ import ToastMessages from "../../components/toast-messages";
 
 export default function HomePageByLang({ params: { lang } }) {
   return (
-    <main className="flex flex-col h-full">
+    <div className="flex flex-col h-full">
       <section className="flex-auto">
         <h1 id="intro-heading">
           <div className="flex justify-center items-end mt-[10vh]">
@@ -69,7 +68,7 @@ export default function HomePageByLang({ params: { lang } }) {
 
       <TypingAnimation containerId="introduction" startMillisecond={1000} />
       <ToastMessages messages={content.messages[lang]} />
-    </main>
+    </div>
   );
 }
 
@@ -81,7 +80,7 @@ export function SocialMedia({ lang }) {
           href={item.link}
           target="_blank"
           title={item.title[lang]}
-          className="overflow-hidden w-12 rounded-lg duration-300 lazy-b "
+          className="overflow-hidden w-10 rounded-lg duration-300 lazy-b "
           style={getCssDelay(1)}
           key={i}
         >
@@ -131,10 +130,10 @@ const content = {
     en: [
       "Hi there!",
       "Thanks for visiting!",
-      "We will walk you through hour site",
+      "We will walk you through our site",
       "Let's start first with what we can do",
       "We are a Software Consultant",
-      "Wee works externally for companies and helps them with software development processes",
+      "We work externally for companies and helps them with software development processes",
       "This may include their software planning, design and construction stages",
       "Sometimes these consultants work alone on these projects, and sometimes they collaborate with internal software developers",
       "Want to know more about what we can do for you, please visit Services Page.",

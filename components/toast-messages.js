@@ -10,13 +10,15 @@ export default function ToastMessages({ messages = [], duration = 4 }) {
   const [content, setContent] = useState("");
 
   useEffect(() => {
+    const el = messages[index];
     if (!mountedRef.current) mountedRef.current = true;
     else {
       setShow(false);
       setTimeout(() => {
-        setContent(messages[index]);
+        if (!el) return setContent(null);
+        setContent(el);
         setShow(true);
-        setTimeout(() => setIndex(index + 1), duration * 1000);
+        setTimeout(() => setIndex(index + 1), (el.length / 6) * 1000);
       }, 600);
     }
   }, [index]);

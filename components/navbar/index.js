@@ -2,6 +2,7 @@ import Link from "next/link";
 import localFont from "next/font/local";
 import MobileMenu from "./mobile-menu";
 import { btnCls } from "../tailwindcss-class";
+import { navLinks } from "../shared-content";
 const siteName = process.env.SITE_NAME;
 
 const IconFont = localFont({ src: "../../public/font/Quicksand-Bold.ttf", display: "swap" });
@@ -46,7 +47,7 @@ export default async function Navbar({ lang }) {
       <div className="flex-auto"></div>
 
       <div className="hidden md:flex gap-2">
-        {content.list.map((link, i) => (
+        {navLinks.map((link, i) => (
           <a href={link.path.replace("lang", lang)} className="hvr px-2 py-1" key={i}>
             {link[lang]}
           </a>
@@ -67,11 +68,4 @@ export default async function Navbar({ lang }) {
 
 export const content = {
   contact: { en: "Contact Us", ar: "تواصل معنا", path: "/lang/contact" },
-  list: [
-    { en: "Home", ar: "الصفحة الرئيسية", path: "/lang" },
-    { en: "Services", ar: "خدمات", path: "/lang/service" },
-    { en: "Work", ar: "أعمالنا", path: "/lang/work" }, // Clients, Projects
-    { en: "About", ar: "لمحة", path: "/lang/about" },
-    { en: "Blog", ar: "المدونات", path: "/lang/blog" },
-  ],
 };

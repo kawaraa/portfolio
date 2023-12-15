@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Transition from "../transition";
-import { content } from "./index";
+import { navLinks } from "../shared-content";
 
 export default function MobileMenu({ lang }) {
   const pathname = usePathname();
@@ -24,7 +24,7 @@ export default function MobileMenu({ lang }) {
         exit="translate-x-[-100%]"
         time="200"
       >
-        {content.list.map((link, i) => (
+        {navLinks.map((link, i) => (
           <li key={i}>
             <a href={link.path.replace("lang", lang)} className="list-links px-2 py-1">
               {link[lang]}

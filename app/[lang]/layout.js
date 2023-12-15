@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import getMetadata, { content } from "../metadata";
 import Navbar from "../../components/navbar";
 import CursorAndPageAnimation from "../../components/cursor-and-page-animation";
+import Footer from "../../components/footer";
 
 const kufiFont = localFont({
   src: "../../public/font/NotoKufiArabic-VariableFont_wght.ttf",
@@ -39,9 +40,15 @@ export default function Layout({ children, params: { lang } }) {
           }}
         />
 
-        {/* <header></header> */}
         <Navbar lang={lang} />
-        {children}
+
+        {/* <header></header> */}
+
+        <div className="overflow-auto">
+          <main className="px-3 md:px-5 max-w-screen-2xl">{children}</main>
+          <Footer lang={lang} />
+        </div>
+
         <CursorAndPageAnimation />
       </body>
     </html>

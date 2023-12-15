@@ -1,3 +1,4 @@
+export const h1Cls = "text-4xl mt-10 mb-3";
 export const cardBgCls = "bg-cbg dark:bg-dcbg rounded-md";
 export const bCls = "border border-neutral-300 dark:border-neutral-600";
 export const bHrFsCls = "hover:border-blue-500 focus:border-blue-500 active:border-blue-500";
