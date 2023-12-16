@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import { navLinks } from "./shared-content";
 import Brand from "./navbar/brand";
-import { skeleton } from "./tailwindcss-class";
+import { linkCls, skeleton } from "./tailwindcss-class";
+import TimeByTimezone from "./time-by-timezone";
 const lineSkeleton = skeleton + " w-full h-6";
 
 export default async function Footer({ lang }) {
@@ -42,15 +43,38 @@ export default async function Footer({ lang }) {
             </div>
           }
         >
-          <ul dir="auto" className="md:flex-auto">
-            {navLinks.map((item, i) => (
-              <li className="my-2" key={i}>
-                <a href={item.path.replace("lang", lang)} className="hvr block py-1 px-2">
-                  {item[lang]}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div dir="auto" className="md:flex-auto flex">
+            <ul className="flex-auto">
+              {navLinks.map((item, i) => (
+                <li className="my-2" key={i}>
+                  <a href={item.path.replace("lang", lang)} className="hvr block py-1 px-2">
+                    {item[lang]}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex-auto flex flex-col items-start justify-end">
+              <address className="">
+                <h3 className="text-lg">
+                  Amsterdam: <TimeByTimezone cls="font-semibold" />
+                </h3>
+                <br />
+                Govert Flinckstraat
+                <br />
+                971072 EE Amsterdam
+                <br />
+                Netherlands
+              </address>
+              <a
+                className={`${linkCls} hvr mt-3 text-lg`}
+                target="_blank"
+                href="mailto:contact@kawaraa.com?Subject=Hello%20again"
+              >
+                contact@kawaraa.com
+              </a>
+            </div>
+          </div>
         </Suspense>
       </div>
 
@@ -77,7 +101,7 @@ const content = {
       imageUrl: "/linkedin.png",
     },
     {
-      title: { en: "Kawara Facebook page", ar: "صفحة كاوارا على الفيسبوك" },
+      title: { en: "Kawara Facebook page", ar: "صفحة كوارا على الفيسبوك" },
       link: "https://www.facebook.com/kawaraa1",
       imageUrl: "/facebook.png",
     },

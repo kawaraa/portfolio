@@ -52,18 +52,18 @@ export default function getMetadata({ lang, title, description, keywords, author
 }
 
 export const content = {
-  name: { en: "Kawara Software Consultant", ar: "كاوارا أخصائي برمجيات" },
+  name: { en: "Kawara Software Consultant", ar: "كوارا أخصائي برمجيات" },
   title: {
     en: "Kawara Software Development - Web Application Development",
-    ar: "كاوارا لتطوير البرمجيات - تطوير تطبيقات الويب - Kawara",
+    ar: "كوارا لتطوير البرمجيات - تطوير تطبيقات الويب - Kawara",
   },
   description: {
     en: "Kawara is a Software Development Consulting Company who does Web, Application, System and Custom Development also Fixing, Updating, Maintenance and Performance improvement for Websites and a lot of other things",
-    ar: "Kawara كاوارا هي شركة لتطوير البرمجيات وأخصائي برمجيات تقوم بتطوير الويب والتطبيقات والأنظمة والتطوير المخصص بالإضافة إلى إصلاح وتحديث وصيانة وتحسين الأداء لمواقع الويب والكثير من الأشياء الأخرى ",
+    ar: "Kawara كوارا هي شركة لتطوير البرمجيات وأخصائي برمجيات تقوم بتطوير الويب والتطبيقات والأنظمة والتطوير المخصص بالإضافة إلى إصلاح وتحديث وصيانة وتحسين الأداء لمواقع الويب والكثير من الأشياء الأخرى ",
   },
   keywords: {
     en: "Kawara portfolio, Kawara Software Consultant, Kawara software development, full-stack developer, Frontend developer, Backend developer, Webmaster, Systems development, Mobile application development, Android application development, Iphone IOS application development, Telephone application development, Smart device application development, Web development, Apps development, Maintaining websites and applications, Updating websites and applications, Editing websites and applications, Enhancing websites performance, Enhancing applications performance, Fixing websites and applications, Improving SEO, Improving Search Engine Optimization, SEO friendly Website, User friendly Web App, Create accessible websites, User friendly UI UX, Create responsive websites, Create databases, Building RESTFUL API servers, Building web service",
-    ar: "محفظة كاوارا, كاوارا أخصائي برمجيات, كاوارا لتطوير البرمجيات, مطور ويب شامل متكامل, مطور الواجهة الأمامية, مطور الواجهة الخلفية, مطور خوادم, مشرف الموقع, تطوير الأنظمة, تطوير تطبيقات الهاتف المحمول, تطوير تطبيقات الاندرويد, تطوير تطبيقات الايفون IOS, تطوير تطبيقات الهاتف, تطوير تطبيقات الأجهزة الذكية, تطوير الشبكة, صيانة المواقع والتطبيقات, تحديث المواقع والتطبيقات, تحرير المواقع والتطبيقات, تعزيز أداء المواقع, تحسين أداء التطبيقات, اصلاح المواقع والتطبيقات, تحسين محركات البحث, موقع متوافق مع تحسين محركات البحث, تطبيق ويب سهل الاستخدام, إنشاء مواقع ويب يمكن الوصول إليها, واجهة مستخدم سهلة الاستخدام, إنشاء مواقع ويب سريعة الاستجابة, إنشاء مواقع ويب متجاوب, إنشاء قواعد البيانات, بناء خوادم, بناء خدمة الويب, بناء سيرفرات, واجهة برمجة",
+    ar: "محفظة كوارا, كوارا أخصائي برمجيات, كوارا لتطوير البرمجيات, مطور ويب شامل متكامل, مطور الواجهة الأمامية, مطور الواجهة الخلفية, مطور خوادم, مشرف الموقع, تطوير الأنظمة, تطوير تطبيقات الهاتف المحمول, تطوير تطبيقات الاندرويد, تطوير تطبيقات الايفون IOS, تطوير تطبيقات الهاتف, تطوير تطبيقات الأجهزة الذكية, تطوير الشبكة, صيانة المواقع والتطبيقات, تحديث المواقع والتطبيقات, تحرير المواقع والتطبيقات, تعزيز أداء المواقع, تحسين أداء التطبيقات, اصلاح المواقع والتطبيقات, تحسين محركات البحث, موقع متوافق مع تحسين محركات البحث, تطبيق ويب سهل الاستخدام, إنشاء مواقع ويب يمكن الوصول إليها, واجهة مستخدم سهلة الاستخدام, إنشاء مواقع ويب سريعة الاستجابة, إنشاء مواقع ويب متجاوب, إنشاء قواعد البيانات, بناء خوادم, بناء خدمة الويب, بناء سيرفرات, واجهة برمجة",
   },
   author: { name: "Kawara", url: baseUrl },
 };

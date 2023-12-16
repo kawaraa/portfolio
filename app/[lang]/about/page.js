@@ -26,7 +26,6 @@ export default function About({ params: { lang } }) {
         ))}
       </div>
 
-      {/**/}
       <section className={`mt-20 mb-32 `}>
         <h2 className="text-center text-2xl mb-5 font-semibold">{content.whyUs.t[lang]} &#128170;</h2>
 
@@ -50,12 +49,12 @@ const content = {
   title: { en: ["About us", "Solutions Beyond Code"], ar: ["لمحة عنا", "حلول ما وراء البرمجية"] },
   h1: {
     en: "About Kawara? Who is Kawara? What is Kawara?",
-    ar: "من يكون كاوارا؟ من هو كاوارا؟ ما هو كاوارا؟",
+    ar: "من يكون كوارا؟ من هو كوارا؟ ما هو كوارا؟",
   },
   p: {
     en: [
-      "Welcome to Kawara, where innovation meets expertise in the hear of software consulting.",
-      "Established with a vision to transform businesses through cutting-edge technology.",
+      "Welcome to Kawara, where innovation meets expertise in the heart of software consulting.",
+      "Established with a vision to transform businesses through cutting-edge technology and strategic consulting.",
       "We take pride in being your strategic partner on the journey to digital success.",
       "We are a team of passionate and seasoned software professionals dedicated to delivering unparalleled solutions.",
       "Our foundation rests on a commitment to excellence, innovation, and client satisfaction.",
@@ -90,5 +89,16 @@ const content = {
       { en: "a", ar: "" },
       { en: "a", ar: "" },
     ],
+    // Expertise Across Industries: With a diverse team of experts, we bring industry-specific knowledge to the table. From healthcare to finance, retail to manufacturing, we have a proven track record of delivering results across various sectors.
+    // A portfolio of successful projects across diverse industries.
+
+    // Transparent Communication: We believe in open and honest communication at every stage of the engagement.
+
+    // Customized Solutions: Tailored software solutions to meet the unique needs of your business.
+    // Continuous Improvement: Embracing a culture of learning and adaptation to stay ahead in the ever-evolving tech landscape.
+
+    // Collaborative Approach: We view every project as a partnership. Our collaborative approach ensures that we understand your unique challenges and goals, working hand-in-hand to craft tailored solutions.
+
+    // Innovation at the Core: Innovation is in our DNA. We stay at the forefront of technological advancements to provide you with solutions that not only meet your current needs but also position you for future success.
   },
 };

@@ -37,19 +37,12 @@ export default function HomePageByLang({ params: { lang } }) {
           <span className="opacity-0">{content.p[lang][6]}</span>
           <br />
           <span className="opacity-0">{content.p[lang][7]}</span>
-          <a
-            className={`opacity-0 ${linkCls} hvr`}
-            target="_blank"
-            href="mailto:contact@kawaraa.com?Subject=Hello%20again"
-          >
-            contact@kawaraa.com
-          </a>
         </div>
       </section>
 
       <TypingAnimation containerId="introduction" startMillisecond={1000} />
 
-      <ToastMessages messages={content.messages[lang]} start={5} />
+      <ToastMessages messages={content.messages[lang]} start={30} />
     </div>
   );
 }
@@ -72,7 +65,7 @@ const content = {
       "Ready to transform your ideas into reality? then Contact us at ",
     ],
     ar: [
-      "مرحبًا بكم في كاوارا (Kawara)، حيث يلتقي الابتكار بالتنفيذ.",
+      "مرحبًا بكم في كوارا (Kawara)، حيث يلتقي الابتكار بالتنفيذ.",
       "نحن شركة رائدة أخصائية في تطوير البرمجيات الشاملة وصياغة الحلول الرقمية التي تدفع النجاح للشركات من جميع الأحجام. مع فريق من المطورين والمصممين الموهوبين متخصص في، نحن متخصصون في إنشاء برامج متطورة لتلبية احتياجاتك الفريدة.",
       "نحن نقدم مجموعة واسعة من خدمات تطوير البرمجيات لمساعدتك على البقاء في المقدمة في العصر الرقمي.",
       "نحن نبني حلولاً برمجية مخصصة تتوافق تمامًا مع أهداف عملك.",
@@ -104,3 +97,16 @@ const content = {
     ar: ["أهلاً بك!", "شكرا لزيارتكم!"],
   },
 };
+
+// What Sets Us Apart:
+
+// Expertise: Backed by a team of highly skilled developers, architects, and consultants, we bring years of experience in crafting robust and scalable software solutions.
+// Innovation: We thrive on staying ahead of the curve. Our experts are not just problem solvers; they are innovators who embrace the latest technologies to keep your business at the forefront of the digital revolution.
+// Client-Centric Approach: Your success is our success. We take the time to understand your unique challenges, goals, and aspirations, tailoring our solutions to meet your specific needs.
+// End-to-End Solutions: From ideation to implementation and ongoing support, we offer comprehensive services that cover the entire software development lifecycle. We are your one-stop destination for all things software.
+
+// Other Paragraph:
+
+// Whether you're a startup with a vision or an established enterprise seeking digital transformation, we are here to turn your aspirations into reality.
+// We believe in the power of innovation to drive growth, streamline processes, and enhance user experiences
+//

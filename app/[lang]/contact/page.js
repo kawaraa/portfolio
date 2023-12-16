@@ -14,3 +14,8 @@ export default function Contact({ params: { lang } }) {
     </>
   );
 }
+
+// Join Us on Your Digital Journey:
+
+// Embark on your digital journey with Kawara. Whether you're looking for innovative software solutions, strategic consulting, or a reliable partner to guide your digital transformation, we are here to exceed your expectations.
+// At Kawara, we don't just build software; we build success stories. Let's create yours together.
