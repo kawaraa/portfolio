@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import { navLinks } from "./shared-content";
-import Brand from "./navbar/brand";
-import { linkCls, skeleton } from "./tailwindcss-class";
+import { call, navLinks } from "./shared-content";
+import { BrandLogo, BrandName } from "./navbar/brand";
+import { btnCls, linkCls, skeleton } from "./tailwindcss-class";
 import TimeByTimezone from "./time-by-timezone";
 const lineSkeleton = skeleton + " w-full h-6";
 
@@ -10,21 +10,41 @@ export default async function Footer({ lang }) {
   const copyrightDate = 2022 + (currentYear > 2022 ? `-${currentYear}` : "");
 
   return (
-    <footer dir="ltr" className="text-sm mt-16">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-stone-300 px-6 py-12 text-sm dark:border-neutral-700 md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0">
-        <div className="md:w-1/3 flex items-center justify-between md:flex-col">
-          <Brand />
+    <footer
+      dir="ltr"
+      className="text-sm mt-16 p-6 py-12 bg-pc text-dt border-t border-stone-300 dark:border-neutral-700"
+    >
+      <div className="flex justify-end pb-6">
+        <h3>Let's work together.</h3>
+        <a
+          href={`/${lang}/contact`}
+          name="BUTTON"
+          className={`${btnCls} py-3 px-5 !bg-dbg hover:!bg-sc rounded-full`}
+        >
+          {call[lang]}
+        </a>
+        {/*  */}
+      </div>
 
-          <div id="social-media-wrapper" className="flex gap-3">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 text-sm md:flex-row md:gap-12 min-[1320px]:px-0">
+        <div className="md:w-1/3 flex items-center justify-between md:flex-col">
+          <div className="flex items-start">
+            <BrandLogo />
+            <BrandName cls="text-white mx-3" />
+          </div>
+
+          <div id="social-media-wrapper" className="flex items-center gap-3">
             {content.socialMedia.map((item, i) => (
               <a
                 href={item.link.replace("lang", lang)}
                 target="_blank"
                 title={item.title[lang]}
-                className="overflow-hidden w-8 rounded-lg duration-300"
+                className={`overflow-hidden w-8 aspect-square bg-bg ${
+                  i == 2 ? "p-[6px]" : "p-1"
+                } rounded-lg duration-300`}
                 key={i}
               >
-                <img src={item.imageUrl} alt="social media profile logo" className="w-full" />
+                <img src={item.imageUrl} alt="social media profile logo" className="w-full h-full" />
               </a>
             ))}
           </div>
@@ -54,7 +74,7 @@ export default async function Footer({ lang }) {
               ))}
             </ul>
 
-            <div className="flex-auto flex flex-col items-start justify-end">
+            <div dir="ltr" className="flex-auto flex flex-col items-start justify-end">
               <address className="">
                 <h3 className="text-lg">
                   Amsterdam: <TimeByTimezone cls="font-semibold" />
@@ -67,7 +87,7 @@ export default async function Footer({ lang }) {
                 Netherlands
               </address>
               <a
-                className={`${linkCls} hvr mt-3 text-lg`}
+                className={`${linkCls} hvr text-bg hover:text-bg mt-3 text-lg`}
                 target="_blank"
                 href="mailto:contact@kawaraa.com?Subject=Hello%20again"
               >
@@ -78,7 +98,7 @@ export default async function Footer({ lang }) {
         </Suspense>
       </div>
 
-      <div className="py-6 text-sm">
+      <div className="mt-16 text-sm">
         <div className="mx-auto w-full max-w-7xl flex flex-col items-center justify-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p>
             &copy; {copyrightDate} Kawara.{content.rights[lang]}
@@ -96,9 +116,9 @@ const content = {
   certified: { en: "Crafted by Kawara", ar: "Kawara من صنع" },
   socialMedia: [
     {
-      title: { en: "Kawara LinkedIn profile", ar: "الملف الشخصي على لينكدإن" },
-      link: "https://www.linkedin.com/in/kawaraa",
-      imageUrl: "/linkedin.png",
+      title: { en: "Kawara Instagram profile", ar: "الملف الشخصي على الانستغرام" },
+      link: "https://www.instagram.com/in/kawaraa",
+      imageUrl: "/instagram.png",
     },
     {
       title: { en: "Kawara Facebook page", ar: "صفحة كوارا على الفيسبوك" },
@@ -106,9 +126,14 @@ const content = {
       imageUrl: "/facebook.png",
     },
     {
-      title: { en: "Kawara GitHub profile", ar: "الملف الشخصي لكوارا على كيت هاب" },
-      link: "https://github.com/kawaraa",
-      imageUrl: "/github.png",
+      title: { en: "Kawara LinkedIn profile", ar: "الملف الشخصي على لينكدإن" },
+      link: "https://www.linkedin.com/in/kawaraa",
+      imageUrl: "/linkedin.png",
     },
+    // {
+    //   title: { en: "Kawara GitHub profile", ar: "الملف الشخصي لكوارا على كيت هاب" },
+    //   link: "https://github.com/kawaraa",
+    //   imageUrl: "/github.png",
+    // },
   ],
 };

@@ -27,7 +27,9 @@ module.exports = {
         dt: "#d1d5db",
         pc: "#336699", // Primary Color and could be the Actions background and Links text color #1677ff
         sc: "#6599FF", // Secondary Color
+        bg: "#fafafa",
         cbg: "#ffffff", // Card Background color
+        dbg: "#000000",
         dcbg: "#262626", // Dark Card Background color
 
         bg1: "#fde3c2",
