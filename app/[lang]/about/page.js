@@ -17,7 +17,7 @@ export default function About({ params: { lang } }) {
         ))}
       </div>
 
-      <div className="mt-32 flex gap-10">
+      <div className="my-32 flex gap-10">
         {content.sections.map((section, i) => (
           <section className={`flex-1 p-5 ${cardBgCls} `} key={i}>
             <h2 className="text-center text-2xl mb-5 font-semibold">{section.t[lang]}</h2>
@@ -26,13 +26,14 @@ export default function About({ params: { lang } }) {
         ))}
       </div>
 
-      <section className={`mt-20 mb-32 `}>
-        <h2 className="text-center text-2xl mb-5 font-semibold">{content.whyUs.t[lang]} &#128170;</h2>
+      <section className="mb-32">
+        <h2 className="text-center text-2xl mb-5 font-semibold">{content.whyUs.title[lang]} &#128170;</h2>
 
-        <ol className="px-5 flex flex-wrap">
+        <ol className="px-5 flex flex-wrap list-disc">
           {content.whyUs.list.map((item, i) => (
-            <li className={`my-5 p-3 ${cardBgCls}  `} key={i}>
-              {item[lang]}
+            <li className="my-2 " key={i}>
+              <h3 className="text-lg font-semibold">{item.t[lang]}</h3>
+              {item.p[lang]}
             </li>
           ))}
         </ol>
@@ -54,13 +55,20 @@ const content = {
   p: {
     en: [
       "Welcome to Kawara, where innovation meets expertise in the heart of software consulting.",
-      "Established with a vision to transform businesses through cutting-edge technology and strategic consulting.",
-      "We take pride in being your strategic partner on the journey to digital success.",
       "We are a team of passionate and seasoned software professionals dedicated to delivering unparalleled solutions.",
-      "Our foundation rests on a commitment to excellence, innovation, and client satisfaction.",
+      "Established with a vision to transform businesses through cutting-edge technology and strategic consulting.",
       "We understand that in today's dynamic business landscape, harnessing the power of technology is not just an option but a necessity.",
+      "Our foundation rests on a commitment to excellence, innovation, and client satisfaction.",
+      "We take pride in being your strategic partner on the journey to digital success.",
     ],
-    ar: [""],
+    ar: [
+      "مرحبًا بكم في كوارا أخصائي البرمجيات، حيث يلتقي الابتكار بالخبرة في قلب أخصائية البرمجية.",
+      "نحن فريق من محترفي البرمجيات المتحمسين والمتمرسين المخصصين لتقديم حلول لا مثيل لها.",
+      "تأسست برؤية لتحويل الأعمال من خلال التكنولوجيا المتطورة والاستشارات الاستراتيجية.",
+      "نحن ندرك أنه في مشهد الأعمال الديناميكي اليوم، فإن تسخير قوة التكنولوجيا ليس مجرد خيار بل ضرورة.",
+      "تعتمد مؤسستنا على الالتزام بالتميز والابتكار ورضا العملاء.",
+      "نحن نفخر بكوننا شريكك الاستراتيجي في رحلتك نحو النجاح الرقمي.",
+    ],
   },
   sections: [
     {
@@ -73,32 +81,51 @@ const content = {
     {
       t: { en: "Our Vision", ar: "" },
       p: {
-        en: "To be the go-to partner for businesses seeking transformative software solutions, recognized for our commitment to excellence, innovation, and unwavering client satisfaction.",
+        en: "To be the go-to partner for businesses seeking transformable software solutions, recognized for our commitment to excellence, innovation, and unwavering client satisfaction.",
         ar: "",
       },
     },
-
     // { t: { en: "", ar: "" }, p: { en: "", ar: "" } },
   ],
   whyUs: {
-    t: { en: "Why Choose Kawara", ar: "" },
+    title: { en: "Why Choose Kawara", ar: "" },
     list: [
-      { en: "a", ar: "" },
-      { en: "a", ar: "" },
-      { en: "a", ar: "" },
-      { en: "a", ar: "" },
-      { en: "a", ar: "" },
+      {
+        t: { en: "Expertise Across Industries", ar: "" },
+        p: {
+          en: "With a diverse team of experts, we bring industry-specific knowledge to the table. From healthcare to finance, retail to manufacturing, we have a proven track record of delivering results across various sectors. A portfolio of successful projects across diverse industries.",
+          ar: "",
+        },
+      },
+      {
+        t: { en: "Transparent Communication", ar: "" },
+        p: { en: "We believe in open and honest communication at every stage of the engagement.", ar: "" },
+      },
+      {
+        t: { en: "Customized Solutions", ar: "" },
+        p: { en: "Tailored software solutions to meet the unique needs of your business.", ar: "" },
+      },
+      {
+        t: { en: "Continuous Improvement", ar: "" },
+        p: {
+          en: "Embracing a culture of learning and adaptation to stay ahead in the ever-evolving tech landscape.",
+          ar: "",
+        },
+      },
+      {
+        t: { en: "Collaborative Approach", ar: "" },
+        p: {
+          en: "We view every project as a partnership. Our collaborative approach ensures that we understand your unique challenges and goals, working hand-in-hand to craft tailored solutions.",
+          ar: "",
+        },
+      },
+      {
+        t: { en: "Innovation at the Core", ar: "" },
+        p: {
+          en: "Innovation is in our DNA. We stay at the forefront of technological advancements to provide you with solutions that not only meet your current needs but also position you for future success.",
+          ar: "",
+        },
+      },
     ],
-    // Expertise Across Industries: With a diverse team of experts, we bring industry-specific knowledge to the table. From healthcare to finance, retail to manufacturing, we have a proven track record of delivering results across various sectors.
-    // A portfolio of successful projects across diverse industries.
-
-    // Transparent Communication: We believe in open and honest communication at every stage of the engagement.
-
-    // Customized Solutions: Tailored software solutions to meet the unique needs of your business.
-    // Continuous Improvement: Embracing a culture of learning and adaptation to stay ahead in the ever-evolving tech landscape.
-
-    // Collaborative Approach: We view every project as a partnership. Our collaborative approach ensures that we understand your unique challenges and goals, working hand-in-hand to craft tailored solutions.
-
-    // Innovation at the Core: Innovation is in our DNA. We stay at the forefront of technological advancements to provide you with solutions that not only meet your current needs but also position you for future success.
   },
 };

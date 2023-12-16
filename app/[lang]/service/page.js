@@ -27,7 +27,8 @@ export default function Services({ params: { lang } }) {
                   className="w-full"
                 />
               </div>
-              <p className="flex-auto text-sm my-8 px-3 md:my-0 md:px-0">{service.p[lang]}</p>
+
+              <p className="flex-auto text-sm my-8 px-3 md:mt-0 md:px-0">{service.p[lang]}</p>
 
               <a
                 href={service.link.replace("lang", lang)}
@@ -37,7 +38,7 @@ export default function Services({ params: { lang } }) {
               </a>
             </div>
             <div
-              className="hidden md:block w-1/2 overflow-hidden rounded-md lazy-b duration-200"
+              className="hidden overflow-hidden md:flex w-1/2 items-center rounded-md lazy-b duration-200"
               style={getCssDelay(0.5)}
             >
               <Image
@@ -45,7 +46,7 @@ export default function Services({ params: { lang } }) {
                 width="500"
                 height="500"
                 atl={service.t[lang]}
-                className="w-full"
+                className="h-full"
               />
             </div>
           </li>
