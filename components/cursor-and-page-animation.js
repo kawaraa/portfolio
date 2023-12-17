@@ -24,6 +24,7 @@ export default function CursorAndPageAnimation() {
   const fetchContent = (e) => {
     if (e.target.tagName === "A" && e.target.target !== "_blank") {
       e.preventDefault();
+      if (e.target.href == window.location.href) return;
       document.body.classList.add("page-shut");
       setTimeout(() => router.push(e.target.href), 400);
     }
@@ -34,9 +35,10 @@ export default function CursorAndPageAnimation() {
     document.addEventListener("click", fetchContent);
     document.body.classList.remove("page-shut");
 
-    if (!["/", "/en", "/ar"].includes(path)) {
-      document.querySelectorAll("a").forEach((el) => el.href.includes(path) && el.classList.add("active"));
-    }
+    document.querySelectorAll("a").forEach((el) => {
+      el.classList.remove("active");
+      if (el.href == window.location.href) el.classList.add("active");
+    });
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);

@@ -78,4 +78,11 @@ const content = {
     },
   ],
 };
+
 // custom-development
+
+// Software Development: Custom solutions designed to fit your unique requirements, from web and mobile applications to enterprise-level software.
+
+// Consulting Services: Strategic guidance to help you navigate the complexities of technology, making informed decisions for your business.
+
+// Digital Transformation: Transformative solutions that redefine the way you operate, improving efficiency and driving growth.

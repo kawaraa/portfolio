@@ -8,6 +8,8 @@ export const send = { en: "Send Email", ar: "ارسل رسالة" };
 
 export const workWith = { en: "Let's work together", ar: "لنعمل معا" };
 
+export const visit = { en: "Visit website", ar: "زيارة الموقع" };
+
 //
 
 export const navLinks = [
