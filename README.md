@@ -20,14 +20,10 @@ npm run dev
 - حلول ذكية برمجة حادة
 - تمكين النمو من خلال التكنولوجيا
 
-## Services:
-
-- Freelance developer / Freelance software developer
-- Custom Software Development / developer
-
 ### Todo:
 
 - List all the services on services page and contact form
+- Advantages of our product | What you get out of the box: seo-friendly, lightweight and scalable
 - Add an attractive and content related background to every page
 - Store blogs in Github, Google Blog or in Google spreadsheet
 -

@@ -3,7 +3,12 @@ import ContactForm from "./contact-form";
 
 export default function Contact({ params: { lang } }) {
   return (
-    <main className={pageCls + " !mx-0 bg-[url('/map-image-background.png')]"}>
+    <main
+      className={
+        pageCls +
+        " !mx-0 bg-[url('/map-image-background-l.png')] dark:bg-[url('/map-image-dark-background.png')]"
+      }
+    >
       <h1 className={h1Cls}>
         {content.title[lang][0]}
         <span className="sr-only">

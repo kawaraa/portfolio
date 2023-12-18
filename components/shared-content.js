@@ -10,8 +10,6 @@ export const workWith = { en: "Let's work together", ar: "لنعمل معا" };
 
 export const visit = { en: "Visit website", ar: "زيارة الموقع" };
 
-//
-
 export const navLinks = [
   { en: "Home", ar: "الصفحة الرئيسية", path: "/lang" },
   { en: "Services", ar: "خدمات", path: "/lang/service" },
@@ -19,3 +17,5 @@ export const navLinks = [
   // { en: "Blog", ar: "المدونات", path: "/lang/blog" },
   { en: "About", ar: "لمحة", path: "/lang/about" },
 ];
+
+// export const services = [];

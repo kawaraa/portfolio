@@ -68,13 +68,37 @@ const content = {
   },
   services: [
     {
-      t: { en: "eCommerce", ar: "التجارة الإلكترونية" },
+      t: { en: "E-Commerce", ar: "التجارة الإلكترونية" },
       p: {
-        en: "E-Commerce has become such a routine practice, it draws on technologies such as mobile commerce, electronic funds transfer, supply chain management, Internet marketing, online transaction processing, electronic data interchange, inventory management systems, and automated data collection systems",
-        ar: "أصبحت التجارة الإلكترونية ممارسة روتينية، فهي تعتمد على تقنيات مثل التجارة المتنقلة، وتحويل الأموال الإلكتروني، وإدارة سلسلة التوريد، والتسويق عبر الإنترنت، ومعالجة المعاملات عبر الإنترنت، وتبادل البيانات الإلكترونية، وأنظمة إدارة المخزون، وأنظمة جمع البيانات الآلية.",
+        en: [
+          "We don't simply build your Web Shop, we set up your entire digital architecture.",
+          "E-Commerce has become such a routine practice, it draws on technologies such as mobile commerce, electronic funds transfer, supply chain management, Internet marketing, online transaction processing, electronic data interchange, inventory management systems, and automated data collection systems",
+        ],
+        ar: [
+          "نحن لا نبني فقط متجرك إلكتروني، بل نقوم بإعداد لك البنية الرقمية بالكامل.",
+          "أصبحت التجارة الإلكترونية ممارسة روتينية، فهي تعتمد على تقنيات مثل التجارة المتنقلة، وتحويل الأموال الإلكتروني، وإدارة سلسلة التوريد، والتسويق عبر الإنترنت، ومعالجة المعاملات عبر الإنترنت، وتبادل البيانات الإلكترونية، وأنظمة إدارة المخزون، وأنظمة جمع البيانات الآلية.",
+        ],
       },
       imageUrl: "/ecommerce.webp",
       link: "lang/services/ecommerce",
+    },
+    {
+      t: { en: "Custom Development", ar: "" },
+      p: {
+        en: [""],
+        ar: [""],
+      },
+      imageUrl: "/custom-development.png",
+      link: "lang/services/custom-development",
+    },
+    {
+      t: { en: "Consulting Services", ar: "" },
+      p: {
+        en: [""],
+        ar: [""],
+      },
+      imageUrl: "/consulting-services.png",
+      link: "lang/services/custom-development",
     },
   ],
 };
@@ -84,5 +108,3 @@ const content = {
 // Software Development: Custom solutions designed to fit your unique requirements, from web and mobile applications to enterprise-level software.
 
 // Consulting Services: Strategic guidance to help you navigate the complexities of technology, making informed decisions for your business.
-
-// Digital Transformation: Transformative solutions that redefine the way you operate, improving efficiency and driving growth.
