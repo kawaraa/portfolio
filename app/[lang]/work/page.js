@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { visit } from "../../../components/shared-content";
-import { btnCls, cardBgCls, h1Cls } from "../../../components/tailwindcss-class";
+import { btnCls, cardBgCls, h1Cls, pageCls } from "../../../components/tailwindcss-class";
 import { getCssDelay } from "../../../services/utilities";
 
 export default function Work({ params: { lang } }) {
   return (
-    <>
+    <main className={pageCls}>
       <h1 className={h1Cls}>{content.title[lang]}</h1>
 
       {/* <p className="mb-14 opacity-90">{content.p[lang]}</p> */}
@@ -48,7 +48,7 @@ export default function Work({ params: { lang } }) {
             ))}
         </ol>
       </div>
-    </>
+    </main>
   );
 }
 

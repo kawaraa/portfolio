@@ -45,7 +45,8 @@ export default function Layout({ children, params: { lang } }) {
         {/* <header></header> */}
 
         <div className="overflow-auto">
-          <main className="min-h-screen px-3 md:px-5 max-w-screen-2xl">{children}</main>
+          {children}
+
           <Footer lang={lang} />
         </div>
 

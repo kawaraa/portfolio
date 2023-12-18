@@ -245,3 +245,22 @@ const content = {
     ar: ["أهلاً بك!", "شكرا لزيارتكم!"],
   },
 };
+
+// IT Consulting
+// Web Development
+// Mobile Application Development
+// Custom Software Development
+// Search Engine Optimization (SEO)
+// Cybersecurity
+// Information Security
+
+// Application Development
+// Android Development
+// iOS Development
+
+// We offer a wide range of software development services to help you stay ahead in the digital age.
+// We build bespoke software solutions that align perfectly with your business goals and transform ideas into reality.
+// We can lead the end-to-end development cycle of complex and scalable projects, from concept to
+// deployment.
+// We are specialized in both areas Backend and Frontend development.
+// We also work with the latest technologies this has a lot of advantages like security, friendly UX and SEO

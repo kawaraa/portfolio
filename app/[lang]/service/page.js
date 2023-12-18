@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { btnCls, cardBgCls, h1Cls } from "../../../components/tailwindcss-class";
+import { btnCls, cardBgCls, h1Cls, pageCls } from "../../../components/tailwindcss-class";
 import { getCssDelay } from "../../../services/utilities";
 import { learn } from "../../../components/shared-content";
 
 export default function Services({ params: { lang } }) {
   return (
-    <>
+    <main className={pageCls}>
       <h1 className={h1Cls}>{content.title[lang]}</h1>
 
       <p className="mb-14">{content.p[lang]}</p>
@@ -52,7 +52,7 @@ export default function Services({ params: { lang } }) {
           </li>
         ))}
       </ol>
-    </>
+    </main>
   );
 }
 

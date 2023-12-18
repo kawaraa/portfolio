@@ -1,8 +1,8 @@
-import { bCls, cardBgCls, h1Cls } from "../../../components/tailwindcss-class";
+import { pageCls, cardBgCls, h1Cls } from "../../../components/tailwindcss-class";
 
 export default function About({ params: { lang } }) {
   return (
-    <>
+    <main className={pageCls}>
       <h1 className={h1Cls + " mt-20 mb-5"}>
         {content.title[lang][0]} <br />
         <span className="opacity-75">{content.title[lang][1]}</span>
@@ -38,7 +38,7 @@ export default function About({ params: { lang } }) {
           ))}
         </ol>
       </section>
-    </>
+    </main>
   );
 }
 

@@ -12,7 +12,7 @@ export default async function Footer({ lang }) {
   return (
     <footer
       dir="ltr"
-      className="text-sm mt-16 p-6 py-12 bg-pc text-dt border-t border-stone-300 dark:border-neutral-700"
+      className="text-sm p-6 py-12 bg-pc text-dt border-t border-stone-300 dark:border-neutral-700"
     >
       <div className="pb-6 flex items-center justify-end gap-3">
         <h3 className="text-2xl text-bg font-semibold">{workWith[lang]}</h3>
