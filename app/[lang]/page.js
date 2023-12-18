@@ -4,6 +4,7 @@ import ToastMessages from "../../components/toast-messages";
 import "./page.css";
 import Image from "next/image";
 
+// Lazy Load
 // import dynamic from "next/dynamic";
 // const DynamicHeader = dynamic(() => import("../components/header"), { ssr: false });
 // you can use the ssr option to disable server-rendering. This is useful if an external dependency or component relies on browser APIs like window.
@@ -66,6 +67,7 @@ export default function HomePageByLang({ params: { lang } }) {
 
       <article className="mb-20">
         <h2 className={h1Cls}>{content.priorities.title[lang]}</h2>
+        <p className="">{content.priorities.p[lang]}</p>
 
         <ol className="mt-12 flex flex-wrap">
           {content.priorities.list.map((item, i) => (
@@ -143,39 +145,42 @@ const content = {
         "Whether you're a startup with a vision or an established enterprise seeking digital transformation, we are here to turn your aspirations into reality.",
         "We believe in the power of innovation to drive growth, streamline processes, and enhance user experiences",
       ],
-      ar: "",
+      ar: [
+        "سواء كنت شركة ناشئة ذات بصيرة أو مؤسسة راسخة تسعى للتحول الرقمي، نحن هنا لتحويل تطلعاتك إلى واقع ملموس.",
+        "نحن نؤمن بقوة الابتكار لدفع النمو وتبسيط العمليات وتحسين تجارب المستخدم",
+      ],
     },
     list: [
       {
         image: "/expertise.png",
-        t: { en: "Expertise", ar: "" },
+        t: { en: "Expertise", ar: "الخبرة" },
         p: {
           en: "Backed by a team of highly skilled developers, architects, and consultants, we bring years of experience in crafting robust and scalable software solutions.",
-          ar: "",
+          ar: "بدعم من فريق من المطورين والمهندسين والاستشاريين ذوي المهارات العالية، نتمتع بسنوات من الخبرة في صياغة حلول برمجية قوية وقابلة للتطوير.",
         },
       },
       {
         image: "/innovation.png",
-        t: { en: "Innovation", ar: "" },
+        t: { en: "Innovation", ar: "الابتكار" },
         p: {
-          en: "We thrive on staying ahead of the curve. Our experts are not just problem solvers; they are innovators who embrace the latest technologies to keep your business at the forefront of the digital revolution.",
-          ar: "",
+          en: "We enjoy being ahead of trends and changes. Our experts are not just problem solvers; they are innovators who embrace the latest technologies to keep your business at the forefront of the digital revolution.",
+          ar: "نحن نستمتع بكوننا متقدمين على الاتجاهات والتغيرات. نحن لسنا مجرد حل للمشاكل؛ نحن مبتكرون نتبنى أحدث التقنيات لإبقاء عملك في طليعة الثورة الرقمية.",
         },
       },
       {
         image: "/client-centric-approach.png",
-        t: { en: "Client-Centric Approach", ar: "" },
+        t: { en: "Client-Centric Approach", ar: "حل يركز على العميل" },
         p: {
           en: "Your success is our success. We take the time to understand your unique challenges, goals, and aspirations, tailoring our solutions to meet your specific needs.",
-          ar: "",
+          ar: "نجاحك هو نجاحنا. نحن نأخذ الوقت الكافي لفهم تحدياتك وأهدافك وتطلعاتك الفريدة، ونصمم حلولنا لتلبية احتياجاتك الخاصة.",
         },
       },
       {
         image: "/solution.png",
-        t: { en: "End-to-End Solutions", ar: "" },
+        t: { en: "End-to-End Solution", ar: "حل كامل وشامل" },
         p: {
           en: "From ideation to implementation and ongoing support, we offer comprehensive services that cover the entire software development lifecycle. We are your one-stop destination for all things software.",
-          ar: "",
+          ar: "بدءًا من التفكير وحتى التنفيذ والدعم المستمر، نقدم خدمات شاملة تغطي خطوات التطوير البرمجيات بأكملها. نحن وجهتك الشاملة لكل ما يتعلق بالبرمجيات.",
         },
       },
       // { image: "", t: { en: "", ar: "" }, p: { en: "", ar: "" } },
@@ -183,50 +188,77 @@ const content = {
   },
   priorities: {
     title: { en: "Work priorities", ar: "أولويات العمل" },
+    p: {
+      en: "Advantages of our product and What you get out of the box.",
+      ar: "مزايا منتجنا وما الذي تحصل عليه تلقائيا.",
+    },
     list: [
       {
         image: "/security.png",
-        t: { en: "Security", ar: "" },
+        t: { en: "Security", ar: "الحماية" },
         p: {
-          en: "Security is the first highest priority. When talking about security means talking about business risk and growth, cost, data, customers and the list goes on",
-          ar: "",
+          en: "Security is the first highest priority. When talking about security means talking about business risk and growth, cost, data, customers and the list goes on.",
+          ar: "الأمن هو الأولوية القصوى الأولى. عندما نتحدث عن الأمن يعني الحديث عن مخاطر الأعمال والنمو والتكلفة والبيانات والعملاء والقائمة تطول",
         },
       },
       {
         image: "/performance.png",
-        t: { en: "Performance", ar: "" },
+        t: { en: "Performance", ar: "الاداء" },
         p: {
           en: "Speed Performance includes Fast load times and lag free interaction is one of my highest priorities. We know that the application becomes slow as much as the it gets complex, here where speed performance comes to play.",
-          ar: "",
+          ar: "تتضمن سرعة الأداء أوقات تحميل سريعة، ويعد التفاعل الخالي من التأخير أحد أهم أولوياتي. نحن نعلم أن التطبيق يصبح بطيئًا بقدر ما يصبح معقدًا، وهنا يأتي دور سرعة الأداء.",
         },
       },
       {
         image: "/responsive.png",
-        t: { en: "Responsive", ar: "" },
+        t: { en: "Responsive", ar: "متجاوب" },
         p: {
-          en: "Layouts work on any device, big or small. Making your application working and looking good on all devices is something essential nowadays.",
-          ar: "",
+          en: "Layouts work on any device, big or small screen. Making your application working and looking good on all devices is something essential nowadays.",
+          ar: "تعمل الهيكل العام للصفحات على أي جهاز، سواء كان شاشة كبيرًا أو صغيرًا. يعد جعل تطبيقك يعمل ويبدو جيدًا على جميع الأجهزة أمرًا ضروريًا في الوقت الحاضر.",
         },
       },
       {
         image: "/dynamic.png",
-        t: { en: "Dynamic", ar: "" },
+        t: { en: "Dynamic", ar: "ديناميكي" },
         p: {
           en: "Websites don't have to be static. We love making applications come to life and making them more dynamic, functional feature rich and always in sync",
-          ar: "",
+          ar: "لا يجب أن تكون مواقع الويب ساكن. نحن نحب أن نجعل التطبيقات تنبض بالحياة ونجعلها أكثر ديناميكية وغنية بالميزات الوظيفية ومتزامنة دائمًا",
         },
       },
       {
         image: "/accessibility.png",
         t: {
           en: "Accessibility",
-          ar: "",
+          ar: "إمكانية الوصول",
         },
         p: {
           en: "Full advanced user interface control. Making website accessible for all people even for people with disabilities, is something that makes your application smart and easy to interact with through all devices like Keyboard, Mouse and more.",
+          ar: "التحكم الكامل في واجهة المستخدم المتقدمة. إن إتاحة الوصول إلى موقع الويب لجميع الأشخاص، حتى الأشخاص ذوي الإعاقة، هو أمر يجعل تطبيقك ذكيًا وسهل التفاعل معه من خلال جميع الأجهزة مثل لوحة المفاتيح والماوس والمزيد.",
+        },
+      },
+      {
+        image: "/seo.webp",
+        t: {
+          en: "SEO friendly",
+          ar: "صديق محرك البحث",
+        },
+        p: {
+          en: "SEO friendly implemnetation",
           ar: "",
         },
       },
+      {
+        image: "/scalable.png",
+        t: {
+          en: "Scalable",
+          ar: "",
+        },
+        p: {
+          en: "Ready to scale",
+          ar: "",
+        },
+      },
+      //
       // { image: "", t: { en: "", ar: "" }, p: { en: "", ar: "" } },
     ],
   },
@@ -246,6 +278,7 @@ const content = {
   },
 };
 
+// Important:
 // IT Consulting
 // Web Development
 // Mobile Application Development

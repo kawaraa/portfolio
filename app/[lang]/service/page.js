@@ -13,12 +13,15 @@ export default function Services({ params: { lang } }) {
       <ol className="">
         {content.services.map((service, i) => (
           <li
-            className={`${cardBgCls} rounded-md max-w-lg md:max-w-full mx-auto my-5 md:p-5 flex md:gap-10 `}
+            className={`${cardBgCls} ${
+              i % 2 != 0 && "flex-row-reverse"
+            } max-w-lg md:max-w-full mx-auto my-5 md:p-5 flex md:gap-10 rounded-md lazy-b duration-200`}
+            style={getCssDelay(0.5)}
             key={i}
           >
-            <div className="flex flex-col md:w-1/2 lazy-b duration-200" style={getCssDelay(0.5)}>
+            <div className="flex flex-col md:w-1/2">
               <h2 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{service.t[lang]}</h2>
-              <div className="md:hidden flex-auto overflow-hidden lazy-b duration-200">
+              <div className="md:hidden flex-auto overflow-hidden">
                 <Image
                   src={service.imageUrl}
                   width="500"
@@ -32,15 +35,15 @@ export default function Services({ params: { lang } }) {
 
               <a
                 href={service.link.replace("lang", lang)}
-                className={`${btnCls} md:place-self-start mx-3 mb-3 md:m-0`}
+                className={`${btnCls} ${
+                  i % 2 != 0 ? "md:place-self-end" : "md:place-self-start"
+                } mx-3 mb-3 md:m-0`}
               >
                 {learn[lang]}
               </a>
             </div>
-            <div
-              className="hidden overflow-hidden md:flex w-1/2 items-center rounded-md lazy-b duration-200"
-              style={getCssDelay(0.5)}
-            >
+
+            <div className="hidden overflow-hidden md:flex w-1/2 items-center rounded-md">
               <Image
                 src={service.imageUrl}
                 width="500"
@@ -83,28 +86,28 @@ const content = {
       link: "lang/services/ecommerce",
     },
     {
-      t: { en: "Custom Development", ar: "" },
+      t: { en: "Custom Development", ar: "التطوير المخصص" },
       p: {
-        en: [""],
-        ar: [""],
+        en: [
+          "Custom solutions designed to fit your unique requirements, from web and mobile applications to enterprise-level software",
+        ],
+        ar: [
+          "حلول مخصصة مصممة لتناسب متطلباتك الفريدة، بدءًا من تطبيقات الويب والهاتف المحمول وحتى البرامج على مستوى المؤسسة",
+        ],
       },
-      imageUrl: "/custom-development.png",
+      imageUrl: "/custom-development.jpg",
       link: "lang/services/custom-development",
     },
     {
-      t: { en: "Consulting Services", ar: "" },
+      t: { en: "Consulting Services", ar: "خدمات استشارية" },
       p: {
-        en: [""],
-        ar: [""],
+        en: [
+          "Strategic guidance to help you navigate the complexities of technology, making informed decisions for your business.",
+        ],
+        ar: ["التوجيه الاستراتيجي لمساعدتك على التنقل بين تعقيدات التكنولوجيا، واتخاذ قرارات مستنيرة لعملك."],
       },
-      imageUrl: "/consulting-services.png",
+      imageUrl: "/consulting-services.jpg",
       link: "lang/services/custom-development",
     },
   ],
 };
-
-// custom-development
-
-// Software Development: Custom solutions designed to fit your unique requirements, from web and mobile applications to enterprise-level software.
-
-// Consulting Services: Strategic guidance to help you navigate the complexities of technology, making informed decisions for your business.

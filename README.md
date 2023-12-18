@@ -22,8 +22,6 @@ npm run dev
 
 ### Todo:
 
-- List all the services on services page and contact form
-- Advantages of our product | What you get out of the box: seo-friendly, lightweight and scalable
 - Add an attractive and content related background to every page
 - Store blogs in Github, Google Blog or in Google spreadsheet
 -
