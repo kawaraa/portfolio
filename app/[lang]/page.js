@@ -1,8 +1,8 @@
-import TypingAnimation from "../../components/typing-animation";
-import { cardBgCls, h1Cls, linkCls } from "../../components/tailwindcss-class";
-import ToastMessages from "../../components/toast-messages";
-import "./page.css";
 import Image from "next/image";
+import TypingAnimation from "../../components/typing-animation";
+import ToastMessages from "../../components/toast-messages";
+import { cardBgCls, h1Cls, linkCls, pageCls } from "../../components/tailwindcss-class";
+import "./page.css";
 
 // Lazy Load
 // import dynamic from "next/dynamic";
@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function HomePageByLang({ params: { lang } }) {
   return (
-    <div className="flex flex-col">
+    <main className={`${pageCls} flex flex-col`}>
       <article className="flex-auto">
         <h1 id="intro-heading">
           <div className="flex justify-center items-end mt-[10vh]">
@@ -42,7 +42,7 @@ export default function HomePageByLang({ params: { lang } }) {
         </div>
       </article>
 
-      <article className="mb-20">
+      <article className="">
         <h2 className={h1Cls}>{content.features.title[lang]}</h2>
 
         <p className="opacity-90">
@@ -51,27 +51,32 @@ export default function HomePageByLang({ params: { lang } }) {
           {content.features.p[lang][1]}
         </p>
 
-        <ul className="mt-12">
+        <ul className="mt-20">
           {content.features.list.map((item, i) => (
-            <li className="flex my-10 gap-10" key={i}>
-              {i % 2 == 0 ? null : <ImageItem src={item.image} alt="" />}
+            <li
+              className={`flex mb-20 flex-col md:gap-10 ${
+                i % 2 != 0 ? "md:flex-row-reverse" : "md:flex-row "
+              } `}
+              key={i}
+            >
+              <h4 className="block md:hidden text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
+              <ImageItem src={item.image} alt="" />
               <div className="">
-                <h4 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
+                <h4 className="hidden md:block text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
                 <p className="flex-auto my-8 px-3 md:mt-0 md:px-0">{item.p[lang]}</p>
               </div>
-              {i % 2 != 0 ? null : <ImageItem src={item.image} alt="" />}
             </li>
           ))}
         </ul>
       </article>
 
-      <article className="mb-20">
+      <article className="">
         <h2 className={h1Cls}>{content.priorities.title[lang]}</h2>
         <p className="">{content.priorities.p[lang]}</p>
 
-        <ol className="mt-12 flex flex-wrap">
+        <ol className="mb-12 flex flex-wrap">
           {content.priorities.list.map((item, i) => (
-            <li className="sm:w-1/2 lg:w-1/3 my-10 p-5 text-center" key={i}>
+            <li className="w-full sm:w-1/2 lg:w-1/3 my-10 p-5 text-center" key={i}>
               <div className={`p-5 pt-8 h-full text-center ${cardBgCls} `}>
                 <ImageItem src={item.image} cls="w-20 mx-auto" alt="" />
                 <div className="">
@@ -87,14 +92,14 @@ export default function HomePageByLang({ params: { lang } }) {
       <TypingAnimation containerId="introduction" startMillisecond={1000} />
 
       <ToastMessages messages={content.messages[lang]} start={30} />
-    </div>
+    </main>
   );
 }
 
 function ImageItem({ src, cls = "", alt = "" }) {
   return (
-    <div className={cls || "min-w-[300px] max-w-[400px]"}>
-      <Image src={src} width="500" height="500" alt={alt} />
+    <div className={cls || "min-w-[300px] max-w-[400px] mx-auto"}>
+      <Image src={src} width="500" height="500" alt={alt} className="w-full" />
     </div>
   );
 }
@@ -240,22 +245,22 @@ const content = {
         image: "/seo.webp",
         t: {
           en: "SEO friendly",
-          ar: "صديق محرك البحث",
+          ar: "متوافق مع محركات البحث",
         },
         p: {
-          en: "SEO friendly implemnetation",
-          ar: "",
+          en: "SEO friendly implementation and Easy for search engines to understand and find. SEO is crucial for online visibility and success. It enhances website ranking, drives traffic, and ensures businesses are easily found by their target audience.",
+          ar: "أداة متوافق مع جميع محركات البحث ويسهل على محركات البحث فهم موقعك الإلكتروني والعثور عليه. يعد محركات البحث أمرًا بالغ الأهمية للظهور موقعك والنجاح عبر الإنترنت. إنه يعزز تصنيف موقع الويب، وكسب الزوار، ويضمن سهولة العثور على مشروعك التجاري من قبل الجمهور المستهدف.",
         },
       },
       {
-        image: "/scalable.png",
+        image: "/scalable.webp",
         t: {
           en: "Scalable",
-          ar: "",
+          ar: "قابلية التوسع",
         },
         p: {
-          en: "Ready to scale",
-          ar: "",
+          en: "Ready to scale by natiure. Scalability ensures your business can grow smoothly. It adapts to increasing demands, making your operations efficient and future-proof.",
+          ar: "جاهز لتوسع بطبيعته, يتضمن قابلية التوسع وأن ينمو عملك بسلاسة. فهو يتكيف مع المتطلبات المتزايدة، مما يجعل عملياتك فعالة وقابلة للمستقبل.",
         },
       },
       //

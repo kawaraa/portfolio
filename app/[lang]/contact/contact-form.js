@@ -1,20 +1,47 @@
 "use client";
+import { useState } from "react";
 import { send } from "../../../components/shared-content";
 import { btnCls, cardBgCls } from "../../../components/tailwindcss-class";
 const inputFieldCls = "relative mt-16";
 const underline = `outline-none border-b-[1px] border-stone-400 dark:border-gray-400 focus:border-dbg dark:focus:border-bg`;
 const inputCls = `peer block bg-transparent w-full p-1 ${underline}`;
-const inputLabelCls = "absolute top-1 left-1 z-1 peer-focus:-top-6 peer-valid:-top-6 text-lg duration-300";
+const inputLabelCls =
+  "absolute top-1 left-1 right-1 z-1 peer-focus:-top-6 peer-valid:-top-6 peer-invalid:-top-6 text-lg duration-300";
 
-export default function ContactForm({ lang }) {
+export default function ContactForm({ lang, apiUrl }) {
+  const [sent, setSent] = useState();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const body = JSON.stringify({
+      name: e.target.name.value,
+      email: e.target.email.value,
+      organization: e.target.organization.value,
+      subject: e.target.subject.value,
+      budget: e.target.budget?.value || 0,
+      deadline: e.target.deadline?.value || 0,
+      message: e.target.message.value,
+    });
+
+    fetch(apiUrl, { method: "POST", body }).catch(() => null);
+    setTimeout(() => document.querySelector("a").click(), 6000);
+    document.getElementById("main-container").scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+    setSent(true);
+  };
+
+  if (sent) {
+    return <p className="mt-[30vh] text-xl text-green-600 text-center">{content.response[lang]}</p>;
+  }
   return (
-    <form className={`${cardBgCls} max-w-lg mx-auto mt-20 px-5 py-8`}>
+    <form onSubmit={handleSubmit} className={`${cardBgCls} max-w-lg mx-auto mt-20 px-5 py-8`}>
       <h2 className="text-3xl mb-3 text-center">{content.h2[lang]}</h2>
 
       {content.inputs.map((input, i) => (
         <div className={inputFieldCls} key={i}>
           <input {...input.props} className={inputCls} />
-          <label htmlFor={input.props.id} className={inputLabelCls}>
+          <label dir="auto" htmlFor={input.props.id} className={inputLabelCls}>
             {input.label[lang]}
           </label>
         </div>
@@ -62,6 +89,10 @@ export default function ContactForm({ lang }) {
 
 const content = {
   h2: { en: "Let's talk", ar: "لنتحدث معا" },
+  response: {
+    en: "Thanks for contacting us, We will reply within 24 hours.",
+    ar: "شكرا لإتصالك بنا، سوف نقوم بالرد خلال 24 ساعة.",
+  },
   inputs: [
     { label: { en: "Name", ar: "الاسم" }, props: { type: "text", name: "name", id: "name", required: true } },
     {

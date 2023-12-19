@@ -26,12 +26,12 @@ export default function About({ params: { lang } }) {
         ))}
       </div>
 
-      <section className="mb-32">
+      <section className="mb-10">
         <h2 className="text-center text-2xl mb-5 font-semibold">{content.whyUs.title[lang]} &#128170;</h2>
 
-        <ol className="px-5 flex flex-wrap list-disc">
+        <ol className="px-5  list-disc">
           {content.whyUs.list.map((item, i) => (
-            <li className="my-2 " key={i}>
+            <li className="mt-10 " key={i}>
               <h3 className="text-lg font-semibold">{item.t[lang]}</h3>
               {item.p[lang]}
             </li>
@@ -72,58 +72,64 @@ const content = {
   },
   sections: [
     {
-      t: { en: "Our Mission", ar: "" },
+      t: { en: "Our Mission", ar: "مهمتنا" },
       p: {
         en: "Empowering businesses through technology by providing strategic, scalable, and sustainable solutions that drive growth, enhance efficiency, and foster innovation.",
-        ar: "",
+        ar: "تمكين الشركات من خلال التكنولوجيا من خلال توفير حلول استراتيجية وقابلة للتطوير ومستدامة تدفع النمو وتعزز الكفاءة وتشجع الابتكار.",
       },
     },
     {
-      t: { en: "Our Vision", ar: "" },
+      t: { en: "Our Vision", ar: "هدفنا" },
       p: {
         en: "To be the go-to partner for businesses seeking transformable software solutions, recognized for our commitment to excellence, innovation, and unwavering client satisfaction.",
-        ar: "",
+        ar: "أن نكون الشريك المفضل للشركات التي تبحث عن حلول برمجية قابلة للتحويل، ومعترف بها لالتزامنا بالتميز والابتكار ورضا العملاء الذي لا يتزعزع.",
       },
     },
     // { t: { en: "", ar: "" }, p: { en: "", ar: "" } },
   ],
   whyUs: {
-    title: { en: "Why Choose Kawara", ar: "" },
+    title: { en: "Why Choose Kawara?", ar: "لماذا تختار كاوارا؟" },
     list: [
       {
-        t: { en: "Expertise Across Industries", ar: "" },
+        t: { en: "Expertise Across Industries", ar: "الخبرة في جميع المجالات" },
         p: {
           en: "With a diverse team of experts, we bring industry-specific knowledge to the table. From healthcare to finance, retail to manufacturing, we have a proven track record of delivering results across various sectors. A portfolio of successful projects across diverse industries.",
-          ar: "",
+          ar: "مع فريق متنوع من الخبراء، نقدم معرفة متخصصة في المجال. من الرعاية الصحية إلى الخدمات المالية، ومن التجزئة إلى التصنيع، لدينا سجل حافل بتحقيق النتائج في مختلف القطاعات. محفظة من المشاريع الناجحة في صناعات متنوعة.",
         },
       },
       {
-        t: { en: "Transparent Communication", ar: "" },
-        p: { en: "We believe in open and honest communication at every stage of the engagement.", ar: "" },
+        t: { en: "Transparent Communication", ar: "شفافية بالتعامل" },
+        p: {
+          en: "We believe in open and honest communication at every stage of the engagement.",
+          ar: "نحن نؤمن بالتواصل المفتوح والصادق في كل مرحلة من مراحل التعاون.",
+        },
       },
       {
-        t: { en: "Customized Solutions", ar: "" },
-        p: { en: "Tailored software solutions to meet the unique needs of your business.", ar: "" },
+        t: { en: "Customized Solutions", ar: "حلول مخصصة" },
+        p: {
+          en: "Tailored software solutions to meet the unique needs of your business.",
+          ar: "حلول برمجية مصممة لتلبية الاحتياجات الفريدة لعملك.",
+        },
       },
       {
-        t: { en: "Continuous Improvement", ar: "" },
+        t: { en: "Continuous Improvement", ar: "تحسن مستمر" },
         p: {
           en: "Embracing a culture of learning and adaptation to stay ahead in the ever-evolving tech landscape.",
-          ar: "",
+          ar: "احتضان ثقافة التعلم والتكيف للبقاء في المقدمة في المشهد التكنولوجي المتطور باستمرار.",
         },
       },
       {
-        t: { en: "Collaborative Approach", ar: "" },
+        t: { en: "Collaborative Approach", ar: "النهج التعاوني" },
         p: {
           en: "We view every project as a partnership. Our collaborative approach ensures that we understand your unique challenges and goals, working hand-in-hand to craft tailored solutions.",
-          ar: "",
+          ar: "نحن ننظر إلى كل مشروع على أنه شراكة. ويضمن نهجنا التعاوني أننا نفهم تحدياتك وأهدافك الفريدة، ونعمل جنبًا إلى جنب لصياغة حلول مخصصة.",
         },
       },
       {
-        t: { en: "Innovation at the Core", ar: "" },
+        t: { en: "Innovation at the Core", ar: "الابتكار في الصميم" },
         p: {
-          en: "Innovation is in our DNA. We stay at the forefront of technological advancements to provide you with solutions that not only meet your current needs but also position you for future success.",
-          ar: "",
+          en: "Innovation is our nature. We stay at the forefront of technological advancements to provide you with solutions that not only meet your current needs but also position you for future success.",
+          ar: "الابتكار هو طبيعتنا. نحن نبقى في طليعة التطورات التكنولوجية لتزويدك بالحلول التي لا تلبي احتياجاتك الحالية فحسب، بل تضعك أيضًا في طريق النجاح في المستقبل.",
         },
       },
     ],

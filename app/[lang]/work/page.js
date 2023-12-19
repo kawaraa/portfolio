@@ -8,13 +8,11 @@ export default function Work({ params: { lang } }) {
     <main className={pageCls}>
       <h1 className={h1Cls}>{content.title[lang]}</h1>
 
-      {/* <p className="mb-14 opacity-90">{content.p[lang]}</p> */}
+      <div className="flex flex-col lg:flex-row lg:gap-10">
+        <div className="lg:w-1/2 p-0 lg:pr-8">
+          <p className="lg:mb-14 opacity-90">{content.p[lang]}</p>
 
-      <div className="flex flex-col lg:flex-row mt-">
-        <div className="lg:w-1/2 pr-8">
-          <p className="mb-14 opacity-90">{content.p[lang]}</p>
-
-          <ol className="">
+          <ol className=" mx-auto">
             <li className="h-32"></li>
 
             {content.projects
@@ -32,8 +30,8 @@ export default function Work({ params: { lang } }) {
           </ol>
         </div>
 
-        <ol className="lg:w-1/2 pl-8">
-          <li className="h-28"></li>
+        <ol className="lg:w-1/2 p-0 lg:pl-8">
+          <li className="h-0 lg:h-28"></li>
           {content.projects
             .filter((_, i) => i % 2 == 1)
             .map((project, i) => (
@@ -53,24 +51,25 @@ export default function Work({ params: { lang } }) {
 }
 
 function ListItem({ imageUrl, name, description, link, lang }) {
+  const btn = (
+    <a href={link} className={`${btnCls} `} name="BUTTON">
+      {visit[lang]}
+    </a>
+  );
+
   return (
-    <>
-      <li className={`${cardBgCls} mb-20 p-5 p-3 lazy-b duration-200`} style={getCssDelay(0.5)}>
-        <div className="overflow-hidden w-full rounded-md">
-          <Image src={imageUrl} width="500" height="500" atl={name} className="w-full" />
+    <li className={`${cardBgCls} mb-20 p-5 p-3 lazy-b duration-200`} style={getCssDelay(0.5)}>
+      <div className="overflow-hidden relative w-full rounded-md">
+        <Image src={imageUrl} width="500" height="500" atl={name} className="w-full" />
+        <div className="bg-black/10 absolute inset-0 w-ful h-full flex items-center justify-center">
+          {btn}
         </div>
+      </div>
 
-        <h2 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{name}</h2>
+      <h2 className="text-left text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{name}</h2>
 
-        <p className="flex-auto text-sm my-8 px-3 md:mt-0 md:px-0">{description}</p>
-
-        <div className="text-center">
-          <a href={link} className={`${btnCls} md:place-self-start mx-3 mb-3 md:m-0`}>
-            {visit[lang]}
-          </a>
-        </div>
-      </li>
-    </>
+      <p className="flex-auto text-sm my-8 px-3 md:mt-0 md:px-0">{description}</p>
+    </li>
   );
 }
 
@@ -90,8 +89,8 @@ const content = {
       link: "https://arablocalmarket.com",
       name: "Arab Local Market",
       description: {
-        en: "eCommerce, eCommerce, eCommerce",
-        ar: "التجارة الإلكترونية, التجارة الإلكترونية, التجارة الإلكترونية",
+        en: "A complete Online Marketplace that helps break-and-mortar local physical stores improve their sales.",
+        ar: "سوق متكامل عبر الإنترنت يساعد المتاجر المحلية على تحسين مبيعاتها.",
       },
     },
     {
@@ -99,8 +98,8 @@ const content = {
       link: "https://shop.kawaraa.com",
       name: "Kawara shop",
       description: {
-        en: "eCommerce, eCommerce, eCommerce",
-        ar: "التجارة الإلكترونية, التجارة الإلكترونية, التجارة الإلكترونية",
+        en: "Kawara Shop is the online store where we practice E-commerce.",
+        ar: "متجر كاوارة هو المتجر الإلكتروني حيث نمارس فيه التجارة الإلكترونية.",
       },
     },
     {
@@ -108,8 +107,8 @@ const content = {
       link: "https://kawaraa.com",
       name: "Kawara Software Consultant",
       description: {
-        en: "eCommerce, eCommerce, eCommerce",
-        ar: "التجارة الإلكترونية, التجارة الإلكترونية, التجارة الإلكترونية",
+        en: "The latest version of our Website, after we became Software Consultant.",
+        ar: "أحدث إصدار من موقعنا الإلكتروني, بعد أن أصبحنا أخصائين ومستشارين للبرمجيات.",
       },
     },
     {
@@ -117,8 +116,8 @@ const content = {
       link: "https://portfolio.kawaraa.com",
       name: "Kawara Portfolio",
       description: {
-        en: "eCommerce, eCommerce, eCommerce",
-        ar: "التجارة الإلكترونية, التجارة الإلكترونية, التجارة الإلكترونية",
+        en: "The first version of our CTO Portfolio",
+        ar: "النسخة الأولى من موقع مدير التكنولوجيا للشركة",
       },
     },
   ],

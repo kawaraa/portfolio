@@ -8,14 +8,14 @@ export default function Services({ params: { lang } }) {
     <main className={pageCls}>
       <h1 className={h1Cls}>{content.title[lang]}</h1>
 
-      <p className="mb-14">{content.p[lang]}</p>
+      <p className="">{content.p[lang]}</p>
 
-      <ol className="">
+      <ol className="mt-28">
         {content.services.map((service, i) => (
           <li
             className={`${cardBgCls} ${
               i % 2 != 0 && "flex-row-reverse"
-            } max-w-lg md:max-w-full mx-auto my-5 md:p-5 flex md:gap-10 rounded-md lazy-b duration-200`}
+            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex md:gap-10 rounded-md lazy-b duration-200`}
             style={getCssDelay(0.5)}
             key={i}
           >

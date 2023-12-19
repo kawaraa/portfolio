@@ -44,7 +44,7 @@ export default function Layout({ children, params: { lang } }) {
 
         {/* <header></header> */}
 
-        <div className="overflow-auto">
+        <div id="main-container" className="overflow-auto">
           {children}
 
           <Footer lang={lang} />

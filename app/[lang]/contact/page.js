@@ -1,5 +1,6 @@
 import { h1Cls, pageCls } from "../../../components/tailwindcss-class";
 import ContactForm from "./contact-form";
+const apiUrl = process.env.GOOGLE_APP_SCRIPT_URL;
 
 export default function Contact({ params: { lang } }) {
   return (
@@ -12,14 +13,14 @@ export default function Contact({ params: { lang } }) {
       <h1 className={h1Cls}>
         {content.title[lang][0]}
         <span className="sr-only">
+          {content.title[lang][1]}
           {content.title[lang][2]}
-          {content.title[lang][3]}
         </span>
       </h1>
 
       <p>{content.p[lang][0]}</p>
       <p>{content.p[lang][1]}</p>
-      <ContactForm lang={lang} />
+      <ContactForm lang={lang} apiUrl={apiUrl} />
     </main>
   );
 }
@@ -28,12 +29,16 @@ const content = {
   title: {
     en: [
       "Join us on your digital journey",
-      "Let's talk",
       " Contact us, Contact Kawara",
-      "Let's build something together!",
-      "Are you ready to take your business to the next level?",
+      " Let's build something together!",
+      " Are you ready to take your business to the next level?",
     ],
-    ar: [""],
+    ar: [
+      "انضم إلينا في رحلتك الرقمية",
+      "تواصل معنا، اتصل بنا، اتصل بكوارا ",
+      "لنبني شيئا معا! ",
+      "هل أنت مستعد للارتقاء بعملك إلى المرحلة التالية؟",
+    ],
   },
   p: {
     en: [
@@ -46,6 +51,14 @@ const content = {
       "Join our growing list of satisfied clients and experience the difference with Kawara.",
       "Your success is our priority.",
     ],
-    ar: [""],
+    ar: [
+      "سواء كنت تبحث عن حلول برمجية مبتكرة أو استشارات استراتيجية أو شريك موثوق لتوجيه تحولك الرقمي، فنحن هنا لتجاوز توقعاتك",
+      "في كاوارا، نحن لا نبني البرمجيات فحسب، بل نبني قصص النجاح. دعونا ننشئ لك معا.",
+      "هل أنت على استعداد لبناء شيء حقيقي مع المبدعين المفضلين لديك وقادة التكنولوجيا؟ تواصل معنا أو املأ نموذج الاستفسار",
+      "اتصل بنا اليوم، ودعنا نبدأ رحلة الابتكار والنجاح.",
+      "سواء كنت شركة ناشئة تتطلع إلى إحداث تغيير جذري في السوق أو شركة راسخة تسعى إلى التحول الرقمي، فلدينا الخبرة اللازمة لتحقيق ذلك.",
+      "انضم إلى قائمتنا المتزايدة من العملاء الراضين واختبر الفرق مع كاوارا.",
+      "نجاحك هو أولويتنا.",
+    ],
   },
 };
