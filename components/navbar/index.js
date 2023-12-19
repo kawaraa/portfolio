@@ -25,7 +25,11 @@ export default async function Navbar({ lang }) {
         ))}
       </div>
 
-      <a href={`/${lang}/contact`} name="BUTTON" className={`${btnCls} mx-3 py-2 px-4 rounded-full`}>
+      <a
+        href={`/${lang}/contact`}
+        name="BUTTON"
+        className={`${btnCls} hidden md:block mx-3 py-2 px-4 rounded-full`}
+      >
         {contact[lang]}
       </a>
       <MobileMenu lang={lang} />

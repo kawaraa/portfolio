@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Transition from "../transition";
-import { navLinks } from "../shared-content";
+import { contact, navLinks } from "../shared-content";
+import { bCls, btnCls, linkCls } from "../tailwindcss-class";
 
 export default function MobileMenu({ lang }) {
   const pathname = usePathname();
@@ -19,18 +20,32 @@ export default function MobileMenu({ lang }) {
       <Transition
         Tag="ul"
         open={isMenuOpen}
-        base="md:hidden fixed z-[1] bottom-0 left-0 right-0 top-0 flex h-full w-full flex-col bg-white pb-6 dark:bg-black p-4 transition-all ease-in-out duration-300"
+        base="md:hidden fixed z-[1] bottom-0 left-0 right-0 top-0 pt-20 flex h-full w-full flex-col bg-white pb-6 dark:bg-black p-4 transition-all ease-in-out duration-300"
         enter="translate-x-0"
-        exit="translate-x-[-100%]"
+        exit="translate-x-[100%]"
         time="200"
+        dir="auto"
       >
         {navLinks.map((link, i) => (
-          <li key={i}>
-            <a href={link.path.replace("lang", lang)} className="list-links px-2 py-1">
+          <li
+            className={`my-1 border-b-[1xp] ${bCls} ${linkCls} border-t-0 border-l-0 border-r-0 !border-b-[1px]`}
+            key={i}
+          >
+            <a href={link.path.replace("lang", lang)} className="block px-5 py-2 text-lg">
               {link[lang]}
             </a>
           </li>
         ))}
+
+        <li className="mt-10 ">
+          <a
+            href={`/${lang}/contact`}
+            name="BUTTON"
+            className={`${btnCls} !flex mx-3 py-2 px-4 rounded-full`}
+          >
+            {contact[lang]}
+          </a>
+        </li>
       </Transition>
 
       <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden relative z-2 ml-3">

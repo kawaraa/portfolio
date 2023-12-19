@@ -1,32 +1,31 @@
 /* Site Name */
 #site-name {
   opacity: 0;
-  animation: animate-site-name 1.5s ease-in 0.5s forwards;
+  animation: animate-site-name 1.5s ease 0.5s forwards;
 }
 @keyframes animate-site-name {
   0% {
     opacity: 1;
+    position: fixed;
   }
   1% {
     opacity: 1;
-    position: absolute;
-    left: -300%;
-    top: 90vh;
+    position: fixed;
+    transform: translate(-150vw, 50vh);
     letter-spacing: 100vh;
     font-size: 500px;
   }
+
   60% {
     opacity: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(50vw, 50vh);
+    position: fixed;
+    transform: translate(calc(50vw - 100px), 50vh);
     letter-spacing: revert-layer;
     font-size: revert-layer;
   }
   80% {
     opacity: 1;
-    transform: translate(50vw, 50vh);
+    transform: translate(calc(50vw - 100px), 50vh);
     letter-spacing: revert-layer;
     font-size: revert-layer;
   }

@@ -12,9 +12,9 @@ import "./page.css";
 
 export default function HomePageByLang({ params: { lang } }) {
   return (
-    <main className={`${pageCls} !pt-5`}>
-      <article className="h-[90vh] flex flex-col justify-center">
-        <h1 id="intro-heading">
+    <main className={`${pageCls} !pt-[5vh]`}>
+      <article className="min-h-[90vh] pb-20">
+        <h1 id="intro-heading" className="">
           <div className="flex justify-center items-end ">
             <span id="hi" className="capitalize text-5xl">
               {content.hi[lang]}
@@ -27,18 +27,21 @@ export default function HomePageByLang({ params: { lang } }) {
 
         <p className="sr-only">{content.hiddenP[lang][1]}</p>
 
-        <div id="introduction" className="text-lg text-center mt-10 ">
-          <p className="opacity-0">{content.p[lang][0]}</p>
-          <p className="opacity-0">{content.p[lang][1]}</p>
-          <p className="opacity-0">{content.p[lang][2]}</p>
-          <p className="opacity-0">{content.p[lang][3]}</p>
-          <span className="opacity-0">{content.p[lang][4]}</span>
+        <div id="introduction" className="text-lg text-center mt-5 md:mt-10">
+          <p className="opacity-0 sm:leading-10">{content.p[lang][0]}</p>
+          <p className="opacity-0 sm:leading-10">{content.p[lang][1]}</p>
+          <p className="opacity-0 sm:leading-10">{content.p[lang][2]}</p>
+          <p className="opacity-0 sm:leading-10">{content.p[lang][3]}</p>
+          {/* <span className="opacity-0">{content.p[lang][4]}</span>
           <a className={`opacity-0 ${linkCls} hvr`} href="/work">
             {content.p[lang][5]}
+          </a> */}
+          {/* <span className="opacity-0">{content.p[lang][6]}</span> */}
+          {/* <br /> */}
+          <span className="opacity-0 sm:leading-10">{content.p[lang][7]}</span>
+          <a className={`opacity-0 sm:leading-10 ${linkCls} hvr`} href={`${lang}/contact`}>
+            {content.p[lang][8]}
           </a>
-          <span className="opacity-0">{content.p[lang][6]}</span>
-          <br />
-          <span className="opacity-0">{content.p[lang][7]}</span>
         </div>
       </article>
 
@@ -119,17 +122,19 @@ const content = {
       "Feel free to take a look at some of our work on ",
       "Work ",
       " page.",
-      "Ready to transform your ideas into reality? then Contact us at ",
+      "Ready to transform your ideas into reality? ",
+      "Contact us",
     ],
     ar: [
       "مرحبًا بكم في كوارا (Kawara)، حيث يلتقي الابتكار بالتنفيذ.",
       "نحن شركة رائدة أخصائية في تطوير البرمجيات الشاملة وصياغة الحلول الرقمية التي تدفع النجاح للشركات من جميع الأحجام. مع فريق من المطورين والمصممين الموهوبين متخصص في، نحن متخصصون في إنشاء برامج متطورة لتلبية احتياجاتك الفريدة.",
-      "نحن نقدم مجموعة واسعة من خدمات تطوير البرمجيات لمساعدتك على البقاء في المقدمة في العصر الرقمي.",
-      "نحن نبني حلولاً برمجية مخصصة تتوافق تمامًا مع أهداف عملك.",
+      "نقدم مجموعة واسعة من خدمات تطوير البرمجيات لمساعدتك على البقاء في المقدمة في العصر الرقمي.",
+      "نبني حلولاً برمجية مخصصة تتوافق تمامًا مع أهداف عملك.",
       " لا تتردد في إلقاء نظرة على بعض من أعمالنا على صفحة ",
       "أعمال",
       "",
-      "هل أنت مستعد لتحويل أفكارك إلى واقع؟ ثم اتصل بنا على ",
+      "هل أنت مستعد لتحويل أفكارك إلى واقع؟ ",
+      "تواصل معنا",
     ],
   },
   hiddenP: {

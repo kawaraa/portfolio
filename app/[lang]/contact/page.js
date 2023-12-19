@@ -7,7 +7,7 @@ export default function Contact({ params: { lang } }) {
     <main
       className={
         pageCls +
-        " !mx-0 bg-[url('/map-image-background-l.png')] dark:bg-[url('/map-image-dark-background.png')]"
+        " !mx-0 px-3 bg-[url('/map-image-background-l.png')] dark:bg-[url('/map-image-dark-background.png')]"
       }
     >
       <h1 className={h1Cls}>
