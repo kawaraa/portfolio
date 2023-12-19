@@ -46,7 +46,6 @@ export default function Layout({ children, params: { lang } }) {
         />
 
         <Navbar lang={lang} />
-
         {/* <header></header> */}
 
         <div id="main-container" className="overflow-scroll">
