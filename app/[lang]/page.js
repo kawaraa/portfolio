@@ -12,10 +12,10 @@ import "./page.css";
 
 export default function HomePageByLang({ params: { lang } }) {
   return (
-    <main className={`${pageCls} flex flex-col`}>
-      <article className="flex-auto">
+    <main className={`${pageCls} !pt-5`}>
+      <article className="h-[90vh] flex flex-col justify-center">
         <h1 id="intro-heading">
-          <div className="flex justify-center items-end mt-[10vh]">
+          <div className="flex justify-center items-end ">
             <span id="hi" className="capitalize text-5xl">
               {content.hi[lang]}
             </span>
@@ -27,7 +27,7 @@ export default function HomePageByLang({ params: { lang } }) {
 
         <p className="sr-only">{content.hiddenP[lang][1]}</p>
 
-        <div id="introduction" className="text-lg text-center mt-10 min-h-[70vh]">
+        <div id="introduction" className="text-lg text-center mt-10 ">
           <p className="opacity-0">{content.p[lang][0]}</p>
           <p className="opacity-0">{content.p[lang][1]}</p>
           <p className="opacity-0">{content.p[lang][2]}</p>

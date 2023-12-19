@@ -70,7 +70,7 @@
 
 /* Home page */
 #hi {
-  transform: translate(0, -20vh);
+  transform: translate(0, -30vh);
   animation: animate-fall 0.5s ease-in 2s forwards;
 }
 @keyframes animate-fall {

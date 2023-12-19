@@ -6,7 +6,7 @@ const inputFieldCls = "relative mt-16";
 const underline = `outline-none border-b-[1px] border-stone-400 dark:border-gray-400 focus:border-dbg dark:focus:border-bg`;
 const inputCls = `peer block bg-transparent w-full p-1 ${underline}`;
 const inputLabelCls =
-  "absolute top-1 left-1 right-1 z-1 peer-focus:-top-6 peer-valid:-top-6 peer-invalid:-top-6 text-lg duration-300";
+  "absolute top-1 left-1 right-1 z-1 peer-focus:-top-6 peer-valid:-top-6 text-lg duration-300";
 
 export default function ContactForm({ lang, apiUrl }) {
   const [sent, setSent] = useState();
