@@ -14,22 +14,27 @@ export default async function Footer({ lang }) {
       dir="ltr"
       className="text-sm p-6 py-12 bg-pc text-dt border-t border-stone-300 dark:border-neutral-700"
     >
-      <div className="pb-6 flex items-center justify-end gap-3">
+      <div
+        dir="auto"
+        className={`mb-8 flex flex-col sm:flex-row items-center gap-3 ${lang != "ar" && "justify-end"}`}
+      >
         <h3 className="text-2xl text-bg font-semibold">{workWith[lang]}</h3>
-        <a
-          href={`/${lang}/contact`}
-          name="BUTTON"
-          className={`${btnCls} py-3 px-5 !bg-dbg hover:!bg-sc rounded-full`}
-        >
-          {call[lang]}
-        </a>
-        <a
-          href={`/${lang}/contact`}
-          name="BUTTON"
-          className={`${btnCls} py-3 px-5 !bg-dbg hover:!bg-sc rounded-full`}
-        >
-          {send[lang]}
-        </a>
+        <div className="flex gap-3">
+          <a
+            href={`/${lang}/contact`}
+            name="BUTTON"
+            className={`${btnCls} py-3 px-5 !bg-dbg hover:!bg-sc rounded-full`}
+          >
+            {call[lang]}
+          </a>
+          <a
+            href={`/${lang}/contact`}
+            name="BUTTON"
+            className={`${btnCls} py-3 px-5 !bg-dbg hover:!bg-sc rounded-full`}
+          >
+            {send[lang]}
+          </a>
+        </div>
         {/*  */}
       </div>
 

@@ -17,11 +17,11 @@ export default function About({ params: { lang } }) {
         ))}
       </div>
 
-      <div className="my-32 flex gap-10">
+      <div className="my-32 flex flex-col sm:flex-row gap-10">
         {content.sections.map((section, i) => (
           <section className={`flex-1 p-5 ${cardBgCls} `} key={i}>
             <h2 className="text-center text-2xl mb-5 font-semibold">{section.t[lang]}</h2>
-            <p>{section.p[lang]}</p>
+            <p className="">{section.p[lang]}</p>
           </section>
         ))}
       </div>

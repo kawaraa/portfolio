@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ImageWithSkeleton from "../../components/image-with-skeleton";
 import TypingAnimation from "../../components/typing-animation";
 import ToastMessages from "../../components/toast-messages";
 import { cardBgCls, h1Cls, linkCls, pageCls } from "../../components/tailwindcss-class";
@@ -102,7 +102,7 @@ export default function HomePageByLang({ params: { lang } }) {
 function ImageItem({ src, cls = "", alt = "" }) {
   return (
     <div className={cls || "min-w-[300px] max-w-[400px] mx-auto"}>
-      <Image src={src} width="500" height="500" alt={alt} className="w-full" />
+      <ImageWithSkeleton src={src} width="500" height="500" alt={alt} className="w-full" />
     </div>
   );
 }

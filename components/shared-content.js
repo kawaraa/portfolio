@@ -15,7 +15,7 @@ export const navLinks = [
   { en: "Services", ar: "خدمات", path: "/lang/service" },
   { en: "Work", ar: "أعمالنا", path: "/lang/work" }, // Clients, Projects
   // { en: "Blog", ar: "المدونات", path: "/lang/blog" },
-  { en: "About", ar: "لمحة", path: "/lang/about" },
+  { en: "About", ar: "لمحة عنا", path: "/lang/about" },
 ];
 
 // export const services = [];

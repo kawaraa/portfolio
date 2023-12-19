@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { visit } from "../../../components/shared-content";
 import { btnCls, cardBgCls, h1Cls, pageCls } from "../../../components/tailwindcss-class";
 import { getCssDelay } from "../../../services/utilities";
+import ImageWithSkeleton from "../../../components/image-with-skeleton";
 
 export default function Work({ params: { lang } }) {
   return (
@@ -52,7 +52,7 @@ export default function Work({ params: { lang } }) {
 
 function ListItem({ imageUrl, name, description, link, lang }) {
   const btn = (
-    <a href={link} className={`${btnCls} `} name="BUTTON">
+    <a href={link} className={`${btnCls} `} name="BUTTON" target="_blank">
       {visit[lang]}
     </a>
   );
@@ -60,7 +60,7 @@ function ListItem({ imageUrl, name, description, link, lang }) {
   return (
     <li className={`${cardBgCls} mb-20 p-5 p-3 lazy-b duration-200`} style={getCssDelay(0.5)}>
       <div className="overflow-hidden relative w-full rounded-md">
-        <Image src={imageUrl} width="500" height="500" atl={name} className="w-full" />
+        <ImageWithSkeleton src={imageUrl} width="500" height="500" atl={name} className="w-full" />
         <div className="bg-black/10 absolute inset-0 w-ful h-full flex items-center justify-center">
           {btn}
         </div>

@@ -14,7 +14,12 @@ export default function Layout({ children, params: { lang } }) {
   if (lang != "en" && lang != "ar") notFound();
 
   return (
-    <html dir="auto" translate="no" lang={lang} className={lang == "ar" ? kufiFont.className : ""}>
+    <html
+      dir="auto"
+      translate="no"
+      lang={lang}
+      className={lang == "ar" ? `${kufiFont.className} leading-loose` : ""}
+    >
       <body className="overflow-hidden h-screen no-select h-screen w-screen flex flex-col selection:bg-teal-300 dark:selection:bg-pink-500 dark:selection:text-white cursor-[url(/cursor.svg),_auto] shadow-[0_0_50px_50px_rgba(0,0,0,0.7)] page-open">
         <script
           type="application/ld+json"
