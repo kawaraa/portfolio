@@ -1,28 +1,32 @@
-import Image from "next/image";
-import { btnCls, cardBgCls, h1Cls, pageCls } from "../../../components/tailwindcss-class";
-import { getCssDelay } from "../../../services/utilities";
+import { btnCls, cardBgCls, h1Cls, lazyCls, pageCls } from "../../../components/tailwindcss-class";
+import { getCssDelay } from "../../../components/tailwindcss-class";
 import { learn } from "../../../components/shared-content";
+import ImageWithSkeleton from "../../../components/image-with-skeleton";
 
 export default function Services({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls}>{content.title[lang]}</h1>
+      <h1 className={h1Cls + " lazy-b"} style={getCssDelay(0.5)}>
+        {content.title[lang]}
+      </h1>
 
-      <p className="">{content.p[lang]}</p>
+      <p className="lazy-b" style={getCssDelay(0.5)}>
+        {content.p[lang]}
+      </p>
 
       <ol className="mt-28">
         {content.services.map((service, i) => (
           <li
-            className={`${cardBgCls} ${
+            className={`${cardBgCls} ${i != 0 && lazyCls} ${
               i % 2 != 0 && "flex-row-reverse"
             } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex md:gap-10 rounded-md lazy-b duration-200`}
-            style={getCssDelay(0.5)}
+            style={i != 0 ? null : getCssDelay(1)}
             key={i}
           >
             <div className="flex flex-col md:w-1/2">
               <h2 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{service.t[lang]}</h2>
               <div className="md:hidden flex-auto overflow-hidden">
-                <Image
+                <ImageWithSkeleton
                   src={service.imageUrl}
                   width="500"
                   height="500"
@@ -44,7 +48,7 @@ export default function Services({ params: { lang } }) {
             </div>
 
             <div className="hidden overflow-hidden md:flex w-1/2 items-center rounded-md">
-              <Image
+              <ImageWithSkeleton
                 src={service.imageUrl}
                 width="500"
                 height="500"

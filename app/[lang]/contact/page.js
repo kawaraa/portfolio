@@ -1,4 +1,4 @@
-import { h1Cls, pageCls } from "../../../components/tailwindcss-class";
+import { getCssDelay, h1Cls, pageCls } from "../../../components/tailwindcss-class";
 import ContactForm from "./contact-form";
 const apiUrl = process.env.GOOGLE_APP_SCRIPT_URL;
 
@@ -18,8 +18,12 @@ export default function Contact({ params: { lang } }) {
         </span>
       </h1>
 
-      <p>{content.p[lang][0]}</p>
-      <p>{content.p[lang][1]}</p>
+      <p className="lazy-b" style={getCssDelay(0.5)}>
+        {content.p[lang][0]}
+      </p>
+      <p className="lazy-b" style={getCssDelay(1)}>
+        {content.p[lang][1]}
+      </p>
       <ContactForm lang={lang} apiUrl={apiUrl} />
     </main>
   );

@@ -23,6 +23,5 @@ npm run dev
 ### Todo:
 
 - Add an attractive and content related background to every page
-- Lazy load animation
 - Store blogs in Github, Google Blog or in Google spreadsheet
 -

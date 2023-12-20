@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function CursorAndPageAnimation() {
@@ -7,6 +7,8 @@ export default function CursorAndPageAnimation() {
   const path = usePathname();
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
   const [cls, setCls] = useState("");
+  const prevScrollRef = useRef(20);
+  const elementsRef = useRef([]);
 
   const handleMouseMove = (e) => {
     const name = e.target.dataset.name || e.toElement.name || e.toElement.tagName;
@@ -30,11 +32,30 @@ export default function CursorAndPageAnimation() {
     }
   };
 
+  const viewportHandler = ({ target: { offsetHeight, scrollTop } }) => {
+    if (prevScrollRef.current > scrollTop + 20) prevScrollRef.current = scrollTop + 20;
+    if (prevScrollRef.current > scrollTop) return;
+    prevScrollRef.current = scrollTop + 20;
+
+    elementsRef.current = elementsRef.current.filter((el) => {
+      if (el.offsetTop < offsetHeight + scrollTop) {
+        el.classList.remove("lazy", "off-view");
+        return false;
+      }
+      return true;
+    });
+  };
+
   useEffect(() => {
+    const root = document.getElementById("main-container") || document.body;
+    elementsRef.current = Array.from(document.querySelectorAll(".lazy"));
+    elementsRef.current.forEach((el) => el.classList.add("off-view"));
+
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("click", fetchContent);
-    document.body.classList.remove("page-shut");
+    root.addEventListener("scroll", viewportHandler);
 
+    document.body.classList.remove("page-shut");
     document.querySelectorAll("a").forEach((el) => {
       el.classList.remove("active");
       if (el.href == window.location.href) el.classList.add("active");
@@ -43,6 +64,7 @@ export default function CursorAndPageAnimation() {
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("click", fetchContent);
+      root.removeEventListener("scroll", viewportHandler);
     };
   }, [path]);
 

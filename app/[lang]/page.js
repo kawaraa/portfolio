@@ -1,7 +1,7 @@
 import ImageWithSkeleton from "../../components/image-with-skeleton";
 import TypingAnimation from "../../components/typing-animation";
 import ToastMessages from "../../components/toast-messages";
-import { cardBgCls, h1Cls, linkCls, pageCls } from "../../components/tailwindcss-class";
+import { cardBgCls, h1Cls, lazyCls, linkCls, pageCls } from "../../components/tailwindcss-class";
 import "./page.css";
 
 // Lazy Load
@@ -48,7 +48,7 @@ export default function HomePageByLang({ params: { lang } }) {
       <article className="">
         <h2 className={h1Cls}>{content.features.title[lang]}</h2>
 
-        <p className="opacity-90">
+        <p className={`opacity-90 ${lazyCls}`}>
           {content.features.p[lang][0]}
           <br />
           {content.features.p[lang][1]}
@@ -59,7 +59,7 @@ export default function HomePageByLang({ params: { lang } }) {
             <li
               className={`flex mb-20 flex-col md:gap-10 ${
                 i % 2 != 0 ? "md:flex-row-reverse" : "md:flex-row "
-              } `}
+              } ${lazyCls}`}
               key={i}
             >
               <h4 className="block md:hidden text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
@@ -79,7 +79,7 @@ export default function HomePageByLang({ params: { lang } }) {
 
         <ol className="mb-12 flex flex-wrap">
           {content.priorities.list.map((item, i) => (
-            <li className="w-full sm:w-1/2 lg:w-1/3 my-10 p-5 text-center" key={i}>
+            <li className={`w-full sm:w-1/2 lg:w-1/3 my-10 p-5 text-center ${lazyCls}`} key={i}>
               <div className={`p-5 pt-8 h-full text-center ${cardBgCls} `}>
                 <ImageItem src={item.image} cls="w-20 mx-auto" alt="" />
                 <div className="">

@@ -1,16 +1,20 @@
 import { visit } from "../../../components/shared-content";
-import { btnCls, cardBgCls, h1Cls, pageCls } from "../../../components/tailwindcss-class";
-import { getCssDelay } from "../../../services/utilities";
+import { btnCls, cardBgCls, h1Cls, lazyCls, pageCls } from "../../../components/tailwindcss-class";
+import { getCssDelay } from "../../../components/tailwindcss-class";
 import ImageWithSkeleton from "../../../components/image-with-skeleton";
 
 export default function Work({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls}>{content.title[lang]}</h1>
+      <h1 className={h1Cls + " lazy-b"} style={getCssDelay(0.5)}>
+        {content.title[lang]}
+      </h1>
 
       <div className="flex flex-col lg:flex-row lg:gap-10">
         <div className="lg:w-1/2 p-0 lg:pr-8">
-          <p className="lg:mb-14 opacity-90">{content.p[lang]}</p>
+          <p className="lg:mb-14 opacity-90 lazy-b" style={getCssDelay(0.5)}>
+            {content.p[lang]}
+          </p>
 
           <ol className=" mx-auto">
             <li className="h-32"></li>
@@ -24,6 +28,8 @@ export default function Work({ params: { lang } }) {
                   name={project.name}
                   description={project.description[lang]}
                   link={project.link}
+                  cls={i == 0 ? "lazy-b" : lazyCls}
+                  style={getCssDelay(1)}
                   key={i}
                 />
               ))}
@@ -41,6 +47,7 @@ export default function Work({ params: { lang } }) {
                 name={project.name}
                 description={project.description[lang]}
                 link={project.link}
+                cls={lazyCls}
                 key={i}
               />
             ))}
@@ -50,7 +57,7 @@ export default function Work({ params: { lang } }) {
   );
 }
 
-function ListItem({ imageUrl, name, description, link, lang }) {
+function ListItem({ lang, imageUrl, name, description, link, cls = "", ...p }) {
   const btn = (
     <a href={link} className={`${btnCls} `} name="BUTTON" target="_blank">
       {visit[lang]}
@@ -58,7 +65,7 @@ function ListItem({ imageUrl, name, description, link, lang }) {
   );
 
   return (
-    <li className={`${cardBgCls} mb-20 p-5 p-3 lazy-b duration-200`} style={getCssDelay(0.5)}>
+    <li className={`${cardBgCls} mb-20 p-5 p-3 ${cls}`} {...p}>
       <div className="overflow-hidden relative w-full rounded-md">
         <ImageWithSkeleton src={imageUrl} width="500" height="500" atl={name} className="w-full" />
         <div className="bg-black/10 absolute inset-0 w-ful h-full flex items-center justify-center">

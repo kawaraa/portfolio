@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import { call, navLinks, send, workWith } from "./shared-content";
 import { BrandLogo, BrandName } from "./navbar/brand";
-import { btnCls, linkCls, skeleton } from "./tailwindcss-class";
+import { btnCls, linkCls, skeletonCls } from "./tailwindcss-class";
 import TimeByTimezone from "./time-by-timezone";
-const lineSkeleton = skeleton + " w-full h-6";
+const lineSkeleton = skeletonCls + " w-full h-6";
 
 export default async function Footer({ lang }) {
   const currentYear = new Date().getFullYear();

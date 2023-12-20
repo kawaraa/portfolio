@@ -29,7 +29,7 @@ export default function Layout({ children, params: { lang } }) {
               "@type": "SoftwareApplication",
               applicationCategory: content.keywords[lang],
               name: "Kawara",
-              image: "http://localhost:3000//android-chrome-512x512.png",
+              image: `${process.env.NEXT_PUBLIC_HOST}/android-chrome-512x512.png`,
               description: content.description[lang],
               genre: "Software Development",
               author: "Kawara",

@@ -1,15 +1,16 @@
-import { pageCls, cardBgCls, h1Cls } from "../../../components/tailwindcss-class";
+import { pageCls, cardBgCls, h1Cls, lazyCls } from "../../../components/tailwindcss-class";
+import { getCssDelay } from "../../../components/tailwindcss-class";
 
 export default function About({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls + " mt-20 mb-5"}>
+      <h1 className={h1Cls + " mt-20 mb-5 lazy-b"} style={getCssDelay(0.5)}>
         {content.title[lang][0]} <br />
         <span className="opacity-75">{content.title[lang][1]}</span>
         <span className="sr-only">{content.h1[lang]}</span>
       </h1>
 
-      <div className={``}>
+      <div className="lazy-b" style={getCssDelay(1)}>
         {content.p[lang].map((p, i) => (
           <p className="my-2" key={i}>
             {p}
@@ -19,7 +20,7 @@ export default function About({ params: { lang } }) {
 
       <div className="my-32 flex flex-col sm:flex-row gap-10">
         {content.sections.map((section, i) => (
-          <section className={`flex-1 p-5 ${cardBgCls} `} key={i}>
+          <section className={`flex-1 p-5 ${cardBgCls} ${lazyCls}`} key={i}>
             <h2 className="text-center text-2xl mb-5 font-semibold">{section.t[lang]}</h2>
             <p className="">{section.p[lang]}</p>
           </section>
@@ -27,11 +28,13 @@ export default function About({ params: { lang } }) {
       </div>
 
       <section className="mb-10">
-        <h2 className="text-center text-2xl mb-5 font-semibold">{content.whyUs.title[lang]} &#128170;</h2>
+        <h2 className={`text-center text-2xl mb-5 font-semibold ${lazyCls}`}>
+          {content.whyUs.title[lang]} &#128170;
+        </h2>
 
         <ol className="px-5  list-disc">
           {content.whyUs.list.map((item, i) => (
-            <li className="mt-10 " key={i}>
+            <li className={`mt-10 ${lazyCls}`} key={i}>
               <h3 className="text-lg font-semibold">{item.t[lang]}</h3>
               {item.p[lang]}
             </li>
