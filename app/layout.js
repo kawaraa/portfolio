@@ -4,11 +4,13 @@ import "./globals.css";
 // revalidate all the underneath routes and layouts
 // export const revalidate = 1800; // 30 mins in seconds
 export default function RootLayout(props) {
-  return (
-    <html>
-      <body>{props.children}</body>
-    </html>
-  );
+  return props.children;
+
+  // return (
+  //   <html>
+  //     <body>{props.children}</body>
+  //   </html>
+  // );
 }
 
 export const metadata = getMetadata({ lang: "en" });
