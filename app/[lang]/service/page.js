@@ -30,7 +30,7 @@ export default function Services({ params: { lang } }) {
                   src={service.imageUrl}
                   width="500"
                   height="500"
-                  atl={service.t[lang]}
+                  alt={service.t[lang]}
                   className="w-full"
                 />
               </div>
@@ -52,7 +52,7 @@ export default function Services({ params: { lang } }) {
                 src={service.imageUrl}
                 width="500"
                 height="500"
-                atl={service.t[lang]}
+                alt={service.t[lang]}
                 className="h-full"
               />
             </div>

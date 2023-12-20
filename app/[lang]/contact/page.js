@@ -29,6 +29,10 @@ export default function Contact({ params: { lang } }) {
   );
 }
 
+export function generateMetadata({ params: { lang } }) {
+  return { title: content.title[lang][1] };
+}
+
 const content = {
   title: {
     en: [

@@ -8,38 +8,38 @@
   "description": "Kawara is a Software Development company that does Web, Application, System and Custom Development also Fixing, Updating, Maintenance and Performance improvement for Websites and a lot of other things",
   "icons": [
     {
-      "src": "favicon/favicon-16x16.png",
+      "src": "favicon-16x16.png",
       "type": "image/png",
       "sizes": "16x16"
     },
     {
-      "src": "favicon/favicon-32x32.png",
+      "src": "favicon-32x32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "favicon/favicon.ico",
+      "src": "favicon.ico",
       "type": "image/ico",
       "sizes": "48x48"
     },
     {
-      "src": "favicon/apple-touch-icon.png",
+      "src": "apple-touch-icon.png",
       "type": "image/png",
       "sizes": "180x180"
     },
     {
-      "src": "favicon/android-chrome-192x192.png",
+      "src": "android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon/logo.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
     {
-      "src": "favicon/android-chrome-512x512.png",
+      "src": "android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"

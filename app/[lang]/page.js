@@ -11,6 +11,8 @@ import "./page.css";
 // Or use React.lazy for only client side: https://react.dev/reference/react/lazy
 
 export default function HomePageByLang({ params: { lang } }) {
+  if (lang != "en" && lang != "ar") return null;
+
   return (
     <main className={`${pageCls} !pt-[5vh]`}>
       <article className="min-h-[90vh] pb-20">
@@ -19,6 +21,7 @@ export default function HomePageByLang({ params: { lang } }) {
             <span id="hi" className="capitalize text-5xl">
               {content.hi[lang]}
             </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="hi-emoji.png" alt="Hi Emoji" name="BUTTON" id="hi-emoji" className="w-12 mx-3" />
           </div>
 
@@ -63,7 +66,8 @@ export default function HomePageByLang({ params: { lang } }) {
               key={i}
             >
               <h4 className="block md:hidden text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
-              <ImageItem src={item.image} alt="" />
+              <ImageItem src={item.image} alt={item.t[lang]} />
+
               <div className="">
                 <h4 className="hidden md:block text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
                 <p className="flex-auto my-8 px-3 md:mt-0 md:px-0">{item.p[lang]}</p>
@@ -144,8 +148,7 @@ const content = {
     ],
     ar: [
       "كوارا أخصائي برمجيات, كوارا لتطوير البرمجيات والمواقع الإلكترونية ومتاجر الويب وتطوير تطبيقات الويب وتطوير الواجهة الأمامية والخلفية",
-      "جميع أنواع خدمات تطوير البرمجيات",
-      "نحن نقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، والكثير من الأشياء الأخرى.",
+      "نحن نقوم بجميع أنواع خدمات تطوير البرمجيات ونقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، والكثير من الأشياء الأخرى.",
     ],
   },
   features: {

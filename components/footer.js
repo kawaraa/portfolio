@@ -56,6 +56,7 @@ export default async function Footer({ lang }) {
                 } rounded-lg duration-300`}
                 key={i}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.imageUrl} alt="social media profile logo" className="w-full h-full" />
               </a>
             ))}

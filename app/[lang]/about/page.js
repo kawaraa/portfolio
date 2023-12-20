@@ -46,7 +46,7 @@ export default function About({ params: { lang } }) {
 }
 
 export function generateMetadata({ params: { lang } }) {
-  return { title: content.title[lang].join(" ") };
+  return { title: content.title[lang][0] };
 }
 
 const content = {

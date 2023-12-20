@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import localFont from "next/font/local";
 import getMetadata, { content } from "../metadata";
 import Navbar from "../../components/navbar";
-import CursorAndPageAnimation from "../../components/cursor-and-page-animation";
+// import CursorAndPageAnimation from "../../components/cursor-and-page-animation";
 import Footer from "../../components/footer";
 
 const kufiFont = localFont({
@@ -11,7 +11,7 @@ const kufiFont = localFont({
 });
 
 export default function Layout({ children, params: { lang } }) {
-  if (lang != "en" && lang != "ar") notFound();
+  if (lang != "en" && lang != "ar") return notFound();
 
   return (
     <html
@@ -53,13 +53,11 @@ export default function Layout({ children, params: { lang } }) {
 
           <Footer lang={lang} />
         </div>
-
-        <CursorAndPageAnimation />
       </body>
     </html>
   );
 }
 
 export function generateMetadata({ params: { lang } }) {
-  return getMetadata({ lang });
+  return getMetadata({ lang: lang == "ar" ? lang : "en" });
 }

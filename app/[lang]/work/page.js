@@ -67,7 +67,7 @@ function ListItem({ lang, imageUrl, name, description, link, cls = "", ...p }) {
   return (
     <li className={`${cardBgCls} mb-20 p-5 p-3 ${cls}`} {...p}>
       <div className="overflow-hidden relative w-full rounded-md">
-        <ImageWithSkeleton src={imageUrl} width="500" height="500" atl={name} className="w-full" />
+        <ImageWithSkeleton src={imageUrl} width="500" height="500" alt={name} className="w-full" />
         <div className="bg-black/10 absolute inset-0 w-ful h-full flex items-center justify-center">
           {btn}
         </div>
