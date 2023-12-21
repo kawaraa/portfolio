@@ -37,13 +37,13 @@ const content = {
   title: {
     en: [
       "Join us on your digital journey",
-      " Contact us, Contact Kawara",
+      " Contact us",
       " Let's build something together!",
       " Are you ready to take your business to the next level?",
     ],
     ar: [
       "انضم إلينا في رحلتك الرقمية",
-      "تواصل معنا، اتصل بنا، اتصل بكوارا ",
+      "تواصل معنا، اتصل بنا ",
       "لنبني شيئا معا! ",
       "هل أنت مستعد للارتقاء بعملك إلى المرحلة التالية؟",
     ],

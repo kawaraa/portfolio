@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kawaraa.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar"/>
+    <lastmod>2023-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://kawaraa.com/en/service</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/service"/>
+    <lastmod>2023-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://kawaraa.com/en/work</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/work"/>
+    <lastmod>2023-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://kawaraa.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/about"/>
+    <lastmod>2023-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://kawaraa.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/contact"/>
+    <lastmod>2023-12-30</lastmod>
+  </url>
+</urlset>

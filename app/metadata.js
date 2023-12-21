@@ -56,12 +56,12 @@ export default function getMetadata({ lang, title, description, keywords, author
 export const content = {
   name: { en: "Kawara Software Consultant", ar: "كوارا أخصائي برمجيات" },
   title: {
-    en: "Kaara Software wDevelopment - Web Application Development",
-    ar: "كوارا لتطوير البرمجيات - تطوير تطبيقات الويب - Kawara",
+    en: "Software And Web Development",
+    ar: "كوارا لتطوير البرمجي والويب",
   },
   description: {
-    en: "Kawara is a Software Development Consulting Company who does Web, Application, System and Custom Development also Fixing, Updating, Maintenance and Performance improvement for Websites and a lot of other things",
-    ar: "Kawara كوارا هي شركة لتطوير البرمجيات وأخصائي برمجيات تقوم بتطوير الويب والتطبيقات والأنظمة والتطوير المخصص بالإضافة إلى إصلاح وتحديث وصيانة وتحسين الأداء لمواقع الويب والكثير من الأشياء الأخرى ",
+    en: "Kawara is a Software Consulting who does Web, Application, System and Custom Development, Fixing and improving Websites Performance and other services",
+    ar: "كوارا هي شركة لتطوير البرمجيات وأخصائي برمجيات تقوم بتطوير الويب والتطبيقات والأنظمة والتطوير المخصص وإصلاح وصيانة وتحسين أداء مواقع الويب وغيرها من الخدمات",
   },
   keywords: {
     en: "Kawara portfolio, Kawara Software Consultant, Kawara software development, full-stack developer, Frontend developer, Backend developer, Webmaster, Systems development, Mobile application development, Android application development, Iphone IOS application development, Telephone application development, Smart device application development, Web development, Apps development, Build Web Shop, Build Online Store, Update Online Store Maintaining websites and applications, Updating websites and applications, Editing websites and applications, Enhancing websites performance, Enhancing applications performance, Fixing websites and applications, Improving SEO, Improving Search Engine Optimization, SEO friendly Website, User friendly Web App, Create accessible websites, User friendly UI UX, Create responsive websites, Create databases, Building RESTFUL API servers, Building web service",
