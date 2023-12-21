@@ -16,7 +16,7 @@ export default function HomePageByLang({ params: { lang } }) {
   return (
     <main className={`${pageCls} !pt-[5vh]`}>
       <article className="min-h-[90vh] pb-20">
-        <h1 id="intro-heading" className="">
+        <div id="intro-heading" className="">
           <div className="flex justify-center items-end ">
             <span id="hi" className="capitalize text-5xl">
               {content.hi[lang]}
@@ -24,15 +24,17 @@ export default function HomePageByLang({ params: { lang } }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="hi-emoji.png"
-              alt={content.hi[lang] + ", " + content.hidden[lang][1]}
+              alt={content.hi[lang]}
               name="BUTTON"
               id="hi-emoji"
               className="w-12 mx-3"
             />
           </div>
 
-          <span className="sr-only">{content.hidden[lang][0]}</span>
-        </h1>
+          <h1 className="">
+            <span className="sr-only">{content.hidden[lang][0]}</span>
+          </h1>
+        </div>
 
         <p className="sr-only">{content.hidden[lang][0]}</p>
         <p className="sr-only">{content.hidden[lang][1]}</p>
