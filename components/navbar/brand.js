@@ -15,7 +15,7 @@ export function BrandLogo() {
       id="site-logo"
       data-name="BUTTON"
       className="w-8 text-sc hover:scale-150 duration-300"
-      style={{ maxWidth: "45px" }}
+      style={{ maxWidth: "45px", display: "inline-flex" }}
     >
       <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none">
         <defs>
