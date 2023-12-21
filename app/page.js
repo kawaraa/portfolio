@@ -4,4 +4,4 @@ export default function Page(props) {
   return <HomePageByLang {...props} params={{ lang: "en" }} />;
 }
 
-export const metadata = { alternates: { canonical: "/en" } };
+// export const metadata = { alternates: { canonical: "/en" } };

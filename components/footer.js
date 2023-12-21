@@ -90,9 +90,9 @@ export default async function Footer({ lang }) {
 
             <div dir="ltr" className="flex-auto flex flex-col items-start justify-end">
               <address className="">
-                <h3 className="text-lg">
+                <h4 className="text-lg">
                   Amsterdam: <TimeByTimezone cls="font-semibold" />
-                </h3>
+                </h4>
                 <br />
                 Govert Flinckstraat
                 <br />

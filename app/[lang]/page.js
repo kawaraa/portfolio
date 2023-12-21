@@ -22,13 +22,20 @@ export default function HomePageByLang({ params: { lang } }) {
               {content.hi[lang]}
             </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="hi-emoji.png" alt="Hi Emoji" name="BUTTON" id="hi-emoji" className="w-12 mx-3" />
+            <img
+              src="hi-emoji.png"
+              alt={content.hi[lang] + ", " + content.hidden[lang][1]}
+              name="BUTTON"
+              id="hi-emoji"
+              className="w-12 mx-3"
+            />
           </div>
 
-          <span className="sr-only">{content.hiddenP[lang][0]}</span>
+          <span className="sr-only">{content.hidden[lang][0]}</span>
         </h1>
 
-        <p className="sr-only">{content.hiddenP[lang][1]}</p>
+        <p className="sr-only">{content.hidden[lang][0]}</p>
+        <p className="sr-only">{content.hidden[lang][1]}</p>
 
         <div id="introduction" className="text-lg text-center mt-5 md:mt-10">
           <p className="opacity-0 sm:leading-10">{content.p[lang][0]}</p>
@@ -85,7 +92,7 @@ export default function HomePageByLang({ params: { lang } }) {
           {content.priorities.list.map((item, i) => (
             <li className={`w-full sm:w-1/2 lg:w-1/3 my-10 p-5 text-center ${lazyCls}`} key={i}>
               <div className={`p-5 pt-8 h-full text-center ${cardBgCls} `}>
-                <ImageItem src={item.image} cls="w-20 mx-auto" alt="" />
+                <ImageItem src={item.image} cls="w-20 mx-auto" alt={item.t[lang]} />
                 <div className="">
                   <h4 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
                   <p className="flex-auto text-sm my-8 px-3 md:mt-0 md:px-0">{item.p[lang]}</p>
@@ -112,7 +119,7 @@ function ImageItem({ src, cls = "", alt = "" }) {
 }
 
 export function generateMetadata({ params: { lang } }) {
-  return { alternates: { canonical: lang == "en" ? "/" : "/ar" } };
+  return lang != "en" ? null : { alternates: { canonical: "/" } };
 }
 
 const content = {
@@ -120,7 +127,7 @@ const content = {
   p: {
     en: [
       "Welcome to Kawara, where innovation meets execution.",
-      "We are a software consulting company dedicated to crafting digital solutions that drive success for businesses of all sizes. With a team of talented developers and designers specialize in creating cutting-edge software tailored to your unique needs.",
+      "We are a Software Consultant dedicated to crafting digital solutions that drive success for businesses of all sizes. With a team of talented developers and designers specialize in creating cutting-edge software tailored to your unique needs.",
       "We offer a wide range of software development services to help you stay ahead in the digital age.",
       "We build bespoke software solutions that align perfectly with your business goals.",
       "Feel free to take a look at some of our work on ",
@@ -141,13 +148,13 @@ const content = {
       "تواصل معنا",
     ],
   },
-  hiddenP: {
+  hidden: {
     en: [
-      "Kawara Software Developers, full-stack developers, Website, Web Shop, Web Application Development, Frontend and Backend development",
-      "All kind of software development services. we do Full Stack development, Frontend as well as Backend like building Systems, Website, Web apps, Android and IOS applications, Performance maintenance, Fixing Websites, Updating and Editing websites and a lot of other things.",
+      "Software Development, Website, Online Store, Web Application Development",
+      "We do All kind of software development services, Full-Stack development, Frontend as well as Backend like building Systems, Web Development Website, Web apps, Android and IOS applications, Performance maintenance, Fixing Websites, Updating and Editing websites and a lot of other things.",
     ],
     ar: [
-      "كوارا أخصائي برمجيات, كوارا لتطوير البرمجيات والمواقع الإلكترونية ومتاجر الويب وتطوير تطبيقات الويب وتطوير الواجهة الأمامية والخلفية",
+      "كوارا أخصائي برمجيات ولتطوير البرمجيات والمواقع الإلكترونية ومتاجر الويب وتطوير تطبيقات الويب وتطوير الواجهة الأمامية والخلفية",
       "نحن نقوم بجميع أنواع خدمات تطوير البرمجيات ونقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، والكثير من الأشياء الأخرى.",
     ],
   },
