@@ -108,7 +108,7 @@ a.active:after {
 
 /* When the element is out of view */
 .lazy.off-view {
-  opacity: 0;
+  opacity: 0.5;
   transform: translate(0, 50px);
 }
 

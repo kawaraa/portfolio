@@ -1,8 +1,9 @@
+// import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import localFont from "next/font/local";
 import getMetadata, { content } from "../metadata";
 import Navbar from "../../components/navbar";
-// import CursorAndPageAnimation from "../../components/cursor-and-page-animation";
+import CursorAndPageAnimation from "../../components/cursor-and-page-animation";
 import Footer from "../../components/footer";
 
 const kufiFont = localFont({
@@ -12,13 +13,15 @@ const kufiFont = localFont({
 
 export default function Layout({ children, params: { lang } }) {
   if (lang != "en" && lang != "ar") return notFound();
+  // const themeMode = cookies().get("themeMode")?.value || "auto";
 
   return (
     <html
       dir="auto"
       translate="no"
       lang={lang}
-      className={lang == "ar" ? `${kufiFont.className} leading-loose` : ""}
+      // className={lang != "ar" ? themeMode : `${kufiFont.className} ${themeMode} leading-loose`}
+      className={lang != "ar" ? "" : `${kufiFont.className} leading-loose`}
     >
       <body className="overflow-hidden h-screen no-select h-screen w-screen flex flex-col selection:bg-teal-300 dark:selection:bg-pink-500 dark:selection:text-white cursor-[url(/cursor.svg),_auto] shadow-[0_0_50px_50px_rgba(0,0,0,0.7)] page-open">
         <script
@@ -53,6 +56,8 @@ export default function Layout({ children, params: { lang } }) {
 
           <Footer lang={lang} />
         </div>
+
+        <CursorAndPageAnimation />
       </body>
     </html>
   );
