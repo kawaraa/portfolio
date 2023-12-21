@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { call, navLinks, send, workWith } from "./shared-content";
 import { BrandLogo, BrandName } from "./navbar/brand";
 import { btnCls, linkCls, skeletonCls } from "./tailwindcss-class";
+import CustomLink from "./custom-link";
 import TimeByTimezone from "./time-by-timezone";
 const lineSkeleton = skeletonCls + " w-full h-6";
 
@@ -80,9 +81,9 @@ export default async function Footer({ lang }) {
             <ul className="flex-auto">
               {navLinks.map((item, i) => (
                 <li className="my-2" key={i}>
-                  <a href={item.path.replace("lang", lang)} className="hvr block py-1 px-2">
+                  <CustomLink tag="a" href={item.path.replace("lang", lang)} className="hvr block py-1 px-2">
                     {item[lang]}
-                  </a>
+                  </CustomLink>
                 </li>
               ))}
             </ul>

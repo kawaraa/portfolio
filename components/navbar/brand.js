@@ -11,7 +11,12 @@ export function BrandName({ cls = "", ...p }) {
 
 export function BrandLogo() {
   return (
-    <span id="site-logo" data-name="BUTTON" className="w-8 text-sc hover:scale-150 duration-300">
+    <span
+      id="site-logo"
+      data-name="BUTTON"
+      className="w-8 text-sc hover:scale-150 duration-300"
+      style={{ maxWidth: "45px" }}
+    >
       <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none">
         <defs>
           <linearGradient id="logo-gradient" x1="0%" y1="-50%" x2="100%" y2="190%">

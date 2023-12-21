@@ -48,18 +48,13 @@ export default function CursorAndPageAnimation() {
 
   useEffect(() => {
     const root = document.getElementById("main-container") || document.body;
-    elementsRef.current = Array.from(document.querySelectorAll(".lazy"));
-    elementsRef.current.forEach((el) => el.classList.add("off-view"));
-
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("click", fetchContent);
     root.addEventListener("scroll", viewportHandler);
 
+    elementsRef.current = Array.from(document.querySelectorAll(".lazy"));
+    elementsRef.current.forEach((el) => el.classList.add("off-view"));
     document.body.classList.remove("page-shut");
-    document.querySelectorAll("a").forEach((el) => {
-      el.classList.remove("active");
-      if (el.href == window.location.href) el.classList.add("active");
-    });
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);

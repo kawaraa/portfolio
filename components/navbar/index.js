@@ -3,6 +3,7 @@ import MobileMenu from "./mobile-menu";
 import { btnCls } from "../tailwindcss-class";
 import { contact, navLinks } from "../shared-content";
 import { BrandLogo, BrandName } from "./brand";
+import CustomLink from "../custom-link";
 
 export default async function Navbar({ lang }) {
   return (
@@ -19,9 +20,9 @@ export default async function Navbar({ lang }) {
 
       <div className="hidden md:flex gap-2">
         {navLinks.map((link, i) => (
-          <a href={link.path.replace("lang", lang)} className="hvr px-2 py-1" key={i}>
+          <CustomLink tag="a" href={link.path.replace("lang", lang)} className="hvr px-2 py-1" key={i}>
             {link[lang]}
-          </a>
+          </CustomLink>
         ))}
       </div>
 
