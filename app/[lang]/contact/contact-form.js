@@ -141,7 +141,7 @@ const content = {
       { en: "Custom Development", ar: "تطوير برمجي مخصصة" },
       { en: "Developer on-Retainer", ar: "تجنيب المطور" },
       { en: "Long-term Service", ar: "خدمة طويلة الأمد" },
-      { en: "Client Training", ar: "" }, //
+      { en: "Client Training", ar: "تدريب العملاء" }, //
       { en: "Partner", ar: "شريك" },
       { en: "Volunteer", ar: "متطوع" },
       { en: "Other Enquire", ar: "استفسار اخرى" },

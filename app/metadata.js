@@ -28,7 +28,7 @@ export default function getMetadata({ lang, title, description, keywords, author
       description: description || content.description[lang],
       url: baseUrl,
       siteName: "Kawara",
-      images: [{ url: `${baseUrl}/android-chrome-512x512.png`, width: 600, height: 600 }],
+      images: [{ url: `${baseUrl}/android-chrome-512x512.png`, width: 400, height: 500 }],
       type: "website",
       // publishedTime: page.createdAt,
       // modifiedTime: page.updatedAt,
