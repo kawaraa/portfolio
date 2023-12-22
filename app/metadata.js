@@ -3,14 +3,12 @@ const twitterSite = process.env.TWITTER_SITE || "";
 
 export default function getMetadata({ lang, title, description, keywords, author, data }) {
   return {
-    title: {
-      default: `${title || content.title[lang]} - ${content.name[lang]}`,
-    },
+    title: title || { default: content.title[lang], template: `%s - Kawara` },
     description: description || content.description[lang],
     keywords: keywords || content.keywords[lang],
     category: "Software Development",
     applicationName: "Kawara",
-    authors: [author || "Kawara"],
+    authors: [author || content.author],
     icons: {
       shortcut: { type: "image/ico", sizes: "48x48", url: "/favicon.ico" },
       icon: { type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
@@ -54,10 +52,9 @@ export default function getMetadata({ lang, title, description, keywords, author
 }
 
 export const content = {
-  name: { en: "Kawara Software Consultant", ar: "كوارا أخصائي برمجيات" },
   title: {
-    en: "Software And Web Development",
-    ar: "كوارا لتطوير البرمجي والويب",
+    en: "Kawara Software Consultant - Software And Web Development",
+    ar: "كوارا أخصائي برمجيات - تطوير البرمجي والويب",
   },
   description: {
     en: "Kawara is a Software Consulting who does Web, Application, System and Custom Development, Fixing and improving Websites Performance and other services",

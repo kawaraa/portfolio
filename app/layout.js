@@ -11,7 +11,7 @@ const kufiFont = localFont({ src: "../public/font/NotoKufiArabic-VariableFont_wg
 // revalidate all the underneath routes and layouts
 // export const revalidate = 1800; // 30 mins in seconds
 export default function RootLayout({ params, children }) {
-  // Note: The following line triggers the dynamic layout rendering, then access "childProp?.segment"
+  // Note: Using "cookies()" triggers the dynamic layout rendering, then access "childProp?.segment"
   const themeMode = cookies().get("themeMode")?.value || "auto";
   const lang = (children?.props?.childProp?.segment || []).includes("ar") ? "ar" : "en";
 

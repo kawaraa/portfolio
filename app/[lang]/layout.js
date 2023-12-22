@@ -8,6 +8,14 @@ export default function Layout({ children, params: { lang } }) {
   return children;
 }
 
-export function generateMetadata({ params: { lang } }) {
-  return getMetadata({ lang: lang == "ar" ? lang : "en" });
+export function generateMetadata({ params }) {
+  const lang = params.lang == "ar" ? "ar" : "en";
+  return getMetadata({ lang, title: content.title[lang] });
 }
+
+export const content = {
+  title: {
+    en: "Kawara Software Consultant - Software And Web Development",
+    ar: "كوارا أخصائي برمجيات - تطوير البرمجي والويب",
+  },
+};
