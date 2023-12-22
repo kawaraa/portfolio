@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { Cookies } from "../services/utilities";
 
-export default function CursorAndPageAnimation() {
+export default function CursorAndPageAnimation({ lang }) {
   const router = useRouter();
   const path = usePathname();
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
@@ -62,6 +63,10 @@ export default function CursorAndPageAnimation() {
       root.removeEventListener("scroll", viewportHandler);
     };
   }, [path]);
+
+  useEffect(() => {
+    Cookies.set("lang", lang);
+  }, []);
 
   return (
     <div

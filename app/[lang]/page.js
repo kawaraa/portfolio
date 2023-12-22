@@ -1,3 +1,4 @@
+import { getSupportedLanguage } from "../layout";
 import ImageWithSkeleton from "../../components/image-with-skeleton";
 import TypingAnimation from "../../components/typing-animation";
 import ToastMessages from "../../components/toast-messages";
@@ -11,7 +12,7 @@ import "./page.css";
 // Or use React.lazy for only client side: https://react.dev/reference/react/lazy
 
 export default function HomePageByLang({ params: { lang } }) {
-  if (lang != "en" && lang != "ar") return null;
+  if (!getSupportedLanguage(lang)) return null;
 
   return (
     <main className={`${pageCls} !pt-[5vh]`}>

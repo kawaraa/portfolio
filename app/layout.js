@@ -12,8 +12,11 @@ const kufiFont = localFont({ src: "../public/font/NotoKufiArabic-VariableFont_wg
 // export const revalidate = 1800; // 30 mins in seconds
 export default function RootLayout({ params, children }) {
   // Note: Using "cookies()" triggers the dynamic layout rendering, then access "childProp?.segment"
-  const themeMode = cookies().get("themeMode")?.value || "auto";
-  const lang = (children?.props?.childProp?.segment || []).includes("ar") ? "ar" : "en";
+  const cookieStorage = cookies();
+  const themeMode = cookieStorage.get("themeMode")?.value || "auto";
+  let lang = getSupportedLanguage((children?.props?.childProp?.segment || [])[1]);
+  if (!lang) lang = getSupportedLanguage(cookieStorage.get("lang")?.value) || "en";
+  // const themeMode = cookieStorage.get("themeMode")?.value || "auto";
 
   return (
     <html
@@ -57,7 +60,7 @@ export default function RootLayout({ params, children }) {
           <Footer lang={lang} />
         </div>
 
-        <CursorAndPageAnimation />
+        <CursorAndPageAnimation lang={lang} />
       </body>
     </html>
   );
@@ -73,3 +76,5 @@ export const viewport = {
   ],
   colorScheme: "light dark",
 };
+
+export const getSupportedLanguage = (lang) => ["en", "ar"].find((l) => l === lang);
