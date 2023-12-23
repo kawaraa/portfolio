@@ -22,6 +22,8 @@ npm run dev
 
 ### Todo:
 
+- Add the facebook arabic post to linkedin and add a video ad with another post
+- Post ArabLocalMarket project as a sample on our work on FB and LN
 - Add an attractive and content related background to every page
 - Store blogs in Github, Google Blog or in Google spreadsheet
 -

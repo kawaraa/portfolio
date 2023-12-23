@@ -1,4 +1,4 @@
-const baseUrl = new URL(process.env.NEXT_PUBLIC_HOST);
+const baseUrl = process.env.NEXT_PUBLIC_HOST;
 const twitterSite = process.env.TWITTER_SITE || "";
 
 export default function getMetadata({ lang, title, description, keywords, author, data }) {
@@ -28,7 +28,7 @@ export default function getMetadata({ lang, title, description, keywords, author
       description: description || content.description[lang],
       url: baseUrl,
       siteName: "Kawara",
-      images: [{ url: `${baseUrl}/kawara-logo-opengraph.png`, width: 400, height: 500 }],
+      images: [{ url: new URL(`${baseUrl}/kawara-logo-opengraph.png`).href, width: 400, height: 500 }],
       type: "website",
       // publishedTime: page.createdAt,
       // modifiedTime: page.updatedAt,
@@ -40,7 +40,7 @@ export default function getMetadata({ lang, title, description, keywords, author
       siteId: "14647548228070274373",
       creator: "@kawara",
       creatorId: "14647548228070274373",
-      images: [`${baseUrl}/kawara-logo-opengraph.png`],
+      images: [new URL(`${baseUrl}/kawara-logo-opengraph.png`).href],
       site: twitterSite,
     },
     appleWebApp: { title: "Kawara", statusBarStyle: "black-translucent" },
