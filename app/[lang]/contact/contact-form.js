@@ -127,11 +127,14 @@ const content = {
       { en: "Update a Windows App", ar: "تحديث تطبيق ويندوز" },
       { en: "Build a MacOS App", ar: "بناء تطبيق أبل" },
       { en: "Update a MacOS App", ar: "تحديث تطبيق أبل" },
-      // { en: "Design UI/UX", ar: "تصميم واجهة المستخدم" },
+      { en: "Design UI/UX", ar: "تصميم واجهة المستخدم" },
+      { en: "E-Commerce solution", ar: "حل لتجارة الإلكترونية" },
+      // Point-of-Sale (POS) Systems
+      // Appointment Scheduling
+      // Inventory Management
       { en: "Build a Restful API", ar: "بناء واجهة برمجة أو سيرفر" },
       { en: "Build a Service", ar: "بناء خدمة" },
       { en: "Software Testing", ar: "فحص برنامج" },
-      { en: "E-Commerce solution", ar: "حل لتجارة الإلكترونية" },
       { en: "Create a Database", ar: "إنشاء قاعدة بيانات" },
       { en: "Build an Automated Service", ar: "بناء وظيفة آلية" },
       { en: "Integrate a new service", ar: "دمج خدمة جديدة" },
