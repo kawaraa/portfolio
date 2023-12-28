@@ -129,9 +129,9 @@ const content = {
       { en: "Update a MacOS App", ar: "تحديث تطبيق أبل" },
       { en: "Design UI/UX", ar: "تصميم واجهة المستخدم" },
       { en: "E-Commerce solution", ar: "حل لتجارة الإلكترونية" },
-      // Point-of-Sale (POS) Systems
-      // Appointment Scheduling
-      // Inventory Management
+      { en: "Point-of-Sale (POS) System", ar: "نظام نقاط البيع (POS)" },
+      { en: "Appointment Booking system", ar: "نظام حجز المواعيد" },
+      { en: "Inventory Management System", ar: "نظام إدارة المخزون" },
       { en: "Build a Restful API", ar: "بناء واجهة برمجة أو سيرفر" },
       { en: "Build a Service", ar: "بناء خدمة" },
       { en: "Software Testing", ar: "فحص برنامج" },
@@ -142,8 +142,8 @@ const content = {
       { en: "Analyze Data", ar: "تحليل البيانات" },
       { en: "Integrate with Social Media", ar: "دمج مع وسائل التواصل الاجتماعي" },
       { en: "Custom Development", ar: "تطوير برمجي مخصصة" },
-      { en: "Developer on-Retainer", ar: "تجنيب المطور" },
-      { en: "Long-term Service", ar: "خدمة طويلة الأمد" },
+      { en: "Developer on-Retainer", ar: "تجنيب المطور" }, // E.g. ongoing maintenance
+      { en: "Long-term Service", ar: "خدمة طويلة الأمد" }, // E.g. ongoing maintenance
       { en: "Client Training", ar: "تدريب العملاء" }, //
       { en: "Partner", ar: "شريك" },
       { en: "Volunteer", ar: "متطوع" },
