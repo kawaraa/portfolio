@@ -38,7 +38,7 @@ export default function ContactForm({ lang, apiUrl }) {
     <form
       onSubmit={handleSubmit}
       className={`${cardBgCls} max-w-lg mx-auto mt-20 px-5 py-8 lazy-b`}
-      style={getCssDelay(0.5)}
+      style={getCssDelay()}
     >
       <h2 className="text-3xl mb-3 text-center">{content.h2[lang]}</h2>
 

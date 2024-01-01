@@ -18,10 +18,10 @@ export default function Contact({ params: { lang } }) {
         </span>
       </h1>
 
-      <p className="lazy-b" style={getCssDelay(0.5)}>
+      <p className="lazy-b" style={getCssDelay()}>
         {content.p[lang][0]}
       </p>
-      <p className="lazy-b" style={getCssDelay(1)}>
+      <p className="lazy-b" style={getCssDelay()}>
         {content.p[lang][1]}
       </p>
       <ContactForm lang={lang} apiUrl={apiUrl} />

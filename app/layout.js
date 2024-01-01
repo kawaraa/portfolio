@@ -16,7 +16,6 @@ export default function RootLayout({ params, children }) {
   const themeMode = cookieStorage.get("themeMode")?.value || "auto";
   let lang = getSupportedLanguage((children?.props?.childProp?.segment || [])[1]);
   if (!lang) lang = getSupportedLanguage(cookieStorage.get("lang")?.value) || "en";
-  // const themeMode = cookieStorage.get("themeMode")?.value || "auto";
 
   return (
     <html

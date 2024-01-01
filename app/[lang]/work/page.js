@@ -6,13 +6,13 @@ import ImageWithSkeleton from "../../../components/image-with-skeleton";
 export default function Work({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls + " lazy-b"} style={getCssDelay(0.5)}>
+      <h1 className={h1Cls + " lazy-b"} style={getCssDelay()}>
         {content.title[lang]}
       </h1>
 
       <div className="flex flex-col lg:flex-row lg:gap-10">
         <div className="lg:w-1/2 p-0 lg:pr-8">
-          <p className="lg:mb-14 opacity-90 lazy-b" style={getCssDelay(0.5)}>
+          <p className="lg:mb-14 opacity-90 lazy-b" style={getCssDelay()}>
             {content.p[lang]}
           </p>
 
@@ -29,7 +29,7 @@ export default function Work({ params: { lang } }) {
                   description={project.description[lang]}
                   link={project.link}
                   cls={i == 0 ? "lazy-b" : lazyCls}
-                  style={getCssDelay(1)}
+                  style={getCssDelay()}
                   key={i}
                 />
               ))}

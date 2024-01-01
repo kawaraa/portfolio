@@ -4,13 +4,13 @@ import { getCssDelay } from "../../../components/tailwindcss-class";
 export default function About({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls + " mt-20 mb-5 lazy-b"} style={getCssDelay(0.5)}>
+      <h1 className={h1Cls + " mt-20 mb-5 lazy-b"} style={getCssDelay()}>
         {content.title[lang][0]} <br />
         <span className="opacity-75">{content.title[lang][1]}</span>
         <span className="sr-only">{content.h1[lang]}</span>
       </h1>
 
-      <div className="lazy-b" style={getCssDelay(1)}>
+      <div className="lazy-b" style={getCssDelay()}>
         {content.p[lang].map((p, i) => (
           <p className="my-2" key={i}>
             {p}

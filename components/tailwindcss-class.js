@@ -9,6 +9,6 @@ export const disabledLinkCls = "cursor-not-allowed disabled:opacity-60 hover:opa
 export const skeletonCls = "animate-pulse rounded bg-neutral-200 dark:bg-neutral-700";
 export const lazyCls = "lazy linear duration-1000";
 
-export function getCssDelay(time) {
+export function getCssDelay(time = 1) {
   return { animationDelay: ((Math.random() + time) * 600).toFixed() + "ms" };
 }

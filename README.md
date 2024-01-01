@@ -22,6 +22,8 @@ npm run dev
 
 ### Todo
 
+- Add Language toggle on the bottom left corner of the screen
+- Add theme select in the navbar
 - Add a video ad with description as post
 - Add an attractive and content related background to every page
 - Store blogs in Github, Google Blog or in Google spreadsheet
@@ -84,42 +86,4 @@ Text on Screen: "Contact Us Today - [YourWebsite.com]"
 [Closing Animation]
 [Upbeat Music Fades Out]
 
-### Posts
-
-🚀 Elevate Your Local Business with Custom Software Solutions! 🌐💻
-
-Attention, local business owners! 🌟 Are you ready to take your brick-and-mortar store or local business to new heights? Discover the power of digital transformation with our custom software solutions!
-Here's how our software development expertise can revolutionize your business:
-
-✨ Point-of-Sale (POS) Systems:
-Upgrade your in-store transactions and checkout process with a seamless POS system. Speed up transactions, manage inventory efficiently, and enhance the overall customer experience.
-
-✨ E-Commerce Integration:
-Extend your local business online! Reach customers beyond your storefront with integrated e-commerce solutions that make shopping convenient and accessible by transform your local store into an online shopping destination
-
-✨ Custom Mobile Apps:
-Stay connected with your customers on the go through a personalized mobile app. Offer exclusive deals, loyalty programs, and a convenient way for them to engage with your business anytime, anywhere.
-
-✨ Inventory Management:
-Streamline your inventory management with a custom software solution. Keep track of stock levels, automate reordering, and minimize the risk of overstocking or running out of popular items.
-
-✨ Customer Relationship Management (CRM):
-Build lasting relationships with your customers. Implement a CRM system to manage customer interactions, personalize marketing efforts, and enhance customer satisfaction.
-
-✨ Appointment Scheduling:
-Simplify appointments! Allow customers to schedule appointments online, Service-based businesses can offer hassle-free appointments booking system, reminders, and an improved customer booking experience.
-
-✨ Analytics and Reporting:
-Gain valuable insights into your business performance. Utilize analytics and reporting tools to track sales, customer behavior, and make informed decisions for growth.
-
-💡 Why Choose Us?
-🌐 Expertise in custom software solutions for local businesses.
-📈 Proven track record of enhancing efficiency and customer engagement.
-🛠️ Dedicated support and maintenance for optimal performance.
-
-📈 Ready to elevate your local business through innovative software solutions? Let's collaborate to bring your vision to life! Contact us today for a personalized consultation. 🌟
-On LinkedIn or,
-Email: contact@kawaraa.com
-Our Website: https://kawaraa.com
-
-#LocalBusiness #SoftwareSolutions #DigitalTransformation #ECommerce #BusinessInnovation #CustomerExperience 🛍️📱
+### Ready Posts

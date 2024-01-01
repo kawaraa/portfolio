@@ -6,11 +6,11 @@ import ImageWithSkeleton from "../../../components/image-with-skeleton";
 export default function Services({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls + " lazy-b"} style={getCssDelay(0.5)}>
+      <h1 className={h1Cls + " lazy-b"} style={getCssDelay()}>
         {content.title[lang]}
       </h1>
 
-      <p className="lazy-b" style={getCssDelay(0.5)}>
+      <p className="lazy-b" style={getCssDelay()}>
         {content.p[lang]}
       </p>
 
@@ -20,7 +20,7 @@ export default function Services({ params: { lang } }) {
             className={`${cardBgCls} ${i != 0 && lazyCls} ${
               i % 2 != 0 && "flex-row-reverse"
             } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex md:gap-10 rounded-md lazy-b duration-200`}
-            style={i != 0 ? null : getCssDelay(1)}
+            style={i != 0 ? null : getCssDelay()}
             key={i}
           >
             <div className="flex flex-col md:w-1/2">
