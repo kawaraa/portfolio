@@ -2,6 +2,7 @@ import { btnCls, cardBgCls, h1Cls, lazyCls, pageCls } from "../../../components/
 import { getCssDelay } from "../../../components/tailwindcss-class";
 import { learn } from "../../../components/shared-content";
 import ImageWithSkeleton from "../../../components/image-with-skeleton";
+import { content as metaData } from "../../metadata";
 
 export default function Services({ params: { lang } }) {
   return (
@@ -13,6 +14,8 @@ export default function Services({ params: { lang } }) {
       <p className="lazy-b" style={getCssDelay()}>
         {content.p[lang]}
       </p>
+
+      <p className="sr-only">{metaData[lang]}</p>
 
       <ol className="mt-28">
         {content.services.map((service, i) => (
@@ -38,7 +41,7 @@ export default function Services({ params: { lang } }) {
               <p className="flex-auto text-sm my-8 px-3 md:mt-0 md:px-0">{service.p[lang]}</p>
 
               <a
-                href={service.link.replace("lang", lang)}
+                href={service.link}
                 className={`${btnCls} ${
                   i % 2 != 0 ? "md:place-self-end" : "md:place-self-start"
                 } mx-3 mb-3 md:m-0`}
@@ -87,7 +90,7 @@ const content = {
         ],
       },
       imageUrl: "/ecommerce.webp",
-      link: "lang/services/ecommerce",
+      link: "service/ecommerce",
     },
     {
       t: { en: "Custom Development", ar: "التطوير المخصص" },
@@ -100,7 +103,7 @@ const content = {
         ],
       },
       imageUrl: "/custom-development.jpg",
-      link: "lang/services/custom-development",
+      link: "service/custom-development",
     },
     {
       t: { en: "Consulting Services", ar: "خدمات استشارية" },
@@ -111,7 +114,7 @@ const content = {
         ar: ["التوجيه الاستراتيجي لمساعدتك على التنقل بين تعقيدات التكنولوجيا، واتخاذ قرارات مستنيرة لعملك."],
       },
       imageUrl: "/consulting-services.jpg",
-      link: "lang/services/custom-development",
+      link: "service/custom-development",
     },
   ],
 };

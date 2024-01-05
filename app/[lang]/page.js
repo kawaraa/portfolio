@@ -151,14 +151,15 @@ const content = {
       "تواصل معنا",
     ],
   },
+
   hidden: {
     en: [
       "Software Development, Website, Online Store, Web Application Development",
-      "We do All kind of software development services, Full-Stack development, Frontend as well as Backend like building Systems, Web Development Website, Web apps, Android and IOS applications, Performance maintenance, Fixing Websites, Updating and Editing websites and a lot of other things.",
+      "We do All kind of software development services, Full-Stack development, Frontend as well as Backend like building Systems, Web Development Website, Web apps, Android and IOS applications, Performance maintenance, Fixing Websites, Updating and Editing websites, Shopify Integration, E-commerce Solutions, Shopify API Development, Inventory Management Integration and a lot of other things.",
     ],
     ar: [
       "كوارا أخصائي برمجيات ولتطوير البرمجيات والمواقع الإلكترونية ومتاجر الويب وتطوير تطبيقات الويب وتطوير الواجهة الأمامية والخلفية",
-      "نحن نقوم بجميع أنواع خدمات تطوير البرمجيات ونقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، والكثير من الأشياء الأخرى.",
+      "نحن نقوم بجميع أنواع خدمات تطوير البرمجيات ونقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، دمج شوبيفاي، حلول التجارة الإلكترونية المخصصة، خدمات دمج واجهة برمجة، دمج إدارة المخزون، والكثير من الأشياء الأخرى.",
     ],
   },
   features: {

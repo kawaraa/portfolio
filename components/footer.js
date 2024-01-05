@@ -49,7 +49,7 @@ export default async function Footer({ lang }) {
           <div id="social-media-wrapper" className="flex items-center gap-3">
             {content.socialMedia.map((item, i) => (
               <a
-                href={item.link.replace("lang", lang)}
+                href={item.link}
                 target="_blank"
                 title={item.title[lang]}
                 className={`overflow-hidden w-8 aspect-square bg-bg ${
@@ -101,7 +101,7 @@ export default async function Footer({ lang }) {
                 Netherlands
               </address>
               <a
-                className={`${linkCls} hvr text-bg hover:text-bg mt-3 text-lg`}
+                className={`${linkCls} hvr text-bg hover:text-bg hover:text-sc mt-3 text-lg`}
                 target="_blank"
                 href="mailto:contact@kawaraa.com?Subject=Hello%20again"
               >
