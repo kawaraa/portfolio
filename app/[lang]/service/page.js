@@ -17,12 +17,12 @@ export default function Services({ params: { lang } }) {
 
       <p className="sr-only">{metaData[lang]}</p>
 
-      <ol className="mt-28">
+      <ol className="mt-28 max-w-screen-xl mx-auto">
         {content.services.map((service, i) => (
           <li
             className={`${cardBgCls} ${i != 0 && lazyCls} ${
               i % 2 != 0 && "flex-row-reverse"
-            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex md:gap-10 rounded-md lazy-b`}
+            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex items-center md:gap-10 rounded-md lazy-b`}
             style={i != 0 ? null : getCssDelay()}
             key={i}
           >
@@ -50,11 +50,11 @@ export default function Services({ params: { lang } }) {
               </a>
             </div>
 
-            <div className="hidden overflow-hidden md:flex w-1/2 items-center rounded-md">
+            <div className="hidden overflow-hidden md:flex flex-1 max-h-64 lg:max-h-72 items-center rounded-md">
               <ImageWithSkeleton
                 src={service.imageUrl}
-                width="500"
-                height="500"
+                width="1500"
+                height="1500"
                 alt={service.t[lang]}
                 className="h-full"
               />

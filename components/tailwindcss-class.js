@@ -8,7 +8,7 @@ export const btnCls = `relative inline-flex items-center justify-center rounded-
 export const linkCls = "text-sc hover:text-pc visited:text-pc";
 export const disabledLinkCls = "cursor-not-allowed disabled:opacity-60 hover:opacity-60";
 export const skeletonCls = "animate-pulse rounded bg-neutral-200 dark:bg-neutral-700";
-export const lazyCls = "lazy linear duration-1000";
+export const lazyCls = "lazy linear !duration-1000";
 
 export function getCssDelay(time = 1) {
   return { animationDelay: ((Math.random() + time) * 600).toFixed() + "ms" };

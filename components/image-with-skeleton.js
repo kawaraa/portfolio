@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Suspense } from "react";
-import { skeletonCls } from "./tailwindcss-class";
+import { getCssDelay, skeletonCls } from "./tailwindcss-class";
 
 export default function ImageWithSkeleton({ wrapper, ...p }) {
   if (wrapper) return <ImageWrapper {...p} />;
@@ -18,7 +18,7 @@ export function ImageWithSuspense(props) {
 
 export function ImageWrapper({ wrapperCls = "", ...p }) {
   return (
-    <div className={wrapperCls || "min-w-[300px] max-w-[400px] mx-auto"}>
+    <div className={wrapperCls || "min-w-[300px] max-w-[400px] mx-auto"} style={getCssDelay()}>
       <ImageWithSkeleton className="w-full" {...p} />
     </div>
   );

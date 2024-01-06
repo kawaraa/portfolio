@@ -4,7 +4,8 @@ import { useRouter, usePathname } from "next/navigation";
 import { Cookies } from "../services/utilities";
 
 export default function CursorAndPageAnimation({ lang }) {
-  const router = useRouter();
+  // const router = useRouter();
+  // router.push(e.target.href)
   const path = usePathname();
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
   const [cls, setCls] = useState("");
@@ -24,12 +25,12 @@ export default function CursorAndPageAnimation({ lang }) {
     setCoordinates({ x: e.clientX - x, y: e.clientY - y });
   };
 
-  const fetchContent = (e) => {
+  const animateRoute = (e) => {
     if (e.target.tagName === "A" && e.target.target !== "_blank") {
       e.preventDefault();
       if (e.target.href == window.location.href) return;
       document.body.classList.add("page-shut");
-      setTimeout(() => router.push(e.target.href), 400);
+      setTimeout(() => (window.location.href = e.target.href), 400);
     }
   };
 
@@ -38,8 +39,12 @@ export default function CursorAndPageAnimation({ lang }) {
     if (prevScrollRef.current > scrollTop) return;
     prevScrollRef.current = scrollTop + 20;
 
-    elementsRef.current = elementsRef.current.filter((el) => {
-      if (el.offsetTop < offsetHeight + scrollTop) {
+    elementsRef.current = filterElements(elementsRef.current, offsetHeight + scrollTop);
+  };
+
+  const filterElements = (elements, scrolled) => {
+    return elements.filter((el) => {
+      if (el.offsetTop < scrolled) {
         el.classList.remove("lazy", "off-view");
         return false;
       }
@@ -50,16 +55,18 @@ export default function CursorAndPageAnimation({ lang }) {
   useEffect(() => {
     const root = document.getElementById("main-container") || document.body;
     document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("click", fetchContent);
+    document.addEventListener("click", animateRoute);
     root.addEventListener("scroll", viewportHandler);
 
     elementsRef.current = Array.from(document.querySelectorAll(".lazy"));
     elementsRef.current.forEach((el) => el.classList.add("off-view"));
+    elementsRef.current = filterElements(elementsRef.current, root.offsetHeight + root.scrollTop);
+
     document.body.classList.remove("page-shut");
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("click", fetchContent);
+      document.removeEventListener("click", animateRoute);
       root.removeEventListener("scroll", viewportHandler);
     };
   }, [path]);

@@ -21,7 +21,7 @@ export default function Blog({ lang, content, hiddenText, children }) {
         height="500"
         alt={content.h1[lang]}
         className="w-full"
-        wrapperCls={"min-w-[300px] max-w-[700px] mx-auto " + lazyCls}
+        wrapperCls="min-w-[300px] max-w-[700px] mx-auto lazy-b"
         wrapper
       />
 
