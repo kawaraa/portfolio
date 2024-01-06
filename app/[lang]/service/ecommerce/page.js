@@ -1,19 +1,13 @@
-import Blog from "../../../../components/blog";
-import { contact } from "../../../../components/data/shared-content";
-import { btnCls, lazyCls, pageCls } from "../../../../components/tailwindcss-class";
+import Blog, { ContactBtn } from "../../../../components/blog";
+import { contactUsParagraph } from "../../../../components/data/shared-content";
+import { pageCls } from "../../../../components/tailwindcss-class";
 import { content as metadata } from "../../../metadata";
 
 export default function Page({ params: { lang } }) {
   return (
     <main className={pageCls}>
       <Blog lang={lang} content={content} hiddenText={metadata.keywords[lang]}>
-        <a
-          href={`/${lang}/contact`}
-          name="BUTTON"
-          className={`${btnCls} mt-5 mx-auto py-3 px-5 !bg-dbg hover:!bg-sc rounded-full ${lazyCls}`}
-        >
-          {contact[lang]}
-        </a>
+        <ContactBtn lang={lang} />
       </Blog>
       <div className="h-20"></div>
     </main>
@@ -35,10 +29,10 @@ const content = {
   imageUrl: "/ecommerce.jpg",
   sections: [
     {
-      t: { en: "Shopify Integration", ar: "الدمج والتكامل مع شوبيفي" },
+      t: { en: "Shopify Integration", ar: "الدمج والتكامل مع شوبيفاي" },
       p: {
         en: "Shopify Integration is a pivotal aspect of e-commerce development, enabling businesses to seamlessly connect and synchronize their Shopify stores with various applications and services. This process involves merging Shopify's robust e-commerce platform with third-party tools, APIs, and custom solutions to enhance functionality and streamline business operations. Through Shopify Integration, businesses can automate tasks such as inventory management, order processing, and customer data synchronization, fostering efficiency and reducing manual efforts. This allows merchants to focus on core aspects of their business while ensuring a cohesive and connected online shopping experience for customers. Whether it's integrating payment gateways, third-party apps, or customizing the storefront, Shopify Integration empowers businesses to create a tailored and integrated online presence, ultimately contributing to a more successful and scalable e-commerce venture.",
-        ar: "الدمج والتكامل مع شوبيفي هو جانب حيوي في تطوير التجارة الإلكترونية، حيث يمكن للشركات ربط متاجرها على شوبيفي بسلاسة مع تطبيقات وخدمات متنوعة. يشمل هذا العملية دمج منصة التجارة الإلكترونية القوية شوبيفي مع أدوات الأطراف الأخرى، وواجهات برمجة التطبيقات، وحلول مخصصة لتعزيز الوظائف وتسهيل عمليات الأعمال. من خلال الدمج والتكامل مع شوبيفي يمكن للشركات أتمتة المهام مثل إدارة المخزون، ومعالجة الطلبات، ومزامنة بيانات العملاء، مما يعزز الكفاءة ويقلل من الجهد اليدوي. وهذا يتيح للتجار التركيز على الجوانب الأساسية لأعمالهم مع ضمان تجربة تسوق عبر الإنترنت متكاملة ومتصلة للعملاء. سواء كان الأمر يتعلق بتكامل بوابات الدفع، أو تطبيقات الأطراف الأخرى، أو تخصيص واجهة المتجر، يمكن لتكامل Shopify أن يمكن الشركات من خلق تواجد عبر الإنترنت مخصص ومتكامل، مما يسهم في نجاح مشروع التجارة الإلكترونية بشكل أكبر وأكثر قابلية للتوسيع.",
+        ar: "الدمج والتكامل مع شوبيفاي هو جانب حيوي في تطوير التجارة الإلكترونية، حيث يمكن للشركات ربط متاجرها على شوبيفاي بسلاسة مع تطبيقات وخدمات متنوعة. يشمل هذا العملية دمج منصة التجارة الإلكترونية القوية شوبيفاي مع أدوات الأطراف الأخرى، وواجهات برمجة التطبيقات، وحلول مخصصة لتعزيز الوظائف وتسهيل عمليات الأعمال. من خلال الدمج والتكامل مع شوبيفاي يمكن للشركات أتمتة المهام مثل إدارة المخزون، ومعالجة الطلبات، ومزامنة بيانات العملاء، مما يعزز الكفاءة ويقلل من الجهد اليدوي. وهذا يتيح للتجار التركيز على الجوانب الأساسية لأعمالهم مع ضمان تجربة تسوق عبر الإنترنت متكاملة ومتصلة للعملاء. سواء كان الأمر يتعلق بتكامل بوابات الدفع، أو تطبيقات الأطراف الأخرى، أو تخصيص واجهة المتجر، يمكن لتكامل Shopify أن يمكن الشركات من خلق تواجد عبر الإنترنت مخصص ومتكامل، مما يسهم في نجاح مشروع التجارة الإلكترونية بشكل أكبر وأكثر قابلية للتوسيع.",
       },
     },
     {
@@ -92,8 +86,5 @@ const content = {
       },
     },
   ],
-  endP: {
-    en: "Ready to elevate your local business through innovative software solutions? Let's collaborate to bring your vision to life! Contact us today for a personalized consultation.",
-    ar: "هل أنت جاهز لرفع أعمالك المحلية من خلال حلول برمجية مبتكرة؟ لنتعاون لتحقيق رؤيتكم! اتصل بنا اليوم للحصول على استشارة شخصية.",
-  },
+  endP: contactUsParagraph,
 };

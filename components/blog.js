@@ -1,5 +1,6 @@
+import { contact } from "./data/shared-content";
 import ImageWithSkeleton from "./image-with-skeleton";
-import { getCssDelay, h1Cls, h2Cls, lazyCls } from "./tailwindcss-class";
+import { btnCls, getCssDelay, h1Cls, h2Cls, lazyCls } from "./tailwindcss-class";
 
 export default function Blog({ lang, content, hiddenText, children }) {
   return (
@@ -20,7 +21,7 @@ export default function Blog({ lang, content, hiddenText, children }) {
         height="500"
         alt={content.h1[lang]}
         className="w-full"
-        wrapperCls="min-w-[300px] max-w-[700px] mx-auto"
+        wrapperCls={"min-w-[300px] max-w-[700px] mx-auto " + lazyCls}
         wrapper
       />
 
@@ -58,3 +59,15 @@ export function List({ lang, list }) {
     </ol>
   );
 }
+
+export const ContactBtn = ({ lang }) => {
+  return (
+    <a
+      href={`/${lang}/contact`}
+      name="BUTTON"
+      className={`${btnCls} mt-5 mx-auto py-3 px-5 !bg-dbg hover:!bg-sc rounded-full ${lazyCls}`}
+    >
+      {contact[lang]}
+    </a>
+  );
+};

@@ -128,7 +128,7 @@ const content = {
       { en: "Build a MacOS App", ar: "بناء تطبيق أبل" },
       { en: "Update a MacOS App", ar: "تحديث تطبيق أبل" },
       { en: "Design UI/UX", ar: "تصميم واجهة المستخدم" },
-      { en: "Integrate with Shopify", ar: "الدمج والتكامل مع شوبيفي" },
+      { en: "Integrate with Shopify", ar: "الدمج والتكامل مع شوبيفاي" },
       { en: "E-Commerce solution", ar: "حل لتجارة الإلكترونية" },
       { en: "Point-of-Sale (POS) System", ar: "نظام نقاط البيع (POS)" },
       { en: "Appointment Booking system", ar: "نظام حجز المواعيد" },

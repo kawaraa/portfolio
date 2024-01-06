@@ -19,3 +19,8 @@ export const navLinks = [
 ];
 
 // export const services = [];
+
+export const contactUsParagraph = {
+  en: "Ready to elevate your business through innovative software solutions? Let's collaborate to bring your vision to life! Contact us today for a personalized consultation.",
+  ar: "هل أنت جاهز لرفع أعمالك من خلال حلول برمجية مبتكرة؟ لنتعاون لتحقيق رؤيتكم! اتصل بنا اليوم للحصول على استشارة شخصية.",
+};
