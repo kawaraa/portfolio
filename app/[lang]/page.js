@@ -76,8 +76,14 @@ export default function HomePageByLang({ params: { lang } }) {
               key={i}
             >
               <h4 className="block md:hidden text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
-              <ImageItem src={item.image} alt={item.t[lang]} />
-
+              <ImageWithSkeleton
+                src={item.image}
+                alt={item.t[lang]}
+                width="500"
+                height="500"
+                className="w-full"
+                wrapper
+              />
               <div className="">
                 <h4 className="hidden md:block text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
                 <p className="flex-auto my-8 px-3 md:mt-0 md:px-0">{item.p[lang]}</p>
@@ -95,7 +101,15 @@ export default function HomePageByLang({ params: { lang } }) {
           {content.priorities.list.map((item, i) => (
             <li className={`w-full sm:w-1/2 lg:w-1/3 my-10 p-5 text-center ${lazyCls}`} key={i}>
               <div className={`p-5 pt-8 h-full text-center ${cardBgCls} `}>
-                <ImageItem src={item.image} cls="w-20 mx-auto" alt={item.t[lang]} />
+                <ImageWithSkeleton
+                  src={item.image}
+                  alt={item.t[lang]}
+                  width="500"
+                  height="500"
+                  className="w-full"
+                  wrapperCls="w-20 mx-auto"
+                  wrapper
+                />
                 <div className="">
                   <h4 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{item.t[lang]}</h4>
                   <p className="flex-auto text-sm my-8 px-3 md:mt-0 md:px-0">{item.p[lang]}</p>
@@ -110,14 +124,6 @@ export default function HomePageByLang({ params: { lang } }) {
 
       <ToastMessages messages={content.messages[lang]} start={30} />
     </main>
-  );
-}
-
-function ImageItem({ src, cls = "", alt = "" }) {
-  return (
-    <div className={cls || "min-w-[300px] max-w-[400px] mx-auto"}>
-      <ImageWithSkeleton src={src} width="500" height="500" alt={alt} className="w-full" />
-    </div>
   );
 }
 
@@ -159,7 +165,7 @@ const content = {
     ],
     ar: [
       "كوارا أخصائي برمجيات ولتطوير البرمجيات والمواقع الإلكترونية ومتاجر الويب وتطوير تطبيقات الويب وتطوير الواجهة الأمامية والخلفية",
-      "نحن نقوم بجميع أنواع خدمات تطوير البرمجيات ونقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، دمج شوبيفاي، حلول التجارة الإلكترونية المخصصة، خدمات دمج واجهة برمجة، دمج إدارة المخزون، والكثير من الأشياء الأخرى.",
+      "نحن نقوم بجميع أنواع خدمات تطوير البرمجيات ونقوم بتطوير برمجي شامل متكامل والواجهة الأمامية وكذلك الخلفية مثل بناء الأنظمة، ومواقع الويب، وتطبيقات الويب، وتطبيقات أندرويد وايفون وصيانة الأداء، وإصلاح مواقع الويب، وتحديث مواقع الويب وتحريرها، دمج الأطراف الأخرى مع شوبيفي، حلول التجارة الإلكترونية المخصصة، خدمات دمج واجهة برمجة، دمج إدارة المخزون، والكثير من الأشياء الأخرى.",
     ],
   },
   features: {

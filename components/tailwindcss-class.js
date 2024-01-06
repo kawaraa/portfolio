@@ -1,5 +1,6 @@
 export const pageCls = "min-h-screen mx-3 md:mx-5 pt-16 pb-28 max-w-screen-2xl";
 export const h1Cls = "text-4xl mb-3";
+export const h2Cls = "text-2xl mb-5 mt-3";
 export const cardBgCls = "bg-cbg dark:bg-dcbg rounded-md shadow-lg";
 export const bCls = "border border-neutral-200 dark:border-neutral-700";
 export const bHrFsCls = "hover:border-blue-500 focus:border-blue-500 active:border-blue-500";

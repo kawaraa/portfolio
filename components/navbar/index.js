@@ -1,7 +1,7 @@
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
 import { btnCls } from "../tailwindcss-class";
-import { contact, navLinks } from "../shared-content";
+import { contact, navLinks } from "../data/shared-content";
 import { BrandLogo, BrandName } from "./brand";
 import CustomLink from "../custom-link";
 

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { send } from "../../../components/shared-content";
+import { send } from "../../../components/data/shared-content";
 import { btnCls, cardBgCls, getCssDelay } from "../../../components/tailwindcss-class";
 const inputFieldCls = "relative mt-16";
 const underline = `outline-none border-b-[1px] border-stone-400 dark:border-gray-400 focus:border-dbg dark:focus:border-bg`;
@@ -128,6 +128,7 @@ const content = {
       { en: "Build a MacOS App", ar: "بناء تطبيق أبل" },
       { en: "Update a MacOS App", ar: "تحديث تطبيق أبل" },
       { en: "Design UI/UX", ar: "تصميم واجهة المستخدم" },
+      { en: "Integrate with Shopify", ar: "الدمج والتكامل مع شوبيفي" },
       { en: "E-Commerce solution", ar: "حل لتجارة الإلكترونية" },
       { en: "Point-of-Sale (POS) System", ar: "نظام نقاط البيع (POS)" },
       { en: "Appointment Booking system", ar: "نظام حجز المواعيد" },
@@ -137,10 +138,10 @@ const content = {
       { en: "Software Testing", ar: "فحص برنامج" },
       { en: "Create a Database", ar: "إنشاء قاعدة بيانات" },
       { en: "Build an Automated Service", ar: "بناء وظيفة آلية" },
-      { en: "Integrate a new service", ar: "دمج خدمة جديدة" },
+      { en: "Integrate a new service", ar: "الدمج خدمة جديدة" },
       { en: "Connect a Sales Channel", ar: "ربط قناة المبيعات" },
       { en: "Analyze Data", ar: "تحليل البيانات" },
-      { en: "Integrate with Social Media", ar: "دمج مع وسائل التواصل الاجتماعي" },
+      { en: "Integrate with Social Media", ar: "الدمج مع وسائل التواصل الاجتماعي" },
       { en: "Custom Development", ar: "تطوير برمجي مخصصة" },
       { en: "Developer on-Retainer", ar: "تجنيب المطور" }, // E.g. ongoing maintenance
       { en: "Long-term Service", ar: "خدمة طويلة الأمد" }, // E.g. ongoing maintenance

@@ -1,6 +1,6 @@
 import { btnCls, cardBgCls, h1Cls, lazyCls, pageCls } from "../../../components/tailwindcss-class";
 import { getCssDelay } from "../../../components/tailwindcss-class";
-import { learn } from "../../../components/shared-content";
+import { learn } from "../../../components/data/shared-content";
 import ImageWithSkeleton from "../../../components/image-with-skeleton";
 import { content as metaData } from "../../metadata";
 
@@ -22,7 +22,7 @@ export default function Services({ params: { lang } }) {
           <li
             className={`${cardBgCls} ${i != 0 && lazyCls} ${
               i % 2 != 0 && "flex-row-reverse"
-            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex md:gap-10 rounded-md lazy-b duration-200`}
+            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex md:gap-10 rounded-md lazy-b`}
             style={i != 0 ? null : getCssDelay()}
             key={i}
           >
@@ -114,7 +114,7 @@ const content = {
         ar: ["التوجيه الاستراتيجي لمساعدتك على التنقل بين تعقيدات التكنولوجيا، واتخاذ قرارات مستنيرة لعملك."],
       },
       imageUrl: "/consulting-services.jpg",
-      link: "service/custom-development",
+      link: "service/consulting",
     },
   ],
 };

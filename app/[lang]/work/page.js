@@ -1,4 +1,4 @@
-import { visit } from "../../../components/shared-content";
+import { visit } from "../../../components/data/shared-content";
 import { btnCls, cardBgCls, h1Cls, lazyCls, pageCls } from "../../../components/tailwindcss-class";
 import { getCssDelay } from "../../../components/tailwindcss-class";
 import ImageWithSkeleton from "../../../components/image-with-skeleton";

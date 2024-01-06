@@ -23,7 +23,7 @@ export default function Page({ params: { lang } }) {
 }
 
 const content = {
-  h1: { en: "Custom Software Development", ar: "تطوير البرمجيات المخصصة" },
+  h1: { en: "Software Consulting Services", ar: "خدمات استشارات البرمجيات" },
   p: {
     en: [
       "Discover the E-commerce solutions and the power of digital transformation with our custom software solutions.",
