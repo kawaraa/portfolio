@@ -130,24 +130,24 @@ const content = {
   certified: { en: "Crafted by Kawara", ar: "Kawara من صنع" },
   socialMedia: [
     {
-      title: { en: "Kawara Instagram profile", ar: "الملف الشخصي على الانستغرام" },
-      link: "https://www.instagram.com/in/kawaraa",
-      imageUrl: "/instagram.png",
-    },
-    {
-      title: { en: "Kawara Facebook page", ar: "صفحة كوارا على الفيسبوك" },
-      link: "https://www.facebook.com/kawaraa1",
-      imageUrl: "/facebook.png",
-    },
-    {
-      title: { en: "Kawara LinkedIn profile", ar: "الملف الشخصي على لينكدإن" },
-      link: "https://www.linkedin.com/in/kawaraa",
+      title: { en: "Kawara LinkedIn Page", ar: "صفحة كوارا على الينكدإن" },
+      link: "https://www.linkedin.com/company/kawarasoftwaredevelopment",
       imageUrl: "/linkedin.png",
     },
     // {
-    //   title: { en: "Kawara GitHub profile", ar: "الملف الشخصي لكوارا على كيت هاب" },
+    //   title: { en: "Kawara GitHub Page", ar: "صفحة كوارا على الكيت هاب" },
     //   link: "https://github.com/kawaraa",
     //   imageUrl: "/github.png",
     // },
+    {
+      title: { en: "Kawara Facebook Page", ar: "صفحة كوارا على الفيسبوك" },
+      link: "https://www.facebook.com/kawaraSoftwareDevelopment",
+      imageUrl: "/facebook.png",
+    },
+    {
+      title: { en: "Kawara Instagram Page", ar: "صفحة كوارا على الانستغرام" },
+      link: "https://www.instagram.com/",
+      imageUrl: "/instagram.png",
+    },
   ],
 };
