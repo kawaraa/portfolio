@@ -1,6 +1,7 @@
 import { contact } from "../data/shared-content";
 import ImageWithSkeleton from "./image-with-skeleton";
 import { btnCls, getLazyCls, h1Cls, h2Cls, lazyCls } from "./tailwindcss-class";
+import Link from "next/navigation";
 const headings = ["h1", "h2", "h3", "h4", "h5", "h6"];
 
 export default function Blog({ children, lang, content, hiddenText }) {
@@ -31,7 +32,11 @@ export default function Blog({ children, lang, content, hiddenText }) {
       <div className="h-20"></div>
 
       {content.sections.map((section, i) => (
-        <Section lang={lang} section={section} key={i} />
+        <Section lang={lang} section={section} key={i}>
+          {section.sections?.map((section, i) => (
+            <Section lang={lang} section={section} key={i} level="3" />
+          ))}
+        </Section>
       ))}
 
       <List lang={lang} list={content.list} />
@@ -44,7 +49,7 @@ export default function Blog({ children, lang, content, hiddenText }) {
 }
 
 export function Section({ children, lang, section, level = "2" }) {
-  const HTag = headings[+level + 1];
+  const HTag = headings[+level - 1];
 
   return (
     <section className="mb-10">
@@ -72,25 +77,40 @@ export function Section({ children, lang, section, level = "2" }) {
 export function List({ lang, list }) {
   const c = ["list-[disc]", "list-[circle]", "list-[square]", "list-[decimal]", "list-[lower-alpha]"];
 
-  if (!list || !list[0]) return null;
+  const LinkItem = ({ href, children }) => {
+    return !href ? (
+      children
+    ) : (
+      <Link href={href} className="underline underline-offset-4 hover:text-link">
+        {children}
+      </Link>
+    );
+  };
+
+  if (!list || !list.items[0]) return null;
   return (
     <>
       {!list.title ? "" : <p className="text-lg font-semibold">{list.title[lang]}</p>}
 
-      <ol className={`mt-20 px-6 ${c.find((c) => c.includes(list.style)) || ""} ${lazyCls}`}>
-        {list.items.map((item, i) => (
-          <li key={i}>
-            {item[lang]}
+      <ol className={`mt-10 px-6 ${c.find((c) => c.includes(list.style)) || ""}`}>
+        {list.items.map((item, i) => {
+          const [h, p] = item[lang].split(":");
 
-            {!item.link ? (
-              item[lang]
-            ) : (
-              <Link href={item.link} className="underline underline-offset-4 hover:text-link">
-                {item[lang]}
-              </Link>
-            )}
-          </li>
-        ))}
+          return (
+            <li className={`${lazyCls} mb-8`} key={i}>
+              {!p ? (
+                <LinkItem href={item.link}>{h}</LinkItem>
+              ) : (
+                <>
+                  <LinkItem href={item.link}>
+                    <h4 className="text-lg font-semibold">{h}:</h4>
+                  </LinkItem>
+                  <p>{p}</p>
+                </>
+              )}
+            </li>
+          );
+        })}
       </ol>
     </>
   );

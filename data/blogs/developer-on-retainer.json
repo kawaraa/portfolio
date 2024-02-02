@@ -1,1 +1,96 @@
-null
+{
+  "title": {
+    "en": "Developer-on-Retainer Services",
+    "ar": "خدمة الاحتفاظ بالمبرمج"
+  },
+  "h": {
+    "en": "Elevate Your Development Experience with Our Exclusive 'Developer-on-Retainer' Services",
+    "ar": "ارفع مستوى تجربتك التنموية مع ن خلال خدماتنا الحصرية الاحتفاظ بالمبرمج"
+  },
+  "p": {
+    "en": [
+      "Are you tired of the traditional project-based approach to software development? It's time to revolutionize the way you handle your tech needs! Kawara is your trusted partner in cutting-edge solutions."
+    ],
+    "ar": [
+      "هل سئمت من النهج التقليدي القائم على المشاريع في تطوير البرمجيات؟ حان الوقت لإحداث ثورة في الطريقة التي تتعامل بها مع احتياجاتك التقنية! كاوارا هي شريكك الموثوق به في الحلول المتطورة."
+    ]
+  },
+  "sections": [
+    {
+      "h": { "en": "The Power of Developer-on-Retainer", "ar": "قوة خدمة الاحتفاظ بالمبرمج" },
+      "p": {
+        "en": [
+          "Here is a list of what a software development company should provide for a comprehensive retainer services."
+        ],
+        "ar": ["هذه قائمة بما يجب أن تقدمه شركة تطوير البرمجيات لخدمات التجنيب الشاملة."]
+      },
+      "list": {
+        "style": "disc",
+        "items": [
+          {
+            "en": "On-Demand Expertise:With a Developer-on-Retainer service, businesses gain access to a pool of seasoned developers with diverse skill sets. Whether it's front-end development, back-end infrastructure, mobile app development, or any other specialized area, you have experts ready to hit the ground running.",
+            "ar": "الخبرة حسب الطلب:مع خدمة المطور على الاحتفاظ، تحصل الشركات على وصول إلى مجموعة من المطورين ذوي الخبرات المتنوعة. سواء كان الأمر يتعلق بتطوير الواجهة الأمامية، أو بنية الخلفية، أو تطوير تطبيقات الجوال، أو أي مجال متخصص آخر، فلديك خبراء جاهزون لبدء العمل."
+          },
+          {
+            "en": "Flexible Resource Allocation:The flexibility of a retainer service allows companies to scale their development team according to project requirements. Need extra hands during a critical phase? Easily expand your team. Scaling down after project completion? No problem. This agility ensures optimal resource allocation, preventing overstaffing or understaffing issues.",
+            "ar": "توزيع الموارد بمرونة:مرونة خدمة الاحتفاظ تتيح للشركات توسيع فريق التطوير وفقًا لمتطلبات المشروع. هل تحتاج إلى مساعدة إضافية خلال مرحلة حاسمة؟ يمكنك بسهولة توسيع فريقك. التحجيم بعد الانتهاء من المشروع؟ لا مشكلة. تضمن هذه المرونة توزيع الموارد بشكل أمثل، مما يمنع مشكلات التفوق أو التفوق الغير كافي."
+          },
+          {
+            "en": "Continuous Collaboration:Unlike traditional outsourcing models, a Developer-on-Retainer service promotes continuous collaboration. Your retained developers become an extension of your in-house team, fostering a seamless integration of workflows. This close-knit relationship enhances communication and ensures that the development process aligns with your business objectives.",
+            "ar": "التعاون المستمر:على عكس نماذج التشغيل التقليدية، تعزز خدمة المطور على الاحتفاظ التعاون المستمر. يصبح المطورون الذين تم الاحتفاظ بهم تمديدًا لفريق العمل الداخلي، مما يعزز التكامل السلس في سير العمل. هذه العلاقة الوثيقة تعزز التواصل وتضمن أن عملية التطوير تتناسب مع أهداف عملك."
+          },
+          {
+            "en": "Proactive Maintenance and Support:Beyond project development, a retainer service includes ongoing maintenance and support. This proactive approach ensures that your software remains up-to-date, secure, and operates smoothly. Regular updates, bug fixes, and performance enhancements become part of the service, saving you from potential downtime and user dissatisfaction.",
+            "ar": "الصيانة والدعم الفعّال:وراء تطوير المشروع، تشمل خدمة الاحتفاظ الدعم والصيانة المستمرين. يضمن هذا النهج الاستباقي أن تظل برامجك حديثة وآمنة، وأنها تعمل بسلاسة. التحديثات الدورية وإصلاح الأخطاء وتحسين الأداء تصبح جزءًا من الخدمة، مما يوفر لك الوقت والجهد المحتملين."
+          },
+          {
+            "en": "Cost-Effective Solution:Employing a Developer-on-Retainer model is a cost-effective alternative to hiring a full-time, in-house development team. By paying for the specific expertise and hours you need, you eliminate the overhead costs associated with recruitment, training, and employee benefits.",
+            "ar": "حلاً فعّالًا من حيث التكلفة:استخدام نموذج المطور على الاحتفاظ يعتبر بديلاً فعّالاً لتوظيف فريق تطوير داخلي بالكامل. من خلال دفع الثمن الذي يتناسب مع الخبرة والساعات التي تحتاجها، تقضي على التكاليف الإضافية المرتبطة بالتوظيف والتدريب وفوائد الموظفين."
+          }
+        ]
+      }
+    },
+    {
+      "h": { "en": "How it Works", "ar": "كيف يعمل الأمر" },
+      "p": {
+        "en": [""],
+        "ar": [""]
+      },
+      "list": {
+        "style": "decimal",
+        "items": [
+          {
+            "en": "Initial Consultation:The process begins with a comprehensive consultation to understand your business objectives, project scope, and technical requirements.",
+            "ar": "استشارة أولية:يبدأ العملية باستشارة شاملة لفهم أهداف عملك، نطاق المشروع، والمتطلبات التقنية."
+          },
+          {
+            "en": "Team Customization:Based on your needs, a dedicated team of developers is curated with the right skill sets, ensuring a perfect match for your project.",
+            "ar": "تخصيص الفريق:بناءً على احتياجاتك، يتم تجميع فريق مخصص من المطورين بالمهارات الصحيحة، مما يضمن التوافق المثالي مع مشروعك."
+          },
+          {
+            "en": "Flexible Engagement:The engagement model is flexible, allowing you to adjust the team size and composition as your project evolves.",
+            "ar": "مشاركة مرنة:يتيح نموذج الاحتفاظ تعديل حجم الفريق وتكوينه بحسب تطور مشروعك."
+          },
+          {
+            "en": "Transparent Communication:Regular updates, progress reports, and transparent communication channels keep you informed at every stage of development.",
+            "ar": "تواصل شفاف:التحديثات الدورية وتقارير التقدم وقنوات الاتصال الشفافة تبقيك على علم في كل مرحلة من مراحل التطوير."
+          },
+          {
+            "en": "Ongoing Support:Post-launch, the retainer service extends into ongoing support, ensuring your software remains robust and adaptive to changing needs.",
+            "ar": "الدعم المستمر:بعد الإطلاق، تمتد خدمة الاحتفاظ إلى الدعم المستمر، مضمونة استمرار تشغيل برامجك بقوة وقدرة على التكيف مع التغييرات."
+          }
+        ]
+      }
+    }
+  ],
+  "endP": {
+    "en": [
+      "In a technology-driven era, the Developer-on-Retainer service emerges as a strategic solution for businesses seeking continuous innovation without the burden of managing an in-house development team. By partnering with a software development company offering retainer services, businesses can unlock the full potential of their projects, adapting and thriving in the ever-evolving digital landscape.",
+      "Contact us today to embark on a journey of e-commerce excellence."
+    ],
+    "ar": [
+      "في عصر يعتمد على التكنولوجيا، يظهر نموذج المطور على الاحتفاظ كحلاً استراتيجيًا للشركات الراغبة في الابتكار المستمر دون عبء إدارة فريق تطوير داخلي. من خلال التعاون مع شركة تطوير برمجيات تقدم خدمات الاحتفاظ، يمكن للشركات فتح كامل إمكانات مشاريعها، مكيّفة وازدهارًا في المناظر الرقمية المتغيرة باستمرار.",
+      "دعونا نتعاون لتحقيق رؤيتكم! تواصلوا معنا اليوم للحصول على استشارة شخصية."
+    ]
+  }
+}

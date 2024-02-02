@@ -4,102 +4,123 @@
     "ar": "الدمج والتكامل والتعديل الشامل لشوبيفاي"
   },
   "h": {
-    "en": "Comprehensive Shopify Integrations including POS and In-App Customization",
-    "ar": "الدمج والتكامل الشامل لشوبيفاي بما في ذلك نظام نقاط البيع والتعديل تطبيقات الداخلية"
+    "en": "Comprehensive Shopify Integrations including POS Customization",
+    "ar": "الدمج والتعديل الشامل لشوبيفاي بما في ذلك نظام نقاط البيع"
   },
   "p": {
     "en": [
-      "Unleashing the Power of Shopify Integrations and Elevate Your E-commerce Game with us.",
-      "In the competitive world of e-commerce, staying at the forefront requires a holistic approach to Shopify integrations. Kawara, a player in the field, offers a comprehensive and robust suite of Shopify integrations designed to supercharge your online store and streamline operations. Elevate your online presence, enhance user experience, and drive unprecedented success with our cutting-edge solutions."
+      "Unleashing the Power of Shopify Integrations and Elevate Your E-commerce Game with us. In the competitive world of e-commerce, staying at the forefront requires a holistic approach to Shopify integrations. Kawara, a player in the field, offers a comprehensive and robust suite of Shopify integrations designed to supercharge your online store and streamline operations. Elevate your online presence, enhance user experience, and drive unprecedented success with our cutting-edge solutions."
     ],
-    "ar": "في عالم التجارة الإلكترونية التنافسي، يتطلب البقاء في المقدمة نهجًا شاملاً للتكاملات في شوبيفاي. كاوارا، لاعب في هذا المجال، يقدم مجموعة شاملة وقوية من التكاملات في شوبيفاي مصممة لتعزيز متجرك عبر الإنترنت وتسهيل العمليات. ارتق بوجودك عبر الإنترنت، وزين تجربة المستخدم، وحقق نجاحًا غير مسبوق مع حلولنا المتطورة"
+    "ar": [
+      "في عالم التجارة الإلكترونية التنافسي، يتطلب البقاء في المقدمة نهجًا شاملاً للإضافاة في شوبيفاي. كاوارا، لاعب في هذا المجال، يقدم مجموعة شاملة وقوية من التكاملات في شوبيفاي مصممة لتعزيز متجرك عبر الإنترنت وتسهيل العمليات. ارتق بوجودك عبر الإنترنت، وزين تجربة المستخدم، وحقق نجاحًا غير مسبوق مع حلولنا المتطورة"
+    ]
   },
-  "list": [],
   "sections": [
     {
-      "h": { "en": "Payment Gateways Integration", "ar": "تكامل بوابات الدفع" },
+      "h": { "en": "Payment Gateways Integration", "ar": "إضافة بوابات الدفع" },
       "p": {
         "en": [
           "Accepting payments seamlessly is the lifeblood of any e-commerce venture",
           "We ensure your Shopify store is equipped with a variety of payment gateway integrations, including but not limited to PayPal, Stripe, Square, and more. This not only enhances the user experience but also expands your customer base by accommodating various payment preferences."
         ],
-        "ar": ""
+        "ar": [
+          "قبول الدفع بسهولة هو روح أي مشروع تجارة إلكترونية. نحن نضمن أن يكون متجرك شوبيفاي مجهزًا بمجموعة من التكاملات مع بوابات الدفع، بما في ذلك ولكن لا يقتصر على PayPal، Stripe، Square، والمزيد. هذا لا يعزز فقط تجربة المستخدم ولكن يوسع أيضًا قاعدة العملاء عن طريق استيعاب مختلف تفضيلات الدفع."
+        ]
       }
     },
     {
-      "h": { "en": "Shipping and Logistics Integration", "ar": "" },
+      "h": { "en": "Shipping and Logistics Integration", "ar": "تكامل الشحن والخدمات اللوجستية" },
       "p": {
         "en": [
           "Efficient order fulfillment is critical to customer satisfaction.",
           "We facilitate integration with popular shipping and logistics services like UPS, FedEx, DHL, and others. Real-time shipping calculations, order tracking, and label printing become a breeze, ensuring timely deliveries and happy customers."
         ],
-        "ar": ""
-      },
-      "list": []
+        "ar": [
+          "الوفاء الفعّال بالطلبات أمر حاسم لرضاء العملاء. نسهل التكامل مع خدمات الشحن واللوجستيات الشهيرة مثل UPS، FedEx، DHL، وغيرها. تصبح حسابات الشحن في الوقت الحقيقي، وتتبع الطلبات، وطباعة البطاقات أمرًا سهلاً، مما يضمن التسليم في الوقت المحدد ورضا العملاء."
+        ]
+      }
     },
     {
-      "h": { "en": "Inventory Management", "ar": "" },
+      "h": { "en": "Inventory Management", "ar": "إدارة المخزون" },
       "p": {
         "en": [
           "Avoid stockouts and overstock situations by integrating your Shopify store with advanced inventory management systems.",
           "We can seamlessly connect your store with solutions such as TradeGecko, Stitch Labs, or in-house inventory systems, providing real-time updates and ensuring accurate product availability information."
         ],
-        "ar": ""
+        "ar": [
+          "تجنب نفاذ الأسهم والوضع في حالة فائض من خلال دمج متجرك شوبيفاي مع أنظمة إدارة المخزون المتقدمة. يمكننا ربط متجرك بسلاسة مع حلول مثل TradeGecko، Stitch Labs، أو أنظمة المخزون الداخلية، مما يوفر تحديثات فورية وضمان دقة معلومات توفر المنتج."
+        ]
       }
     },
     {
-      "h": { "en": "CRM Integration", "ar": "" },
+      "h": { "en": "CRM Integration", "ar": "تكامل إدارة العلاقات مع العملاء (CRM)" },
       "p": {
         "en": [
           "Building and maintaining customer relationships is vital for sustained success.",
           "We integrate your Shopify store with Customer Relationship Management (CRM) tools like HubSpot, Salesforce, or Zoho CRM. This enables you to manage customer interactions, analyze data, and create targeted marketing campaigns to boost customer retention."
         ],
-        "ar": ""
+        "ar": [
+          "بناء والحفاظ على علاقات العملاء ضروري لتحقيق النجاح المستدام. نقوم بتكامل متجر شوبيفاي الخاص بك مع أدوات إدارة العلاقات مع العملاء (CRM) مثل HubSpot، Salesforce، أو Zoho CRM. يتيح لك ذلك إدارة تفاعلات العملاء، وتحليل البيانات، وإنشاء حملات تسويق مستهدفة لتعزيز الولاء."
+        ]
       }
     },
     {
-      "h": { "en": "Marketing Automation", "ar": "" },
+      "h": { "en": "Marketing Automation", "ar": "تكامل التسويق الآلي" },
       "p": {
         "en": [
           "Elevate your marketing efforts by integrating your Shopify store with marketing automation platforms such as Mailchimp, Klaviyo, or ActiveCampaign.",
           "We help you set up automated email campaigns, abandoned cart recovery sequences, and personalized promotions to engage your audience and drive sales."
         ],
-        "ar": ""
+        "ar": [
+          "ارتق بجهود التسويق الخاصة بك من خلال تكامل متجر شوبيفاي الخاص بك مع منصات التسويق الآلي مثل Mailchimp، Klaviyo، أو ActiveCampaign. نساعدك في إعداد حملات البريد الإلكتروني الآلي، وسلاسل استرداد العربات المهجورة، وترقيات شخصية لفتح جمهورك وتحفيز المبيعات."
+        ]
       }
     },
     {
-      "h": { "en": "Analytics and Reporting", "ar": "" },
+      "h": { "en": "Analytics and Reporting", "ar": "تحليل البيانات والتقارير" },
       "p": {
         "en": [
           "Make data-driven decisions by integrating your Shopify store with analytics tools like Google Analytics, Metorik, or Shopify's native analytics.",
           "We ensure that you have access to comprehensive reports on sales, customer behavior, and website performance, enabling you to optimize your strategy for maximum efficiency."
         ],
-        "ar": ""
+        "ar": [
+          "اتخذ قرارات قائمة على البيانات من خلال تكامل متجر شوبيفاي الخاص بك مع أدوات التحليل مثل Google Analytics، Metorik، أو تحليلات Shopify الأصلية. نضمن أن تكون لديك وصولاً إلى تقارير شاملة حول المبيعات، وسلوك العملاء، وأداء الموقع الإلكتروني، مما يتيح لك تحسين استراتيجيتك لتحقيق أقصى كفاءة."
+        ]
       }
     },
     {
-      "h": { "en": "Custom App Development", "ar": "" },
+      "h": { "en": "Custom App Development", "ar": "تطوير تطبيقات مخصصة" },
       "p": {
         "en": [
           "Tailor your Shopify store to your unique requirements with custom app development.",
           "We can create bespoke applications to address specific needs, ensuring that your e-commerce platform aligns perfectly with your business goals."
         ],
-        "ar": ""
+        "ar": [
+          "قم بتخصيص متجرك شوبيفاي وفقًا لاحتياجاتك الفريدة من خلال تطوير تطبيقات مخصصة. يمكننا إنشاء تطبيقات فريدة لتلبية الاحتياجات الخاصة بك، مما يضمن تناغم منصتك للتجارة الإلكترونية تمامًا مع أهداف عملك."
+        ]
       }
     },
     {
-      "h": { "en": "In-App POS Customization", "ar": "" },
+      "h": { "en": "In-App POS Customization", "ar": "تخصيص تطبيق نقاط البيع (POS) داخل التطبيق" },
       "p": {
         "en": [
           "Elevate the in-store experience by customizing your Shopify POS app.",
           "We offer in-depth customization services, allowing you to tailor the POS interface, add unique features, and integrate specialized tools that align with your brand and enhance operational efficiency."
         ],
-        "ar": ""
+        "ar": [
+          "ارتق بتجربة التسوق داخل المتجر عن طريق تخصيص تطبيق Shopify POS الخاص بك. نقدم خدمات تخصيص شاملة، تتيح لك تشكيل واجهة نقاط البيع، وإضافة ميزات فريدة، وتكامل أدوات متخصصة تتماشى مع علامتك التجارية وتعزز الكفاءة التشغيلية."
+        ]
       }
     }
   ],
-  "endP": [
-    "In the dynamic realm of e-commerce, strategic integrations play a pivotal role in elevating your business to new heights. But we are here to offer a wide array of integrations to fortify your Shopify store.",
-    "Contact us today to embark on a journey of e-commerce excellence."
-  ]
+  "endP": {
+    "en": [
+      "In the dynamic realm of e-commerce, strategic integrations play a pivotal role in elevating your business to new heights. But we are here to offer a wide array of integrations to fortify your Shopify store.",
+      "Contact us today to embark on a journey of e-commerce excellence."
+    ],
+    "ar": [
+      "في عالم التجارة الإلكترونية الديناميكي، تلعب عمليات التكامل الاستراتيجي دورًا محوريًا في الارتقاء بأعمالك إلى آفاق جديدة. لكننا هنا لنقدم مجموعة واسعة من عمليات التكامل لتحصين متجرك شوبيفاي. اتصل بنا اليوم للشروع في رحلة التميز في التجارة الإلكترونية.",
+      "هل أنتم مستعدون لرفع أعمالكم إلى آفاق جديدة من خلال حلول برمجية مبتكرة؟ دعونا نتعاون لتحقيق رؤيتكم! تواصلوا معنا اليوم للحصول على استشارة شخصية."
+    ]
+  }
 }
