@@ -1,39 +1,40 @@
-import { btnCls, cardBgCls, h1Cls, lazyCls, pageCls } from "../../../components/tailwindcss-class";
-import { getCssDelay } from "../../../components/tailwindcss-class";
-import { learn } from "../../../components/data/shared-content";
+import {
+  btnCls,
+  cardBgCls,
+  getLazyCls,
+  h1Cls,
+  lazyCls,
+  pageCls,
+} from "../../../components/tailwindcss-class";
+import { learn } from "../../../data/shared-content";
 import ImageWithSkeleton from "../../../components/image-with-skeleton";
 import { content as metaData } from "../../metadata";
 
 export default function Services({ params: { lang } }) {
   return (
     <main className={pageCls}>
-      <h1 className={h1Cls + " lazy-b"} style={getCssDelay()}>
-        {content.title[lang]}
-      </h1>
+      <h1 className={`${h1Cls} ${getLazyCls()}`}>{content.title[lang]}</h1>
 
-      <p className="lazy-b" style={getCssDelay()}>
-        {content.p[lang]}
-      </p>
+      <p className={getLazyCls()}>{content.p[lang]}</p>
 
       <p className="sr-only">{metaData[lang]}</p>
 
       <ol className="mt-28 max-w-screen-xl mx-auto">
         {content.services.map((service, i) => (
           <li
-            className={`${cardBgCls} ${i != 0 && lazyCls} ${
+            className={`${cardBgCls} ${lazyCls} ${
               i % 2 != 0 && "flex-row-reverse"
-            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex items-center md:gap-10 rounded-md lazy-b`}
-            style={i != 0 ? null : getCssDelay()}
+            } max-w-lg md:max-w-full mx-auto mb-16 md:p-5 flex items-center md:gap-10 rounded-md`}
             key={i}
           >
             <div className="flex flex-col md:w-1/2">
-              <h2 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{service.t[lang]}</h2>
+              <h2 className="text-2xl mb-5 mt-3 mx-3 md:t-0 md:mx-0">{service.h[lang]}</h2>
               <div className="md:hidden flex-auto overflow-hidden">
                 <ImageWithSkeleton
                   src={service.imageUrl}
                   width="500"
                   height="500"
-                  alt={service.t[lang]}
+                  alt={service.h[lang]}
                   className="w-full"
                 />
               </div>
@@ -55,7 +56,7 @@ export default function Services({ params: { lang } }) {
                 src={service.imageUrl}
                 width="1500"
                 height="1500"
-                alt={service.t[lang]}
+                alt={service.h[lang]}
                 className="h-full"
               />
             </div>
@@ -78,7 +79,7 @@ const content = {
   },
   services: [
     {
-      t: { en: "E-Commerce", ar: "التجارة الإلكترونية" },
+      h: { en: "E-Commerce", ar: "التجارة الإلكترونية" },
       p: {
         en: [
           "We don't simply build your Web Shop, we set up your entire digital architecture.",
@@ -93,7 +94,7 @@ const content = {
       link: "service/ecommerce",
     },
     {
-      t: { en: "Custom Development", ar: "التطوير المخصص" },
+      h: { en: "Custom Development", ar: "التطوير المخصص" },
       p: {
         en: [
           "Custom solutions designed to fit your unique requirements, from web and mobile applications to enterprise-level software",
@@ -106,7 +107,7 @@ const content = {
       link: "service/custom-development",
     },
     {
-      t: { en: "Consulting Services", ar: "خدمات استشارية" },
+      h: { en: "Consulting Services", ar: "خدمات استشارية" },
       p: {
         en: [
           "Strategic guidance to help you navigate the complexities of technology, making informed decisions for your business.",

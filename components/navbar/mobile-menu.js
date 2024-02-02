@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Transition from "../transition";
-import { contact, navLinks } from "../data/shared-content";
+import { contact, navLinks } from "../../data/shared-content";
 import { bCls, btnCls, linkCls } from "../tailwindcss-class";
 
 export default function MobileMenu({ lang }) {

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { send } from "../../../components/data/shared-content";
-import { btnCls, cardBgCls, getCssDelay } from "../../../components/tailwindcss-class";
+import { send } from "../../../data/shared-content";
+import { btnCls, cardBgCls, getLazyCls } from "../../../components/tailwindcss-class";
 const inputFieldCls = "relative mt-16";
 const underline = `outline-none border-b-[1px] border-stone-400 dark:border-gray-400 focus:border-dbg dark:focus:border-bg`;
 const inputCls = `peer block bg-transparent w-full p-1 ${underline}`;
@@ -35,11 +35,7 @@ export default function ContactForm({ lang, apiUrl }) {
     return <p className="mt-[30vh] text-xl text-green-600 text-center">{content.response[lang]}</p>;
   }
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={`${cardBgCls} max-w-lg mx-auto mt-20 px-5 py-8 lazy-b`}
-      style={getCssDelay()}
-    >
+    <form onSubmit={handleSubmit} className={`${getLazyCls()} ${cardBgCls} max-w-lg mx-auto mt-20 px-5 py-8`}>
       <h2 className="text-3xl mb-3 text-center">{content.h2[lang]}</h2>
 
       {content.inputs.map((input, i) => (

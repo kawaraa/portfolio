@@ -10,6 +10,7 @@ export default function CursorAndPageAnimation({ lang }) {
   const [{ x, y }, setCoordinates] = useState({ x: 300, y: -100 });
   const [cls, setCls] = useState("");
   const prevScrollRef = useRef(20);
+  const loadFleshRef = useRef(0);
   const elementsRef = useRef([]);
 
   const handleMouseMove = (e) => {
@@ -44,11 +45,9 @@ export default function CursorAndPageAnimation({ lang }) {
 
   const filterElements = (elements, scrolled) => {
     return elements.filter((el) => {
-      if (el.offsetTop < scrolled) {
-        el.classList.remove("lazy", "off-view");
-        return false;
-      }
-      return true;
+      if (el.offsetTop > scrolled) return true;
+      el.classList.remove("off-view");
+      return false;
     });
   };
 
@@ -58,9 +57,14 @@ export default function CursorAndPageAnimation({ lang }) {
     document.addEventListener("click", animateRoute);
     root.addEventListener("scroll", viewportHandler);
 
-    elementsRef.current = Array.from(document.querySelectorAll(".lazy"));
-    elementsRef.current.forEach((el) => el.classList.add("off-view"));
-    elementsRef.current = filterElements(elementsRef.current, root.offsetHeight + root.scrollTop);
+    elementsRef.current = Array.from(document.querySelectorAll(".off-view"));
+
+    const fun = () => {
+      elementsRef.current = filterElements(elementsRef.current, root.offsetHeight + root.scrollTop);
+    };
+
+    if (loadFleshRef.current) loadFleshRef.current = clearTimeout(loadFleshRef.current);
+    loadFleshRef.current = setTimeout(fun, 10);
 
     document.body.classList.remove("page-shut");
 

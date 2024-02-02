@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { call, navLinks, send, workWith } from "./data/shared-content";
+import { call, navLinks, send, workWith } from "../data/shared-content";
 import { BrandLogo, BrandName } from "./navbar/brand";
 import { btnCls, linkCls, skeletonCls } from "./tailwindcss-class";
 import CustomLink from "./custom-link";

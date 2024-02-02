@@ -1,15 +1,30 @@
 import { h1Cls, h2Cls, pageCls } from "../../../components/tailwindcss-class";
+import { getBlogFileNames } from "../../../services/blogs";
+import Link from "next/link";
 
-export default function Blog({ params: { lang } }) {
-  return null;
-  // return (
-  //   <main className={pageCls}>
-  //     <h1 className={h1Cls}>{content.title[lang]}</h1>
-  //     <p className="mb-10">{content.p[lang]}</p>
+export default async function Blog({ params: { lang } }) {
+  const fileNames = await getBlogFileNames();
 
-  //     <h2 className={h2Cls}>Recent posts</h2>
-  //   </main>
-  // );
+  return (
+    <main className={pageCls}>
+      <h1 className={h1Cls}>{content.title[lang]}</h1>
+      <p className="mb-10">{content.p[lang]}</p>
+
+      <h2 className={h2Cls}>Recent posts</h2>
+      <ul className="flex flex-col sm:flex-row gap-x-2">
+        {fileNames.map((fileName, i) => {
+          const slug = fileName.replace(".json", "");
+          return (
+            <li key={i}>
+              <Link href={`/${lang}/blog/${slug}`} className="hvr text-pc capitalize">
+                {slug.replaceAll("-", " ")}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </main>
+  );
 }
 
 const content = {
