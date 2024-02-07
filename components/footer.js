@@ -115,7 +115,7 @@ export default async function Footer({ lang }) {
       <div className="mt-16 text-sm">
         <div className="mx-auto w-full max-w-7xl flex flex-col items-center justify-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p>
-            &copy; {copyrightDate} Kawara.{content.rights[lang]}
+            &copy; {copyrightDate} Kawara. {content.rights[lang]}
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] md:inline-block" />
           <p>{content.certified[lang]}</p>

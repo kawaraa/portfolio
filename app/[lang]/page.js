@@ -40,7 +40,7 @@ export default function HomePageByLang({ params: { lang } }) {
         <p className="sr-only">{content.hidden[lang][0]}</p>
         <p className="sr-only">{content.hidden[lang][1]}</p>
 
-        <div id="introduction" className="text-lg text-center mt-5 md:mt-10">
+        <div id="introduction" className="text-lg text-center max-w-5xl mx-auto mt-5 md:mt-10">
           <p className="opacity-0 sm:leading-10">{content.p[lang][0]}</p>
           <p className="opacity-0 sm:leading-10">{content.p[lang][1]}</p>
           <p className="opacity-0 sm:leading-10">{content.p[lang][2]}</p>
@@ -296,15 +296,22 @@ const content = {
     en: [
       "Hi there!",
       "Thanks for visiting!",
-      "We will walk you through our site",
+      // "We will walk you through our site",
       "Let's start first with what we can do",
       "We are a Software Consultant",
       "We work externally for companies and helps them with software development processes",
       "This may include their software planning, design and construction stages",
-      "Sometimes these consultants work alone on these projects, and sometimes they collaborate with internal software developers",
-      "Want to know more about what we can do for you, please visit Services Page.",
+      // "Sometimes these consultants work alone on these projects, and sometimes they collaborate with internal software developers",
+      "Want to know more about what we can do for you, please visit Services Page",
     ],
-    ar: ["أهلاً بك!", "شكرا لزيارتكم!"],
+    ar: [
+      "أهلاً بك!",
+      "شكرا لزيارتكم!",
+      "لنبدأ أولاً بما يمكننا فعله",
+      "نحن مستشار البرمجيات",
+      "نحن نعمل لصالح الشركات ونساعدهم في عمليات تطوير البرمجيات",
+      "هل تريد معرفة المزيد حول ما يمكننا القيام به من أجلك، يرجى زيارة صفحة الخدمات",
+    ],
   },
 };
 
