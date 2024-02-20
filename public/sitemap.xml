@@ -3,26 +3,42 @@
   <url>
     <loc>https://kawaraa.com/en</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar"/>
-    <lastmod>2023-12-30</lastmod>
+    <lastmod>2024-02-01</lastmod>
   </url>
   <url>
     <loc>https://kawaraa.com/en/service</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/service"/>
-    <lastmod>2023-12-30</lastmod>
+    <lastmod>2024-02-01</lastmod>
   </url>
   <url>
     <loc>https://kawaraa.com/en/work</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/work"/>
-    <lastmod>2023-12-30</lastmod>
+    <lastmod>2024-02-01</lastmod>
   </url>
   <url>
     <loc>https://kawaraa.com/en/about</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/about"/>
-    <lastmod>2023-12-30</lastmod>
+    <lastmod>2024-02-01</lastmod>
   </url>
   <url>
     <loc>https://kawaraa.com/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/contact"/>
-    <lastmod>2023-12-30</lastmod>
+    <lastmod>2024-02-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kawaraa.com/en/developer-on-retainer</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/developer-on-retainer"/>
+    <lastmod>2024-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://kawaraa.com/en/shopify-integration</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/shopify-integration"/>
+    <lastmod>2024-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://kawaraa.com/en/software-development</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kawaraa.com/ar/software-development"/>
+    <lastmod>2024-02-01</lastmod>
   </url>
 </urlset>

@@ -41,8 +41,17 @@ export default function Blog({ children, lang, content, hiddenText }) {
 
       <List lang={lang} list={content.list} />
 
-      {!content.endP ? "" : <p className={lazyCls + " mt-20"}>{content.endP[lang]}</p>}
-
+      {!content.endP ? (
+        ""
+      ) : (
+        <div className="mt-20">
+          {content.endP[lang].map((p, i) => (
+            <p className={lazyCls + " my-3"} key={i}>
+              {p}
+            </p>
+          ))}
+        </div>
+      )}
       {children}
     </article>
   );

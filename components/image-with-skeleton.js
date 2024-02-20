@@ -11,7 +11,7 @@ export default function ImageWithSkeleton({ wrapper, ...p }) {
 export function ImageWrapper({ wrapperCls = "", ...p }) {
   return (
     <div className={wrapperCls || "min-w-[300px] max-w-[400px] mx-auto"}>
-      <ImageWithSuspense className="w-full" {...p} />;
+      <ImageWithSuspense className="w-full" {...p} />
     </div>
   );
 }
