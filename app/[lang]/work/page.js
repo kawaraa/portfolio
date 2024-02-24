@@ -102,6 +102,24 @@ const content = {
       },
     },
     {
+      imageUrl: "/oger.png",
+      link: "https://oger.nl",
+      name: "Oger",
+      description: {
+        en: "Re-platforming Web shop, POS and build Custom apps.",
+        ar: "إعادة تصميم منصة متجر الويب ونقاط البيع وإنشاء تطبيقات مخصصة.",
+      },
+    },
+    {
+      imageUrl: "/north-asg.png",
+      link: "https://northasg.com",
+      name: "North Actionsports Group",
+      description: {
+        en: "Where we practice Custom Development, eCommerce Software.",
+        ar: "حيث نمارس التطوير المخصص وبرامج التجارة الإلكترونية.",
+      },
+    },
+    {
       imageUrl: "/kawara-shop.png",
       link: "https://shop.kawaraa.com",
       name: "Kawara shop",
