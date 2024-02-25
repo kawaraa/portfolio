@@ -83,7 +83,7 @@ const content = {
     {
       t: { en: "Our Vision", ar: "هدفنا" },
       p: {
-        en: "To be the go-to partner for businesses seeking transformable software solutions, recognized for our commitment to excellence, innovation, and unwavering client satisfaction.",
+        en: "To be the go-to partner for businesses seeking transformative software solutions, recognized for our commitment to excellence, innovation, and unwavering client satisfaction.",
         ar: "أن نكون الشريك المفضل للشركات التي تبحث عن حلول برمجية قابلة للتحويل، ومعترف بها لالتزامنا بالتميز والابتكار ورضا العملاء الذي لا يتزعزع.",
       },
     },
