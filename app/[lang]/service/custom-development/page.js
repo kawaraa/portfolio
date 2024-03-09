@@ -80,7 +80,11 @@ const content = {
     },
   ],
   endP: {
-    en: "In conclusion, custom software development is not merely a service but a strategic investment in the future of a business. By embracing tailor-made solutions, organizations can overcome challenges, stay agile in a dynamic market, and unleash the full potential of their digital capabilities. The journey to innovation and efficiency begins with the decision to embark on the path of custom software development",
-    ar: "ختاماً، تطوير البرمجيات المخصصة ليس مجرد خدمة بل هو استثمار استراتيجي في مستقبل الأعمال. ومن خلال تبني حلول مصممة خصيصًا، يمكن للمؤسسات التغلب على التحديات، والبقاء مرنًا في سوق ديناميكي، وإطلاق العنان للإمكانات الكاملة لقدراتها الرقمية. تبدأ الرحلة إلى الابتكار والكفاءة بقرار الشروع في طريق تطوير البرمجيات المخصصة",
+    en: [
+      "In conclusion, custom software development is not merely a service but a strategic investment in the future of a business. By embracing tailor-made solutions, organizations can overcome challenges, stay agile in a dynamic market, and unleash the full potential of their digital capabilities. The journey to innovation and efficiency begins with the decision to embark on the path of custom software development",
+    ],
+    ar: [
+      "ختاماً، تطوير البرمجيات المخصصة ليس مجرد خدمة بل هو استثمار استراتيجي في مستقبل الأعمال. ومن خلال تبني حلول مصممة خصيصًا، يمكن للمؤسسات التغلب على التحديات، والبقاء مرنًا في سوق ديناميكي، وإطلاق العنان للإمكانات الكاملة لقدراتها الرقمية. تبدأ الرحلة إلى الابتكار والكفاءة بقرار الشروع في طريق تطوير البرمجيات المخصصة",
+    ],
   },
 };

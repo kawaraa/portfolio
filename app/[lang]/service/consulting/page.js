@@ -90,7 +90,11 @@ const content = {
     },
   ],
   endP: {
-    en: "In conclusion, software consulting services are the compass guiding businesses through the intricate landscape of technology. A well-chosen consultancy becomes a strategic ally, unlocking the full potential of technology to drive innovation, efficiency, and sustainable growth. Embrace the power of software consulting, and embark on a journey towards transformative solutions and enduring success.",
-    ar: "وفي الختام، فإن الخدمات الاستشارية البرمجية هي البوصلة التي توجه الشركات عبر المشهد التكنولوجي المعقد. تصبح الشركة الاستشارية المختارة جيدًا حليفًا استراتيجيًا، مما يفتح الإمكانات الكاملة للتكنولوجيا لدفع الابتكار والكفاءة والنمو المستدام. احتضن قوة الاستشارات البرمجية، وابدأ في رحلة نحو الحلول التحويلية والنجاح الدائم.",
+    en: [
+      "In conclusion, software consulting services are the compass guiding businesses through the intricate landscape of technology. A well-chosen consultancy becomes a strategic ally, unlocking the full potential of technology to drive innovation, efficiency, and sustainable growth. Embrace the power of software consulting, and embark on a journey towards transformative solutions and enduring success.",
+    ],
+    ar: [
+      "وفي الختام، فإن الخدمات الاستشارية البرمجية هي البوصلة التي توجه الشركات عبر المشهد التكنولوجي المعقد. تصبح الشركة الاستشارية المختارة جيدًا حليفًا استراتيجيًا، مما يفتح الإمكانات الكاملة للتكنولوجيا لدفع الابتكار والكفاءة والنمو المستدام. احتضن قوة الاستشارات البرمجية، وابدأ في رحلة نحو الحلول التحويلية والنجاح الدائم.",
+    ],
   },
 };

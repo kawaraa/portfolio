@@ -29,7 +29,8 @@ export default async function Footer({ lang }) {
             {call[lang]}
           </a>
           <a
-            href={`/${lang}/contact`}
+            href="mailto:contact@kawaraa.com?Subject=Hello%20again"
+            target="_blank"
             name="BUTTON"
             className={`${btnCls} py-3 px-5 !bg-dbg hover:!bg-sc rounded-full`}
           >
